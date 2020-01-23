@@ -1,0 +1,7 @@
+
+https://stackoverflow.com/questions/15505508/what-is-the-difference-between-string-substring-and-string-subsequence
+
+1) substring is a continuous part or subpart of a string
+
+2) subsequence is the part of a string or sequence, that might be continuous or not but the order of the elements is maintained
+
