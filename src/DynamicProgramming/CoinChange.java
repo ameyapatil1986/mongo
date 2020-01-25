@@ -20,6 +20,7 @@ public class CoinChange {
         dp[0] = 0;
 
         for(int i = coins[0]; i <= amount; i++) {
+          // If array of coins is sorted then -> for (int j = 0; j < coins.length && i >= coins[j]; j++)
             for (int coin: coins) {
                 if (i >= coin) {
                     if (dp[i - coin] != Integer.MAX_VALUE) {

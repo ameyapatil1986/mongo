@@ -7,8 +7,8 @@ public class Divide {
 
     public int divide(int dividend, int divisor) {
         //handle special cases
-        if(divisor == 0) return Integer.MAX_VALUE;
-        if(divisor ==- 1 && dividend == Integer.MIN_VALUE)
+        if (divisor == 0) return Integer.MAX_VALUE;
+        if (divisor ==- 1 && dividend == Integer.MIN_VALUE)
             return Integer.MAX_VALUE;
 
         //get positive values
@@ -16,7 +16,7 @@ public class Divide {
         long pDivisor = Math.abs((long)divisor);
 
         int result = 0;
-        while(pDividend >= pDivisor){
+        while (pDividend >= pDivisor) {
             //calculate number of left shifts
             int numShift = 0;
             while(pDividend >= (pDivisor << numShift)){
@@ -28,7 +28,7 @@ public class Divide {
             pDividend -= (pDivisor << (numShift - 1));
         }
 
-        if((dividend>0 && divisor>0) || (dividend<0 && divisor<0)){
+        if ((dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0)){
             return result;
         }else{
             return -result;

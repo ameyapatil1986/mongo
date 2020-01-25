@@ -8,8 +8,8 @@ package BasicMath;
 public class ReverseInteger {
 
 
-
-//     while (Character.isDigit(s.charAt(idx))) {
+//     here we go left to right.
+//     while (int idx = 0; Character.isDigit(s.charAt(idx)); idx++) {
 //        num = num * 10 + (s.charAt(idx) - '0');
 //        idx++;
 //    }
@@ -18,6 +18,7 @@ public class ReverseInteger {
     public int reverseInt(int x) {
         // check for negative number
 
+        // here we go right to left, thus number reverses
         double res = 0;
         for (; x!= 0; x /= 10)
             res = res * 10 + x % 10;
