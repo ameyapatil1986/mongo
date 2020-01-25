@@ -38,14 +38,22 @@ public class LongestIncreasingPathMatrix {
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                max = Math.max(max, helper(i, j, matrix, dp));
+                max = Math.max(max, helper(i, j, matrix, dp, Integer.MIN_VALUE));
             }
         }
 
         return max;
     }
 
-    private int helper(int row, int col, int[][] matrix, int[][] dp) {
+    private int helper(int row, int col, int[][] matrix, int[][] dp, int prev) {
+        if (row < 0 || row >= matrix.length || col < 0 || col >= matrix[0].length) {
+            return 0;
+        }
+
+        if (prev > matrix[row][col]) {
+            return 0;
+        }
+
         if (dp[row][col] > 0) {
             return dp[row][col];
         }
@@ -56,9 +64,7 @@ public class LongestIncreasingPathMatrix {
             int x = direction.dx + row;
             int y = direction.dy + col;
 
-            if ((row < 0 || row >= matrix.length || col < 0 || col >= matrix[0].length) && matrix[x][y] > matrix[row][col]) {
-                curMax = Math.max(curMax, helper(x, y, matrix, dp));
-            }
+            curMax = Math.max(curMax, helper(x, y, matrix, dp, matrix[row][col]));
         }
 
         dp[row][col] = curMax + 1;

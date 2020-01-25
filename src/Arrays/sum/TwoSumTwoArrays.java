@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.sum;
 
 import java.util.*;
 
@@ -26,9 +26,6 @@ public class TwoSumTwoArrays {
             }
         }
     }
-
-
-
 
     public static void main() {
 

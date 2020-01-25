@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.sum;
 
 import java.util.*;
 
@@ -15,13 +15,13 @@ public class ThreeSum {
         ArrayList<List<Integer>> result = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int j = i + 1;
-            int k = nums.length - 1;
-
             // The solution set must not contain duplicate triplets.
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
+
+            int j = i + 1;
+            int k = nums.length - 1;
 
             while (j < k) {
                 if (k < nums.length - 1 && nums[k] == nums[k + 1]) {

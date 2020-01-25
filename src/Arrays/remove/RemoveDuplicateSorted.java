@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.remove;
 
 /**
  * https://www.programcreek.com/2013/01/leetcode-remove-duplicates-from-sorted-array-java/

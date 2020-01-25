@@ -7,18 +7,17 @@ public class OverlappingRectangles {
 
     private OverlappingRectangles() { }
 
-    private static boolean intersectsFoo(int rect1_LeftX, int rect1_RightX, int rect1_TopY, int rect1_BottomY,
-        int rect2_LeftX, int rect2_RightX, int rect2_TopY, int rect2_BottomY) {
-
-        // is one rectangle on left side of other
-        if (rect1_RightX < rect2_LeftX || rect2_RightX < rect1_LeftX) {
+    public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
+        // right x < left x
+        if (rec1[2] <= rec2[0] || rec1[2] <= rec2[0]) {
             return false;
         }
 
-        // is one of the rectangle is below the other.
-        if (rect1_TopY < rect2_BottomY || rect2_TopY < rect1_BottomY) {
+        // top y < bottom y.
+        if (rec1[3]<=rec2[1] || rec2[3]<=rec1[1]) {
             return false;
         }
+
 
         return true;
     }

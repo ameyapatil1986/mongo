@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.remove;
 
 /**
  * https://leetcode.com/problems/move-zeroes/

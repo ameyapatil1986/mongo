@@ -56,9 +56,7 @@ public class SurroundingRegions {
             int x = i+dx[k];
             int y = j+dy[k];
 
-            if(x>=0 && x<board.length
-                && y>=0 && y<board[0].length
-                && board[x][y]=='O'){
+            if(x>=0 && x<board.length && y>=0 && y<board[0].length && board[x][y]=='O'){
                 merge(board, x, y);
             }
         }
