@@ -1,4 +1,4 @@
-package BinaryTrees;
+package BinaryTrees.Print;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -130,5 +130,4 @@ public class LeftView<T> {
         computeRightView(node.right, rightView, counter, currentDepth + 1);
         computeRightView(node.left, rightView, counter, currentDepth + 1);
     }
-
 }

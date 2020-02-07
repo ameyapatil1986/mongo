@@ -62,7 +62,7 @@ public class EqualSubset {
         for (int i = 1; i <= arr.length; i++) {
             for (int j = 1; j <= sum; j++) {
                 if (j - arr[i - 1] >= 0) {
-                    T[i][j] = T[i - 1][j - arr[i - 1]]    ||     T[i - 1][j];
+                    T[i][j] = T[i - 1][j - arr[i - 1]] ||  T[i - 1][j];
                 } else {
                     T[i][j] = T[i - 1][j];
                 }

@@ -26,7 +26,7 @@ public class ShuffleAnArray {
 
         for(int i = 0; i < shuffle.length; i++) {
             int x = rand.nextInt(shuffle.length - i);
-            int idx = x+i;
+            int idx = x + i;
 
             int tmp = shuffle[idx];
             shuffle[idx] = shuffle[i];

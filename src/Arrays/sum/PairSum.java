@@ -22,6 +22,13 @@ import java.util.Set;
  */
 public class PairSum {
 
+    // https://leetcode.com/problems/two-sum-iii-data-structure-design/
+    public void add(int x) {
+        Set<Integer> s = new HashSet<Integer>();
+        s.add(x);
+    }
+
+
     /**
      * printPairs : function appropriately describes it's intent
      *

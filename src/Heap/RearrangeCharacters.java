@@ -38,10 +38,10 @@ class RearrangeCharacters {
 
             // pop top element from queue and add it
             // to string.
-            Map.Entry<Character, Integer> k = pq.poll();
-            k.setValue(k.getValue() - 1);
+            Map.Entry<Character, Integer> current = pq.poll();
+            current.setValue(current.getValue() - 1);
 
-            stringBuilder.append(k.getValue());
+            stringBuilder.append(current.getValue());
 
             // If frequency of previous character is less
             // than zero that means it is useless, we
@@ -49,7 +49,7 @@ class RearrangeCharacters {
             if (prev != null && prev.getValue() > 0)
                 pq.add(prev);
 
-            prev = k;
+            prev = current;
         }
 
         String result = stringBuilder.toString();

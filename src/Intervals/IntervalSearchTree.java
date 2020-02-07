@@ -1,5 +1,8 @@
 package Intervals;
 
+/**
+ * https://leetcode.com/problems/my-calendar-i/
+ */
 
 /**
  * References:
@@ -47,6 +50,12 @@ public class IntervalSearchTree {
             this.end = end;
             this.maxEnd = maxEnd;
             this.right = right;
+        }
+    }
+
+    public void book (int start, int end) {
+        if (overlap(start, end)) {
+            add(start, end);
         }
     }
 

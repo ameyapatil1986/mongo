@@ -1,4 +1,4 @@
-package LinkedLists;
+package LinkedLists.math;
 
 import java.util.LinkedList;
 

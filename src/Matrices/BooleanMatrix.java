@@ -19,7 +19,7 @@ public class BooleanMatrix {
 
         // updating the first row and col if 1
         // is encountered
-        for (int i = 0; i < mat.length; i++ ) {
+        for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat[0].length; j++) {
                 if (mat[0][j] == 1) {
                     row_flag = true;

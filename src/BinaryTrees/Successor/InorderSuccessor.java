@@ -28,7 +28,7 @@ public class InorderSuccessor {
 
         TreeNode next = null;
         TreeNode c = root;
-        while(c!=null && c.val!=p.val){
+        while (c!=null && c.val!=p.val) {
             if(c.val > p.val){
                 next = c;
                 c = c.left;

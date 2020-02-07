@@ -1,4 +1,4 @@
-package Strings.ZeroAndOne;
+package Strings.zeroAndOne;
 
 /**
  *

@@ -2,6 +2,10 @@ package Random;
 
 import java.util.*;
 
+
+/**
+ * https://leetcode.com/problems/max-points-on-a-line/
+ */
 public class MaxPointsOnSameLine {
 
     class Point {
@@ -19,6 +23,7 @@ public class MaxPointsOnSameLine {
         for (int i = 0; i < points.length; i++) {
             int duplicate = 1;//
             int vertical = 0;
+
             for (int j = i + 1; j < points.length; j++) {
                 //handle duplicates and vertical
                 if (points[i].x == points[j].x) {

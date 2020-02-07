@@ -1,5 +1,8 @@
 package DynamicProgramming;
 
+import java.util.Arrays;
+
+
 /**
  * https://leetcode.com/problems/jump-game/
  *
@@ -32,11 +35,11 @@ public final class JumpGame {
         }
 
         int[] jump = new int[a.length];
+        Arrays.fill(jump, Integer.MAX_VALUE);
         jump[0] = 0;
 
         for (int i = 1; i < a.length; i++) {
 
-            jump[i] = Integer.MAX_VALUE;
             boolean jumpReachedTillcurrIndex = false;
 
             for (int j = 0; j < i; j++) {

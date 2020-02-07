@@ -71,7 +71,7 @@ public class WordBreak2 {
         }
 
         for(String s: pos[i]){
-            String combined = s + " "+ curr;
+            String combined = s + " "+  curr;
             dfs(pos, result, combined, i-s.length());
         }
     }

@@ -3,7 +3,7 @@ package Arrays.container;
 /**
  * https://leetcode.com/problems/trapping-rain-water/
  */
-public class ContainerWithMostWaterHistogram {
+public class TrappingRainwaterHistogram {
 
     public static int maxWaterIsHere(int[] arr) {
 

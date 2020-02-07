@@ -1,5 +1,8 @@
 package LinkedLists;
 
+/**
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ */
 public class DeleteNthNode {
 
     private static class ListNode<T> {
@@ -21,12 +24,12 @@ public class DeleteNthNode {
         ListNode fast = head;
         ListNode slow = head;
 
-        for(int i=0; i<n; i++){
+        for(int i=0; i < n; i++){
             fast = fast.next;
         }
 
         //if remove the first node
-        if(fast == null){
+        if(fast == null) {
             head = head.next;
             return head;
         }

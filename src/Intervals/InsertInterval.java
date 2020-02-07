@@ -20,9 +20,7 @@ public class InsertInterval {
 
         for (i = 0; i < intervals.size(); i++) {
             if (overlap(intervals.get(i), newInterval)) {
-                newInterval = new Interval(
-                    Math.min(intervals.get(i).start, newInterval.start),
-                    Math.max(newInterval.end, intervals.get(i).end));
+                newInterval = new Interval(Math.min(intervals.get(i).start, newInterval.start), Math.max(newInterval.end, intervals.get(i).end));
                 anyPreviousOverlap = true;
             } else {
                 if (anyPreviousOverlap) {
@@ -31,7 +29,6 @@ public class InsertInterval {
                 } else {
                     result.add(intervals.get(i));
                 }
-
             }
         }
 

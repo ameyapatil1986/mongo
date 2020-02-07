@@ -27,9 +27,9 @@ public class PalindromePartitioning {
         }
 
         //Finding palindromes of length 3 to n
-        for (int curr_len = 3; curr_len <= n; curr_len++) {
-            for (int i = 0; i < n-curr_len+1; i++) {
-                int j = i+curr_len-1;
+        for (int len = 3; len <= n; len++) {
+            for (int i = 0; i < n - len + 1; i++) {
+                int j = i + len -1;
 
                 //1. The first and last characters should match
                 //2. Rest of the substring should be a palindrome
@@ -41,12 +41,12 @@ public class PalindromePartitioning {
 
         int[] cuts = new int[n];
 
-        for(int i=0; i<n; i++) {
+        for(int i = 0; i < n; i++) {
             int temp = Integer.MAX_VALUE;
-            if(palindrome[0][i])
+            if(palindrome[0][i]) {
                 cuts[i] = 0;
-            else {
-                for(int j=0; j<i; j++) {
+            } else {
+                for(int j = 0; j < i; j++) {
                     if((palindrome[j+1][i]) && temp > cuts[j] + 1) {
                         temp = cuts[j] + 1;
                     }

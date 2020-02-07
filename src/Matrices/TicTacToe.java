@@ -2,7 +2,7 @@ package Matrices;
 
 /**
  * https://www.youtube.com/watch?v=_BDXk5mkxzQ
- * https://leetcode.com/problems/intersection-of-two-arrays/
+ * https://leetcode.com/accounts/login/?next=/problems/design-tic-tac-toe/
  */
 public class TicTacToe {
     private int[] rows;

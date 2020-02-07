@@ -1,4 +1,4 @@
-package BinaryTrees;
+package BinaryTrees.LCA;
 
 
 public class LeastCommonAncestorBST {
@@ -49,7 +49,7 @@ public class LeastCommonAncestorBST {
 
 
     public int leastCommonAncestor(int n1, int n2) {
-        TreeNode node  = findLCA(root, n1, n2);
+        TreeNode node  = findLCA(root, Math.min(n1, n2), Math.min(n1, n2));
         if (node != null) {
             return node.item;
         } else {
@@ -57,18 +57,18 @@ public class LeastCommonAncestorBST {
         }
     }
 
-    private TreeNode findLCA(TreeNode node, int n1, int n2) {
+    private TreeNode findLCA(TreeNode node, int min, int max) {
         if (node == null) return null;
 
-        if (n1 < node.item && n2 < node.item) {
-            return findLCA(node.left, n1, n2);
+        if (max < node.item) {
+            return findLCA(node.left, min, max);
         }
 
-        if (n1 > node.item && n2 > node.item) {
-            return findLCA(node.right, n1, n2);
+        if (min > node.item) {
+            return findLCA(node.right, min, max);
         }
 
-        boolean bothExist = doesExist(node, n1) && doesExist(node, n2);
+        boolean bothExist = doesExist(node, min) && doesExist(node, max);
 
         return bothExist ? node : null;
     }

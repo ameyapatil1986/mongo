@@ -43,12 +43,13 @@ public class GasStation {
      */
     public int canCompleteCircuit(int[] gas, int[] cost) {
 
+        // std
         int start = 0;
         int tank = 0;
         int deficit = 0;
 
         for (int i = 0; i < cost.length; i++) {
-            tank += gas[i] - cost[i];
+            tank += gas[i] - cost[i]; // gc
             if (tank < 0) {
                 start = i + 1;
                 deficit += tank;

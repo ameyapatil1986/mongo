@@ -2,29 +2,29 @@ package LinkedLists;
 
 import java.util.List;
 
-class Node<T extends Comparable <T>> {
-    Node<T> next;
+class Nodex<T extends Comparable <T>> {
+    Nodex<T> next;
     T item;
 
-    Node(T item) {
+    Nodex(T item) {
         this.item = item;
     }
 }
 
 
-class LinkedList<T extends Comparable <T>> {
+class LinkedLister<T extends Comparable <T>> {
 
-    private Node<T> first;
-    private Node<T> last;
+    private Nodex<T> first;
+    private Nodex<T> last;
 
-    public LinkedList(List<T> items) {
+    public LinkedLister(List<T> items) {
         for (T item : items) {
             add(item);
         }
     }
 
     private void add(T item) {
-        Node<T> node = new Node<>(item);
+        Nodex<T> node = new Nodex<>(item);
         if (first == null) {
             first = last = node;
         } else {
@@ -33,48 +33,13 @@ class LinkedList<T extends Comparable <T>> {
         }
     }
 
-    public Node<T> getFirstNode() {
+    public Nodex<T> getFirstNode() {
         return first;
     }
 
-    public void setFirstNode(Node<T> first) {
+    public void setFirstNode(Nodex<T> first) {
         this.first = first;
     }
-
-    @Override
-    public int hashCode() {
-        int hashCode = 1;
-        for (Node x = first; x != null; x = x.next)
-            hashCode = 31*hashCode + (x == null ? 0 : x.hashCode());
-        return hashCode;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        LinkedList<T> other = (LinkedList<T>) obj;
-        Node<T> currentListNode = first;
-        Node<T> otherListNode =  other.first;
-
-        while (currentListNode != null && otherListNode != null) {
-
-            if (currentListNode.item != otherListNode.item) {
-                System.out.println(currentListNode.item);
-                return false;
-            }
-            currentListNode = currentListNode.next;
-            otherListNode = otherListNode.next;
-        }
-
-        return currentListNode == null && otherListNode == null;
-    }
-
 }
 
 
@@ -104,9 +69,41 @@ public final class MergeLinkedList {
 
     private MergeLinkedList() {
     }
+//
+//    // does not create new linkedlist, just merges second into first.
+//    public static <T extends Comparable <T>> void mergeRecursive(LinkedLister<T> firstList, LinkedLister<T> secondList) {
+//        if (firstList == null) {
+//            throw new IllegalArgumentException("Bad input");
+//        }
+//        if (secondList == null) {
+//            return;
+//        }
+//
+//        Nodex<T> firstNode = mergeLinkedListRecursive(firstList.getFirstNode(), secondList.getFirstNode());
+//        secondList.setFirstNode(null);
+//        firstList.setFirstNode(firstNode);
+//    }
+//
+//    private static <T extends Comparable <T>> Nodex<T> mergeLinkedListRecursive(Nodex<T> node1, Nodex<T> node2) {
+//        if (node1 == null) {
+//            return node2;
+//        }
+//
+//        if (node2 == null) {
+//            return node1;
+//        }
+//
+//        if (node1.item.compareTo(node2.item) < 0) {
+//            node1.next = mergeLinkedListRecursive(node1.next, node2);
+//            return node1;
+//        } else {
+//            node2.next = mergeLinkedListRecursive(node1, node2.next);
+//            return node2;
+//        }
+//    }
 
     // does not create new linkedlist, just merges second into first.
-    public static <T extends Comparable <T>> void mergeRecursive(LinkedList<T> firstList, LinkedList<T> secondList) {
+    public static <T extends Comparable <T>> void merge(LinkedLister<T> firstList, LinkedLister<T> secondList) {
         if (firstList == null) {
             throw new IllegalArgumentException("Bad input");
         }
@@ -114,12 +111,12 @@ public final class MergeLinkedList {
             return;
         }
 
-        Node<T> firstNode = mergeLinkedListRecursive(firstList.getFirstNode(), secondList.getFirstNode());
+        Nodex<T> firstNode = mergeLinkedList(firstList.getFirstNode(), secondList.getFirstNode());
         secondList.setFirstNode(null);
         firstList.setFirstNode(firstNode);
     }
 
-    private static <T extends Comparable <T>> Node<T> mergeLinkedListRecursive(Node<T> node1, Node<T> node2) {
+    private static <T extends Comparable <T>> Nodex<T> mergeLinkedList(Nodex<T> node1, Nodex<T> node2) {
         if (node1 == null) {
             return node2;
         }
@@ -128,41 +125,9 @@ public final class MergeLinkedList {
             return node1;
         }
 
-        if (node1.item.compareTo(node2.item) < 0) {
-            node1.next = mergeLinkedListRecursive(node1.next, node2);
-            return node1;
-        } else {
-            node2.next = mergeLinkedListRecursive(node1, node2.next);
-            return node2;
-        }
-    }
-
-    // does not create new linkedlist, just merges second into first.
-    public static <T extends Comparable <T>> void merge(LinkedList<T> firstList, LinkedList<T> secondList) {
-        if (firstList == null) {
-            throw new IllegalArgumentException("Bad input");
-        }
-        if (secondList == null) {
-            return;
-        }
-
-        Node<T> firstNode = mergeLinkedList(firstList.getFirstNode(), secondList.getFirstNode());
-        secondList.setFirstNode(null);
-        firstList.setFirstNode(firstNode);
-    }
-
-    private static <T extends Comparable <T>> Node<T> mergeLinkedList(Node<T> node1, Node<T> node2) {
-        if (node1 == null) {
-            return node2;
-        }
-
-        if (node2 == null) {
-            return node1;
-        }
-
-        Node<T> first = null;
-        Node<T> prev = null;
-        Node<T> aux = null;
+        Nodex<T> first = null;
+        Nodex<T> prev = null;
+        Nodex<T> aux = null;
 
         while (node1 != null && node2 != null) {
             if (node1.item.compareTo(node2.item) < 0) {

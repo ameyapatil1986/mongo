@@ -1,5 +1,8 @@
 package LinkedLists;
 
+/**
+ * https://leetcode.com/problems/palindrome-linked-list/
+ */
 
 /**
  * Complexity:
@@ -11,7 +14,6 @@ package LinkedLists;
  * BB: 5
  *
  * http://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
- * @param <E>
  */
 public class LinkedListPalindrome<E> {
 

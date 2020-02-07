@@ -29,7 +29,6 @@ class MaxAbsoluteDifference {
         mx = Math.max(mx, root.val);
         mn = Math.min(mn, root.val);
 
-        return Math.max(dfs(root.left, mn, mx),
-                            dfs(root.right, mn, mx));
+        return Math.max(dfs(root.left, mn, mx), dfs(root.right, mn, mx));
     }
 }

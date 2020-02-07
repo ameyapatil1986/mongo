@@ -128,6 +128,11 @@ class GraphCycleDetection<T> implements Iterable<T> {
     }
 }
 
+/**
+ * https://www.geeksforgeeks.org/check-given-graph-tree/
+ * https://leetcode.com/problems/graph-valid-tree/
+ */
+
 
 /**
  * Qualified example:
@@ -177,6 +182,16 @@ public final class DAGCycleDetection {
         for (T node : graph) {
             if (dfs(graph, node, visitedNodes, completedNodes)) return true;
         }
+
+        /**
+         *
+         */
+        for (T node : graph) {
+            if (!visitedNodes.contains(node)) {
+                return false;
+            }
+        }
+
         return false;
     }
 

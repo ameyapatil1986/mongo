@@ -53,7 +53,12 @@ class Pair<U,V> {
     }
 }
 
+
+/**
+ * https://leetcode.com/articles/smallest-range/
+ */
 class MinimumRange {
+
     // Function to compute the minimum range that includes
     // at-least one element from given M lists
     public static Pair findMinimumRange(List<List<Integer>> listOfLists) {
@@ -78,7 +83,6 @@ class MinimumRange {
         while (true) {
             // remove root node
             ListContainer listContainer = pq.poll();
-
 
             // update low, high if new min is found
             if (high - listContainer.peek() < pair.getSecond() - pair.getFirst()) {

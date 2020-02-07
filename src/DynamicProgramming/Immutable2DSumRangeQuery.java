@@ -1,6 +1,7 @@
-package Matrices;
+package DynamicProgramming;
 
 /**
+ * https://leetcode.com/problems/range-sum-query-2d-immutable/
  * https://raw.githubusercontent.com/mission-peace/interview/master/src/com/interview/dynamic/Immutable2DSumRangeQuery.java
  */
 public class Immutable2DSumRangeQuery {
@@ -10,11 +11,14 @@ public class Immutable2DSumRangeQuery {
     public Immutable2DSumRangeQuery(int[][] matrix) {
         int row = 0;
         int col = 0;
+
         if (matrix.length != 0) {
             row = matrix.length;
             col = matrix[0].length;
         }
+
         T = new int[row + 1][col + 1];
+
         for (int i = 1; i < T.length; i++) {
             for (int j = 1; j < T[0].length; j++) {
                 T[i][j] = T[i - 1][j] + T[i][j - 1] + matrix[i - 1][j - 1] - T[i - 1][j - 1];

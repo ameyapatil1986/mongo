@@ -11,7 +11,7 @@ public class FindElementsInMatrices {
         int l = 0;
         int r = row * col - 1;
 
-        while (l <=r ){
+        while (l <=r ) {
             int mid = l + (r-l) / 2;
             int val = matrix[mid/col][mid%col];
 

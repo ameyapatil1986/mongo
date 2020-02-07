@@ -1,4 +1,4 @@
-package Strings;
+package Stack;
 
 import java.util.*;
 
@@ -16,6 +16,7 @@ import java.util.*;
 public class DecodeString {
 
     /**
+     * https://medium.com/@speedforcerun/leetcode-easy-38-count-and-say-303e0bb8e51
      * https://medium.com/@rebeccahezhang/leetcode-394-decode-string-6aafb1ad6bc3
      */
     public String decodeString(String s) {

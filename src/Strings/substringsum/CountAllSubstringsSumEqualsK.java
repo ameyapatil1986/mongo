@@ -1,4 +1,4 @@
-package Strings.substring;
+package Strings.substringsum;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/subarray-sum-equals-k/
  */
-public class CountSubstringSumEqualsK {
+public class CountAllSubstringsSumEqualsK {
 
     public int countSubarraySum(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -28,48 +28,20 @@ public class CountSubstringSumEqualsK {
         int count = 0;
         int sum = 0;
 
+        /**
+         * https://zxi.mytechroad.com/blog/hashtable/leetcode-560-subarray-sum-equals-k/
+         */
         //eg.1 : 1 1 2 1 1,   k=2
         //eg.2 : 1 1 1        k=2
         //eg.3 : 2 -2 2 2     k=2
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            //map.put(sum, map.getOrDefault(sum, 0) + 1);
-
             count += map.getOrDefault(sum - k, 0);
-
             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
 
         return count;
     }
-
-    /**
-     * snow-flake.
-     * https://www.geeksforgeeks.org/longest-sub-array-sum-k/
-     */
-    public int lenOfLongSubarr(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1);
-
-        int count = 0;
-        int sum = 0;
-        int max = 0;
-
-        //eg.1 : 1 1 2 1 1,   k=2
-        //eg.2 : 1 1 1        k=2
-        //eg.3 : 2 -2 2 2     k=2
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            //map.put(sum, map.getOrDefault(sum, 0) + 1);
-
-            max = Math.max(i - map.getOrDefault(sum - k, 0), max);
-
-            map.put(sum, i);
-        }
-
-        return count;
-    }
-
 }
 
 

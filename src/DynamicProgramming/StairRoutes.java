@@ -32,7 +32,9 @@ public class StairRoutes {
         int[] stairs = new int[stairCount + 1];
 
         for (int currentStep = 1; currentStep < stairs.length; currentStep++) {
+
             int currJumps =  Math.min(currentStep, jumps);
+
             for (int j = 1; j <= currJumps; j++) {
                 // jump from the ground.
                 if ((currentStep - j) == 0) {

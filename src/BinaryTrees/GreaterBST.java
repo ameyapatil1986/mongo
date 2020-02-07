@@ -38,7 +38,7 @@ public class GreaterBST {
 
         convertGBST(node.right, sum);
 
-        node.item += sum.sum;
+        node.item = node.item + sum.sum;
         sum.sum = node.item;
 
         convertGBST(node.left, sum);

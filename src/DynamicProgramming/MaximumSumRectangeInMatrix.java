@@ -75,10 +75,9 @@ public final class MaximumSumRectangeInMatrix {
         assert a != null && a.length > 0;
 
         int currSum = a[0];
-        int max = a[0];
-
         int startTmp = 0;
 
+        int max = a[0];
         int start = 0;
         int end = 0;
 

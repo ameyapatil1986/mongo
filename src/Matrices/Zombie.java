@@ -40,9 +40,7 @@ public class Zombie {
         Queue<Node> queue = new LinkedList<>();
 
         for (int i = 0; i < rows; i++) {
-
             List<Integer> g = grid.get(i);
-
             for (int j = 0; j < cols; j++) {
                 if (g.get(j) == 1) {
                     queue.add(new Node(i, j));
@@ -75,7 +73,7 @@ public class Zombie {
                     }
 
                     // already this node is a part of queue. so ignore
-                    if ([row][col] == 1) {
+                    if (m[row][col] == 1) {
                         continue;
                     }
 

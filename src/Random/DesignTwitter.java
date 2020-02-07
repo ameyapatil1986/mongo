@@ -41,7 +41,7 @@ public class DesignTwitter {
         final PriorityQueue<Tweet> queue = new PriorityQueue<Tweet>(Comparator.comparing(a -> a.timeStampCounter));
 
         //get all users' tweets
-        for(int uid: allPeopleUserFollows){
+        for(int uid: allPeopleUserFollows) {
             for (Tweet tweet : tweetMap.get(uid)) {
                 queue.add(tweet);
             }
