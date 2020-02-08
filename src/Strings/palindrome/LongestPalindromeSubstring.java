@@ -1,4 +1,4 @@
-package Strings;
+package Strings.palindrome;
 
 /******************************************************************************
  *
@@ -33,7 +33,7 @@ public class LongestPalindromeSubstring {
         }
         t[ s.length() * 2 + 1] = '#';
 
-        int[] p = new int[ t.length ];
+        int[] palindromeSize = new int[ t.length ];
 
         int center = 0, right = 0;
 
@@ -41,21 +41,21 @@ public class LongestPalindromeSubstring {
             int mirror = 2 * center - i;
 
             if (right > i)
-                p[i] = Math.min(right - i, p[mirror]);
+                palindromeSize[i] = Math.min(right - i, palindromeSize[mirror]);
 
             // attempt to expand palindrome centered at i
-            while (t[i + (1 + p[i])] == t[i - (1 + p[i])])
-                p[i]++;
+            while (t[i + (1 + palindromeSize[i])] == t[i - (1 + palindromeSize[i])])
+                palindromeSize[i]++;
 
             // if palindrome centered at i expands past right,
             // adjust center based on expanded palindrome.
-            if (i + p[i] > right) {
+            if (i + palindromeSize[i] > right) {
                 center = i;
-                right = i + p[i];
+                right = i + palindromeSize[i];
             }
         }
 
-        return longestPalindromicSubstring(s, p);
+        return longestPalindromicSubstring(s, palindromeSize);
     }
 
     // longest palindromic substring

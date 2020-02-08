@@ -1,4 +1,4 @@
-package Strings;
+package Strings.palindrome;
 
 /**
  * https://leetcode.com/problems/valid-palindrome/
@@ -11,7 +11,6 @@ public class PanamaPalindrome {
     }
 
     public static boolean isPalamaPalindrome(String str) {
-
         int i = 0;
         int j = str.length() - 1;
         char[] ch = str.toCharArray();

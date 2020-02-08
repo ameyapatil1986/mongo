@@ -19,19 +19,19 @@ public class SwapAdjacentLR {
            * XL LX: true
            * LX XL: false
            */
-          for(int i= 0, j= 0; i < s.length() && j < t.length(); ) {
+          for(int i = 0, j = 0; i < s.length() && j < t.length(); ) {
 
                 if (s.charAt(i) == 'X') i++;
                 if (t.charAt(j) == 'X') j++;
 
                 // cant make sense out of this if condition.
-                if(s.charAt(i) != 'X' && t.charAt(j) != 'X'){
+                if (s.charAt(i) != 'X' && t.charAt(j) != 'X') {
                     if (s.charAt(i) != t.charAt(j)) return false;
 
                     // LX & XL.  here both chars for i and j are 'L'. Since L cannot move right, its a false.
-                    if (s.charAt(i) == 'L' && j > i) return false;
+                    if (s.charAt(i) == 'L' && i < j) return false;
                     // XR & RX  here both chars for i and j are 'R'. Since R cannot move left, its a false.
-                    if (t.charAt(j) == 'R' && i > j) return false;
+                    if (t.charAt(j) == 'R' && j < i) return false;
                     else {
                         //printf("%c, %c, %d, %d\n", s[i], t[j], i, j);
                         i++;
@@ -39,6 +39,7 @@ public class SwapAdjacentLR {
                     }
                 }
             }
+
             return true;
       }
 
