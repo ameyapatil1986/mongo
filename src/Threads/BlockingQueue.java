@@ -13,10 +13,10 @@ class Producer extends Thread {
 
     public void run(){
         Random r = new Random();
-        while( true ){
+        while (true) {
             int num = r.nextInt();
             try {
-                buffer.add( num );
+                buffer.add(num);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -71,6 +71,7 @@ public class BlockingQueue<E> {
         }
         /*
          * imagine a scenario like this:
+
          * 1. When queue size was 0, we polled, which resulted in a wait.
          * 2. Now, we added an item to the queue. since queue is not empty, it can be polled.
          * 3. Thus notifyAll.

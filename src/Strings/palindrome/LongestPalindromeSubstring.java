@@ -25,16 +25,17 @@ public class LongestPalindromeSubstring {
     private static String preprocess(String s) {
         char[] t = new char[s.length() * 2 + 3];
         t[0] = '$';
-        t[s.length() * 2 + 2] = '@';
 
         for (int i = 0; i < s.length(); i++) {
             t[ 2 * i + 1 ] = '#';
             t[ 2 * i + 2 ] = s.charAt(i);
         }
-        t[ s.length() * 2 + 1] = '#';
+
+        t[s.length() * 2 + 1] = '#';
+        t[s.length() * 2 + 2] = '@';
+
 
         int[] palindromeSize = new int[ t.length ];
-
         int center = 0, right = 0;
 
         for (int i = 1; i < t.length - 1; i++) {
@@ -44,8 +45,9 @@ public class LongestPalindromeSubstring {
                 palindromeSize[i] = Math.min(right - i, palindromeSize[mirror]);
 
             // attempt to expand palindrome centered at i
-            while (t[i + (1 + palindromeSize[i])] == t[i - (1 + palindromeSize[i])])
+            while (t[i + (1 + palindromeSize[i])] == t[i - (1 + palindromeSize[i])]) {
                 palindromeSize[i]++;
+            }
 
             // if palindrome centered at i expands past right,
             // adjust center based on expanded palindrome.

@@ -14,7 +14,8 @@ import java.util.*;
  *
  *
  * Sample example
- * [leetcode, leet, letgo]
+ * Input: ["flower","flow","flight"]
+ * Output: "fl"
  *
  */
 public class LongestPrefix {

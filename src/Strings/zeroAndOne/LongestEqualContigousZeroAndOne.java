@@ -3,6 +3,8 @@ package Strings.zeroAndOne;
 import java.util.*;
 
 /**
+ * https://www.techiedelight.com/find-maximum-length-sub-array-having-given-sum/
+ * https://leetcode.com/problems/contiguous-array/
  * https://yeqiuquan.blogspot.com/2017/05/525-contiguous-array.html
  *
  * Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
@@ -21,6 +23,10 @@ import java.util.*;
  */
 public class LongestEqualContigousZeroAndOne {
 
+    /**
+     * Sample example:
+     *  [ 0 0 1 1 1
+     */
     public int findMaxLength(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {

@@ -7,9 +7,9 @@ import java.util.*;
  *
  * Complexity: O(n)
  */
-public class SubstringWithoutRepeatingChar {
+public class LongestSubstringWithAllCharactersUnique {
 
-    private SubstringWithoutRepeatingChar() {
+    private LongestSubstringWithAllCharactersUnique() {
     }
 
     public static int lengthOfLongestSubstring(String s) {

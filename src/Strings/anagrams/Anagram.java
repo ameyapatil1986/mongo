@@ -47,10 +47,14 @@ public final class Anagram {
 
             if (map.get(str2.charAt(i)) == 0) {
                 map.remove(str2.charAt(i));
+
+                if (map.isEmpty()) {
+                    return true;
+                }
             }
         }
 
-        return map.isEmpty(); // actually you can also return true without checking map is empty.
+        return false; // actually you can also return true without checking map is empty.
     }
 
     /**

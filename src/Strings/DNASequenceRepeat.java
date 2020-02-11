@@ -22,8 +22,9 @@ public class DNASequenceRepeat {
     public List<String> findRepeatedDnaSequences(String s) {
         Set<String> result = new HashSet<>();
         Set<Integer> duplicateHash = new HashSet<Integer>();
+        int rhash = 0;
 
-        for (int i = 0, rhash = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             if (i > 9)
                 rhash -= Two_POW_9 * encodings.get(s.charAt(i - 10));
 

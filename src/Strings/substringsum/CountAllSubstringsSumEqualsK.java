@@ -21,7 +21,7 @@ import java.util.*;
  */
 public class CountAllSubstringsSumEqualsK {
 
-    public int countSubarraySum(int[] nums, int k) {
+    public static int countSubarraySum(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
 
@@ -42,6 +42,18 @@ public class CountAllSubstringsSumEqualsK {
 
         return count;
     }
+
+    public static void main(String[] args) {
+        int[] abc = {1, 1, 2, 1, 1};
+        System.out.println(countSubarraySum(abc, 2)); // 3
+
+        int[] pqr =  {1, 1, 1};
+        System.out.println(countSubarraySum(pqr, 2)); // 2
+
+        int[] xyz =  {2, -2, 2, 2};
+        System.out.println(countSubarraySum(xyz, 2)); // 2
+    }
+
 }
 
 

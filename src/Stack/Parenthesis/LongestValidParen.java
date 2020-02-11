@@ -26,15 +26,12 @@ public class LongestValidParen {
             if (s.charAt(i) == '(')
                 stack.push(i);
             else {
-                //if stack is empty, it means that we already found a complete valid combo
-                //update the last index.
-                // ())(())
+                //if stack is empty, it means that we already found a complete valid combo update the last index ())(())
                 if (stack.isEmpty()) {
                     last = i;
                 } else {
                     stack.pop();
-                    //found a complete valid combo and calculate max length
-                    // eg: () or even ()()
+                    //found a complete valid combo and calculate max length. eg: () or even ()()
                     if (stack.isEmpty())
                         maxLen = Math.max(maxLen, i - last);
                     else

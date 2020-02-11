@@ -65,7 +65,6 @@ public class LexicographicSmallestSubsequenceOfDistinctChars {
             }
 
             sb.append(c);
-
             set.add(c);
             charCount.put(c, charCount.get(c) - 1);
         }
