@@ -15,6 +15,7 @@ public class LonelyPixel {
     static void findLonely(int[][] pixels) {
         final int ROWS = pixels.length;
         final int COLS = pixels[0].length;
+
         int[] r = new int[ROWS];
         int[] c = new int[COLS];
 

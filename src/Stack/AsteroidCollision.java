@@ -14,6 +14,7 @@ import java.util.*;
  */
 public class AsteroidCollision {
 
+    //  asteroids = [-2, -1, 1, 2]
     public static List<Integer> asteroidCollision(int[] asteroids) {
         Stack<Integer> stack = new Stack<>();
 
@@ -22,11 +23,9 @@ public class AsteroidCollision {
 
         for (int i = 0; i < asteroids.length; i++) {
 
-            if (asteroids[i] > 0) {
+            if (asteroids[i] >= 0) {
                 stack.push(asteroids[i]);
-            }
-
-            if (asteroids[i] < 0) {
+            } else {
                 while (!stack.isEmpty()) {
                     if (stack.peek() == Math.abs(asteroids[i])) {
                         stack.pop();

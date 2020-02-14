@@ -13,6 +13,10 @@ public class MaxPointsOnSameLine {
         int y;
     }
 
+    public double getSlope(Point[] points, int i, int j) {
+        return points[j].y == points[i].y ? 0.0 : (1.0 * (points[j].y - points[i].y)) / (points[j].x - points[i].x);
+    }
+
     public int maxPoints(Point[] points) {
         if (points == null || points.length == 0)
             return 0;
@@ -21,7 +25,7 @@ public class MaxPointsOnSameLine {
         int max = 0;
 
         for (int i = 0; i < points.length; i++) {
-            int duplicate = 1;//
+            int duplicate = 1;
             int vertical = 0;
 
             for (int j = i + 1; j < points.length; j++) {
@@ -33,25 +37,13 @@ public class MaxPointsOnSameLine {
                         vertical++;
                     }
                 } else {
-                    double slope = points[j].y == points[i].y ? 0.0
-                        : (1.0 * (points[j].y - points[i].y))
-                        / (points[j].x - points[i].x);
-
-                    if (result.get(slope) != null) {
-                        result.put(slope, result.get(slope) + 1);
-                    } else {
-                        result.put(slope, 1);
-                    }
+                    double slope = getSlope(points, i, j);
+                    result.put(slope, result.getOrDefault(slope, 0) + 1);
                 }
             }
 
-            for (Integer count : result.values()) {
-                if (count + duplicate > max) {
-                    max = count + duplicate;
-                }
-            }
-
-            max = Math.max(vertical + duplicate, max);
+            int maxPointsOnSlope = result.values().stream().max(Comparator.comparing(e -> e)).get();
+            max = Math.max(max, Math.max(vertical, maxPointsOnSlope) + duplicate);
             result.clear();
         }
 

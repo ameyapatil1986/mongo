@@ -33,15 +33,15 @@ public class GetRandom {
 
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     public boolean remove(int val) {
-        if(valueMap.containsKey(val)){
+        if (valueMap.containsKey(val)) {
             int idx = valueMap.get(val);
             valueMap.remove(val);
             idxMap.remove(idx);
 
-            Integer tailElem = idxMap.get(idxMap.size());
-            if(tailElem!=null){
-                idxMap.put(idx,tailElem);
-                valueMap.put(tailElem, idx);
+            if (!idxMap.isEmpty()) {
+              Integer tailElem = idxMap.get(idxMap.size());
+              idxMap.put(idx, tailElem);
+              valueMap.put(tailElem, idx);
             }
 
             return true;

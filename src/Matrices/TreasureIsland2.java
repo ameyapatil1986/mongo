@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
+/**
+ * https://leetcode.com/discuss/interview-question/356150
+ */
 public class TreasureIsland2 {
 
     enum Direction {
@@ -59,7 +62,7 @@ public class TreasureIsland2 {
                 queue.add(null);
             } else {
                 // amazon code.
-                for (TreasureIslands.Direction direction : TreasureIslands.Direction.values()) {
+                for (Direction direction : Direction.values()) {
                     int row = node.i + direction.getRowDelta();
                     int col = node.j + direction.getColDelta();
 

@@ -29,18 +29,18 @@ public class TicTacToe {
      1: Player 1 wins.
      2: Player 2 wins. */
     public int move(int row, int col, int player) {
-        int count = player == 1 ? 1 : -1;
+        int score = player == 1 ? 1 : -1;
 
-        rows[row] += count;
-        cols[col] += count;
+        rows[row] += score;
+        cols[col] += score;
 
         if (row == col) {
-            diag += count;
+            diag += score;
         }
 
         // X-diagonal
         if (row + col == n - 1) {
-            xdiag += count;
+            xdiag += score;
         }
 
         // If any of them equals to n, return 1
@@ -48,7 +48,7 @@ public class TicTacToe {
             Math.abs(cols[col]) == n ||
             Math.abs(diag) == n ||
             Math.abs(xdiag) == n) {
-            return count > 0 ? 1 : 2;
+            return player; // count > 0 ? 1 : 2;
         }
 
         return 0;

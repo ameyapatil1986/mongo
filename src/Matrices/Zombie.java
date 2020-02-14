@@ -22,6 +22,9 @@ enum Direction {
     }
 }
 
+/**
+ * https://leetcode.com/problems/rotting-oranges/
+ */
 public class Zombie {
 
     private static class Node {
@@ -34,15 +37,14 @@ public class Zombie {
         }
     }
 
-    public static int timeToConvert(int rows, int cols, List<List<Integer>> grid) {
+    public static int timeToConvert(int[][] m) {
 
         int count = -1;
         Queue<Node> queue = new LinkedList<>();
 
-        for (int i = 0; i < rows; i++) {
-            List<Integer> g = grid.get(i);
-            for (int j = 0; j < cols; j++) {
-                if (g.get(j) == 1) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
+                if (m[i][j] == 1) {
                     queue.add(new Node(i, j));
                 }
             }
@@ -62,13 +64,19 @@ public class Zombie {
                     queue.add(null);
                 }
             } else {
-                // amazon code.
+
+                // rotten oranges.
                 for (Direction direction : Direction.values()) {
                     int row = node.i + direction.getRowDelta();
                     int col = node.j + direction.getColDelta();
 
                     // out of boundary.
-                    if (row < 0 || col < 0 || row >= rows|| col >= cols) {
+                    if (row < 0 || col < 0 || row >= m.length || col >= m[0].length) {
+                        continue;
+                    }
+
+                    // no orange, thus nothing to infect.
+                    if (m[row][col] == 0) {
                         continue;
                     }
 
@@ -77,104 +85,11 @@ public class Zombie {
                         continue;
                     }
 
-                    m[row][col] = 1;
                     queue.add(new Node(row, col));
                 }
             }
         }
 
         return 1;
-    }
-
-//    public static int timeToConvert(int[][] m) {
-//
-//        int count = -1;
-//        Queue<Node> queue = new LinkedList<>();
-//
-//        for (int i = 0; i < m.length; i++) {
-//            for (int j = 0; j < m[0].length; j++) {
-//                if (m[i][j] == 1) {
-//                    queue.add(new Node(i, j));
-//                }
-//            }
-//        }
-//
-//        queue.add(null);
-//
-//        while (!queue.isEmpty()) {
-//            Node node = queue.poll();
-//
-//            if (node == null) {
-//                count++;
-//
-////                for (int i =0; i < m.length; i++) {
-////                    for (int j = 0; j < m[0].length; j++) {
-////                            System.out.print(m[i][j] + " ");
-////                    }
-////                    System.out.println();
-////                }
-////                System.out.println(count);
-//
-//
-//                if (queue.isEmpty()) {
-//                    return count;
-//                } else {
-//                   queue.add(null);
-//                }
-//            } else {
-//                // amazon code.
-//                for (Direction direction : Direction.values()) {
-//                    int row = node.i + direction.getRowDelta();
-//                    int col = node.j + direction.getColDelta();
-//
-//                    // out of boundary.
-//                    if (row < 0 || col < 0 || row >= m.length || col >= m[0].length) {
-//                        continue;
-//                    }
-//
-//                    // already this node is a part of queue. so ignore
-//                    if (m[row][col] == 1) {
-//                        continue;
-//                    }
-//
-//                    m[row][col] = 1;
-//                    queue.add(new Node(row, col));
-//                }
-//
-//                //            // rotten oranges.
-//                //            for (Direction direction : Direction.values()) {
-//                //                int row = node.i + direction.getRowDelta();
-//                //                int col = node.j + direction.getColDelta();
-//                //
-//                //                // out of boundary.
-//                //                if (row < 0 || col < 0 || row >= m.length || col >= m[0].length) {
-//                //                    continue;
-//                //                }
-//                //
-//                //                // no orange, thus nothing to infect.
-//                //                if (m[row][col] == 0) {
-//                //                    continue;
-//                //                }
-//                //
-//                //                // already this node is a part of queue. so ignore
-//                //                if (m[row][col] == 1) {
-//                //                    continue;
-//                //                }
-//                //
-//                //                queue.add(new Node(row, col));
-//                //            }
-//            }
-//        }
-//
-//        return 1;
-//    }
-
-    public static void main(String[] args) {
-        int[][] grid = { { 0, 1, 1, 0, 1 },
-                         { 0, 1, 0, 1, 0 },
-                         { 0, 0, 0, 0, 1 },
-                         { 0, 1, 0, 0, 0 } };
-        System.out.println(timeToConvert(grid));
-
     }
 }
