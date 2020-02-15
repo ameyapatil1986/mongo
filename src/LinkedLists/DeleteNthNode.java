@@ -5,26 +5,26 @@ package LinkedLists;
  */
 public class DeleteNthNode {
 
-    private static class ListNode<T> {
+    private static class Node<T> {
         T item;
-        ListNode<T> next;
-        ListNode<T> arbit;
+        Node<T> next;
+        Node<T> arbit;
 
-        ListNode(T item, ListNode<T> next, ListNode<T> arbit) {
+        Node(T item, Node<T> next, Node<T> arbit) {
             this.item = item;
             this.next = next;
             this.arbit = arbit;
         }
     }
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public Node removeNthFromEnd(Node head, int n) {
         if(head == null)
             return null;
 
-        ListNode fast = head;
-        ListNode slow = head;
+        Node fast = head;
 
-        for(int i=0; i < n; i++){
+
+        for(int i = 0; i < n; i++){
             fast = fast.next;
         }
 
@@ -34,12 +34,13 @@ public class DeleteNthNode {
             return head;
         }
 
-        while(fast.next != null){
-            fast = fast.next;
-            slow = slow.next;
+        Node slow = head;
+        Node prev = null;
+        for (; fast != null; fast = fast.next, slow = slow.next) {
+            prev = slow;
         }
 
-        slow.next = slow.next.next;
+        prev.next = slow.next;
 
         return head;
     }

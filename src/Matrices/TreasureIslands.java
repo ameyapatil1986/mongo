@@ -83,7 +83,7 @@ public class TreasureIslands {
                     }
 
                     if (m[row][col] == 'X') {
-                        return count;
+                        return count + 1;
                     }
 
                     m[row][col] = 'D';

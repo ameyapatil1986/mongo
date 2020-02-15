@@ -36,16 +36,14 @@ public class Intersection {
 
         for (ListNode p  = headB ; p != null; p = p.next, len2++);
 
-        int diff = 0;
         ListNode p1 = fetchNodeAtEqualLevel(headA, len1 - len2);
-        ListNode p2 = fetchNodeAtEqualLevel(headA, len2 - len1);;
+        ListNode p2 = fetchNodeAtEqualLevel(headA, len2 - len1);
 
-        while(p1 != null && p2 != null) {
+
+        for(;p1 != null && p2 != null; p1 = p1.next, p2 = p2.next) {
             if (p1.val == p2.val){
                 return p1;
             }
-            p1 = p1.next;
-            p2 = p2.next;
         }
 
         return null;

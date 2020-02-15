@@ -6,6 +6,12 @@ import java.util.Map;
 
 
 /**
+ *    add    |     adjust   |     delete
+ * ---------------------------------------
+ *    empty  |      first   |     onlyOne.
+ *           |              |     first.
+ *
+ *
  *
  * TODO:
  * 1. why is subclassing better than this sad method ?

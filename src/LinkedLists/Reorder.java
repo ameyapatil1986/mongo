@@ -21,10 +21,7 @@ public class Reorder {
         Node slow = head;
         Node fast = head;
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
+        for ( ;fast != null && fast.next != null;  slow = slow.next, fast = fast.next.next);
 
         Node n = reverse(slow.next);
         slow.next = null;
@@ -37,25 +34,26 @@ public class Reorder {
 
             m.next = n;
             n.next = nextM;
+
             m = nextM;
             n = nextN;
         }
     }
 
     public Node reverse(Node start) {
-        if (start == null || start.next == null) return start;
+        Node prev = null;
+        Node ptr = start;
+        Node ptr1 = null;
 
-        Node m = start;
-        Node n = start.next;
-        start.next = null;
+        while (ptr != null) {
+            ptr1 = ptr.next;
+            ptr.next = prev;
 
-        while (m != null && n!= null) {
-            Node temp = n.next;
-            n.next = m;
-            m =n;
-            n = temp;
+            // advance forward.
+            prev = ptr;
+            ptr = ptr1;
         }
 
-        return m;
+        return prev;
     }
 }

@@ -97,18 +97,6 @@ public class ImplementHashMap<K, V> {
         return e.hash == key.hashCode() & e.key.equals(key);
     }
 
-    /**
-     * The result of this value is same as ( h mod len )
-     * http://stackoverflow.com/questions/10879302/hashmap-implentation-in-java-how-does-the-bucket-index-calculation-work#10879302
-     *
-     * And what guarantees same result if length changes: its called rehashing.
-     * http://stackoverflow.com/questions/19349526/how-can-hashmap-guarantee-same-index-for-key-used-again/19349591?noredirect=1#19349591
-     *
-     */
-    private int indexFor(int h, int length) {
-        return h / (length-1);
-    }
-
     public /* synchronized */ void clear() {
         for (int i = 0; i < table.length; i++) {
             table[i] = null;
