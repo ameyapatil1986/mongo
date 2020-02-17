@@ -20,7 +20,6 @@ class MeetingRooms2 {
         int[] start = new int[intervals.length];
         int[] end = new int[intervals.length];
 
-
         for(int i = 0; i < intervals.length; i++) {
             start[i] = intervals[i].start;
             end[i] = intervals[i].end;

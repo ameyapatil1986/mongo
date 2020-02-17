@@ -32,7 +32,7 @@ public class DistantBarcode {
 
         // Here using the priority queue to sort the map with highest value first
         // Descending sort
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> e.getValue()));
         pq.addAll(map.entrySet());
 
         int idx = 0;
@@ -43,20 +43,21 @@ public class DistantBarcode {
             int key = (int) m.getKey();
             int frequencyVal = (int) m.getValue();
 
-
-            while (frequencyVal > 0) {
+            for (int i = 0; i  < frequencyVal; ) {
                 if (barcodes[idx] == -1) {
                     barcodes[idx] = key;
-                    idx = idx + 2;
-                    frequencyVal--;
-                } else {
                     idx++;
+                    i++;
                 }
+
+                idx++;
+
                 if (idx >= barcodes.length) {
                     idx = 0;
                 }
             }
         }
+
         return barcodes;
     }
 }

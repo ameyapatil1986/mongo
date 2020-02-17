@@ -40,7 +40,8 @@ public class IntersectionOfTwoIntervals {
                 // lo - the startpoint of the intersection
                 // hi - the endpoint of the intersection
                 int maxStart = Math.max(A[i].start, B[j].start); //take max start
-                int minEnd = Math.min(A[i].end, B[j].end); // take min end
+                int minEnd   = Math.min(A[i].end, B[j].end); // take min end
+
                 // max start - min end.
                 if (maxStart <= minEnd)
                     ans.add(new Interval(maxStart, minEnd));

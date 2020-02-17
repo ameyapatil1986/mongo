@@ -23,8 +23,9 @@ public class TextJustification {
             int startIndex = i;
             int trailingWhiteSpaces = 0;
 
-            for (;i < words.length; i++) {
+            for ( ;i < words.length; i++) {
                 sum = sum + words[i].length() + 1; // this 1 for space.
+
                 if ((sum - 1) > maxWidth) { // subtracting 1 for space.
                     sum = sum - words[i].length() - 2;  // subtracting 2 again for space :)
                     trailingWhiteSpaces = maxWidth - sum;
@@ -39,8 +40,8 @@ public class TextJustification {
                     sb.append(" ");
                 }
             } else {
-                int numberOfWords = i - startIndex + 1;
-                int spacesBetweenWords = trailingWhiteSpaces / (numberOfWords - 1);
+                int numberOfWords = i - startIndex;
+                int spacesBetweenWords = trailingWhiteSpaces / numberOfWords;
 
                 String space = " ";
                 for (int x = 0; x < spacesBetweenWords; x++) {

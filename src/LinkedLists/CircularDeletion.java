@@ -5,6 +5,17 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ *
+ *      insert    |     delete
+ * ---------------------------------
+ *    empty.      |     empty.
+ *                |     first.
+ *
+ *
+ *
+ */
+
+/**
  * Complexity: O(n)
  *
  * References:

@@ -1,5 +1,6 @@
 package LinkedLists.math;
 
+import LinkedLists.Intersection;
 import java.util.LinkedList;
 
 
@@ -33,21 +34,29 @@ public class SumWithoutReverse {
         }
     }
 
-    public Node doSomething() {
-        LinkedList l1 = new LinkedList();
-        LinkedList l2 = new LinkedList();
+    private Node fetchNodeAtEqualLevel(Node node, int levelsToJumpUp) {
+        for (int count = 0; count < levelsToJumpUp; count++) {
+            node = node.next;
+        }
+        return node;
+    }
 
-        if (l1.size() >  l2.size()) {
-            int diff = l1.size()  - l2.size();
-            Node n1 = null; // l1.getFirst();
-            Node n2 = null; // l1.getFirst();
-            for (int i = 0; i < diff; i++) {
-                n1 = n1.next;
-            }
-            NodeData d = recursively(n1, n2);
-            recursiveLongerLinkedList(n1, diff, d);
 
-            return d.node;
+    public Node doSomething(SumWithoutReverse ll) {
+        int len1 = 0;
+        int len2 = 0;
+
+        for (Node p = first; p != null; p = p.next, len1++);
+        for (Node p = ll.first; p != null; p = p.next, len2++);
+
+        Node p1 = fetchNodeAtEqualLevel(first,    len1 - len2);
+        Node p2 = fetchNodeAtEqualLevel(ll.first, len2 - len1);
+
+        NodeData d = recursively(p1, p2);
+        if (len1 > len2) {
+            recursiveLongerLinkedList(p1, len1 - len2, d);
+        } else {
+            recursiveLongerLinkedList(p2, len2 - len1, d);
         }
 
         return null;
