@@ -22,7 +22,7 @@ import java.util.Queue;
 public class TreasureIslands {
 
     enum Direction {
-        W(-1, 0), N(0, -1), E(0, 1), S(1, 0);
+        N(-1, 0), W(0, -1), S(0, 1), E(1, 0);
 
         private int rowDelta;
         private int colDelta;

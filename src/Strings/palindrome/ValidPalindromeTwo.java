@@ -19,11 +19,7 @@ public class ValidPalindromeTwo {
             return true;
         }
 
-        if (isPalin(s, left + 1, right) || isPalin(s, left, right - 1)) {
-            return true;
-        }
-
-        return false;
+        return isPalin(s, left + 1, right) || isPalin(s, left, right - 1);
     }
 
     private boolean isPalin(String s, int left, int right) {

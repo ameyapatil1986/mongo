@@ -18,31 +18,36 @@ package Strings.palindrome;
 
 public class LongestPalindromeSubstring {
 
+
+    static char[] getFormattedArray(String s) {
+        char[] t = new char[s.length() * 2 + 1];
+
+        for (int i = 0; i < t.length - 1; i = i + 2) {
+            t[ 2 * i ] = '#';
+            t[ 2 * i + 1 ] = s.charAt(i);
+        }
+
+        t[s.length() - 1] = '#';
+        return t;
+    }
+
     // Transform s into t.
     // For example, if s = "abba", then t = "$#a#b#b#a#@"
     // the # are interleaved to avoid even/odd-length palindromes uniformly
     // $ and @ are prepended and appended to each end to avoid bounds checking
     private static String preprocess(String s) {
-        char[] t = new char[s.length() * 2 + 3];
-        t[0] = '$';
-
-        for (int i = 0; i < s.length(); i++) {
-            t[ 2 * i + 1 ] = '#';
-            t[ 2 * i + 2 ] = s.charAt(i);
-        }
-
-        t[s.length() * 2 + 1] = '#';
-        t[s.length() * 2 + 2] = '@';
-
-
+        char[] t = getFormattedArray(s);
         int[] palindromeSize = new int[ t.length ];
-        int center = 0, right = 0;
+
+        int center = 0;
+        int right = 0;
 
         for (int i = 1; i < t.length - 1; i++) {
             int mirror = 2 * center - i;
 
-            if (right > i)
+            if (i < right) {
                 palindromeSize[i] = Math.min(right - i, palindromeSize[mirror]);
+            }
 
             // attempt to expand palindrome centered at i
             while (t[i + (1 + palindromeSize[i])] == t[i - (1 + palindromeSize[i])]) {
@@ -70,7 +75,7 @@ public class LongestPalindromeSubstring {
                 center = i;
             }
         }
-        return s.substring((center - 1 - length) / 2, (center - 1 + length) / 2);
+        return s.substring((center - (length - 1)/2), (center + (length - 1)/2) + 1);
     }
 
 

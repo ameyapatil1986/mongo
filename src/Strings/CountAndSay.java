@@ -3,6 +3,11 @@ package Strings;
 /**
  * https://leetcode.com/problems/count-and-say/
  * https://www.youtube.com/watch?v=usAZEcL_y-0
+ *
+ *      1
+ *      1 1
+ *      2 1
+ *      1 2 1 1
  */
 public class CountAndSay {
 

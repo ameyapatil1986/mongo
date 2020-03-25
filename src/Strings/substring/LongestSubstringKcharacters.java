@@ -42,12 +42,12 @@ public class LongestSubstringKcharacters {
                 while (charFrequency.size() > k) {
                     char l = s.charAt(j);
 
-                    int count = charFrequency.get(l);
-                    if (count == 1) {
+                    charFrequency.put(l, charFrequency.get(l) - 1);
+
+                    if (charFrequency.get(l) == 0) {
                         charFrequency.remove(l);
-                    } else {
-                        charFrequency.put(l, charFrequency.get(l)-1);
                     }
+
                     j++;
                 }
             }
