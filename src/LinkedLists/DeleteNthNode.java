@@ -23,7 +23,6 @@ public class DeleteNthNode {
 
         Node fast = head;
 
-
         for(int i = 0; i < n; i++){
             fast = fast.next;
         }

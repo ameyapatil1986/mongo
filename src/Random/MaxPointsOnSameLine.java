@@ -14,6 +14,8 @@ public class MaxPointsOnSameLine {
     }
 
     public double getSlope(Point[] points, int i, int j) {
+        // horizontal line ( when y is equal ) has slope of 0.
+        // veritical line ( when x is equal ) is slope of infinity
         return points[j].y == points[i].y ? 0.0 : (1.0 * (points[j].y - points[i].y)) / (points[j].x - points[i].x);
     }
 
@@ -21,7 +23,7 @@ public class MaxPointsOnSameLine {
         if (points == null || points.length == 0)
             return 0;
 
-        HashMap<Double, Integer> result = new HashMap<Double, Integer>();
+        Map<Double, Integer> result = new HashMap<Double, Integer>();
         int max = 0;
 
         for (int i = 0; i < points.length; i++) {

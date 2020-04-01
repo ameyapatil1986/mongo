@@ -11,7 +11,7 @@ import java.util.*;
  * s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
  *
  *
- *  Sample example: s = "3[a2[c]]" return "accaccacc".
+ *  Sample example: s = "3[a2[b]]" return "abbabbabb".
  */
 public class DecodeString {
 
@@ -23,7 +23,7 @@ public class DecodeString {
         if (s.length() == 0 || s == null) {
             return s;
         }
-        Stack<String> str = new Stack<String>();
+        Stack<String> strStack = new Stack<String>();
         Stack<Integer> nums = new Stack<Integer>();
         StringBuilder sb = new StringBuilder();
         int idx = 0;
@@ -38,14 +38,14 @@ public class DecodeString {
                 nums.push(num);
             } else if (s.charAt(idx) == '[') {
                 if (sb.length() > 0) {
-                    str.push(sb.toString());
+                    strStack.push(sb.toString());
                 }
                 sb = new StringBuilder();
                 idx++;
             } else if (s.charAt(idx) == ']') {
                 StringBuilder temp = new StringBuilder();
-                if (!str.isEmpty()) {
-                    temp = new StringBuilder(str.pop());
+                if (!strStack.isEmpty()) {
+                    temp = new StringBuilder(strStack.pop());
                 }
                 int repeatTimes = nums.pop();
                 for (int i = 0; i < repeatTimes; i++) {

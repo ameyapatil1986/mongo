@@ -29,12 +29,12 @@ public class EqualSubset {
             T[i][0] = true;
         }
 
-        for (int i = 1; i <= input.length; i++) {
-            for (int j = 1; j <= total; j++) {
-                if (j - input[i - 1] >= 0) {
-                    T[i][j] = T[i - 1][j] || T[i - 1][j - input[i - 1]];
-                } else {
+        for (int i = 1; i < T.length; i++) {
+            for (int j = 1; j < T[0].length; j++) {
+                if (j < input[i - 1]) {
                     T[i][j] = T[i - 1][j];
+                } else {
+                    T[i][j] = T[i - 1][j] || T[i - 1][j - input[i - 1]];
                 }
             }
         }
@@ -59,15 +59,16 @@ public class EqualSubset {
             T[i][0] = true;
         }
 
-        for (int i = 1; i <= arr.length; i++) {
-            for (int j = 1; j <= sum; j++) {
-                if (j - arr[i - 1] >= 0) {
-                    T[i][j] = T[i - 1][j - arr[i - 1]] ||  T[i - 1][j];
-                } else {
+        for (int i = 1; i < T.length; i++) {
+            for (int j = 1; j < T[0].length; j++) {
+                if (j < arr[i - 1]) {
                     T[i][j] = T[i - 1][j];
+                } else {
+                    T[i][j] = T[i - 1][j] || T[i - 1][j - arr[i - 1]];
                 }
             }
         }
+
         return T[arr.length][sum];
     }
 }

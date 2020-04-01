@@ -47,8 +47,8 @@ public class PalindromePartitioning {
                 cuts[i] = 0;
             } else {
                 for(int j = 0; j < i; j++) {
-                    if((palindrome[j+1][i]) && temp > cuts[j] + 1) {
-                        temp = cuts[j] + 1;
+                    if((palindrome[j+1][i])) {
+                        temp = Math.max(temp, cuts[j] + 1);
                     }
                 }
                 cuts[i] = temp;

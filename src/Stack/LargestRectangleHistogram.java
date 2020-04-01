@@ -54,7 +54,11 @@ public class LargestRectangleHistogram {
             } else {
                 int heightValue = height[stack.pop()];
                 //calculate max value when the current height is less than the previous one
-                int w = stack.isEmpty() ? i : i - (stack.peek() + 1);
+
+                //if stack is empty means everything till i has to be
+                //greater or equal to input[top] so get area by
+                //input[top] * i;
+                int w = stack.isEmpty() ? i: i - (stack.peek() + 1);
                 max = Math.max(heightValue * w, max);
             }
         }
@@ -62,7 +66,7 @@ public class LargestRectangleHistogram {
         while (!stack.isEmpty()) {
             int heightValue = height[stack.pop()];
             //calculate max value when the current height is less than the previous one
-            int w = stack.isEmpty() ? i : i - (stack.peek() + 1);
+            int w = stack.isEmpty() ? i: i - (stack.peek() + 1);
             max = Math.max(heightValue * w, max);
         }
 

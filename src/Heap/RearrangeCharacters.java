@@ -25,7 +25,7 @@ class RearrangeCharacters {
         }
 
         // Insert all characters with their frequencies into a priority_queue
-        Queue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        Queue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> -e.getValue()));
         StringBuilder stringBuilder = new StringBuilder();
 
         // work as the previous visited element
@@ -41,7 +41,7 @@ class RearrangeCharacters {
             Map.Entry<Character, Integer> current = pq.poll();
             current.setValue(current.getValue() - 1);
 
-            stringBuilder.append(current.getValue());
+            stringBuilder.append(current.getKey());
 
             // If frequency of previous character is less
             // than zero that means it is useless, we

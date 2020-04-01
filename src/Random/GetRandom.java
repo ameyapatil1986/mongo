@@ -40,8 +40,10 @@ public class GetRandom {
 
             if (!idxMap.isEmpty()) {
               Integer tailElem = idxMap.get(idxMap.size());
-              idxMap.put(idx, tailElem);
-              valueMap.put(tailElem, idx);
+              if (tailElem != null) {
+                  idxMap.put(idx, tailElem);
+                  valueMap.put(tailElem, idx);
+              }
             }
 
             return true;

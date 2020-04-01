@@ -60,7 +60,7 @@ public class KSmallestPairs {
 
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
 
-        PriorityQueue<SomeObject> queue = new PriorityQueue<>((o1, o2) -> (o1.val1 + o1.val2) - (o2.val1 + o2.val2));
+        PriorityQueue<SomeObject> queue = new PriorityQueue<>(Comparator.comparing(o -> o.val1 + o.val2));
 
         for(int i = 0; i < Math.min(nums1.length, k); i++) {
             queue.offer(new SomeObject(nums1[i], nums2[0], 0));

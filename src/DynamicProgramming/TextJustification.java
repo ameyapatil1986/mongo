@@ -23,7 +23,8 @@ public class TextJustification {
             int startIndex = i;
             int trailingWhiteSpaces = 0;
 
-            for ( ;i < words.length; i++) {
+            // step-1 : cram as many words as possible.
+            for ( ; i < words.length; i++) {
                 sum = sum + words[i].length() + 1; // this 1 for space.
 
                 if ((sum - 1) > maxWidth) { // subtracting 1 for space.
@@ -33,6 +34,7 @@ public class TextJustification {
                 }
             }
 
+            // step-2 : justify.
             StringBuilder sb = new StringBuilder();
             if (i == words.length) {
                 for (int j = startIndex; j < i; j++) {

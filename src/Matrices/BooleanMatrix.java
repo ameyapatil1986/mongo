@@ -40,7 +40,7 @@ public class BooleanMatrix {
             }
         }
 
-        // Modify the input matrix mat[] using the
+        // Modify the input matrix mat[] using thet
         // first row and first column of Matrix mat
         for (int i = 1; i < mat.length; i++) {
             for (int j = 1; j < mat[0].length; j ++) {

@@ -47,7 +47,7 @@ public class GameOfLife {
                     if (around == 3) {
                         board[i][j] = live;
                     }
-                } else if (board[i][j] == 1){
+                } else if (board[i][j] == 1) {
                     // Any live cell` with two or three live neighbors lives on to the next generation.
                     if (around == 2 || around ==3)
                         continue;
@@ -69,10 +69,10 @@ public class GameOfLife {
         }
     }
 
-    private int countLive(int i, int j,int[][] board){
+    private int countLive(int i, int j, int[][] board) {
         int count = 0;
 
-        for (Direction dir : Direction.values()){
+        for (Direction dir : Direction.values()) {
             int x = i + dir.getRowDelta();
             int y = j + dir.getColDelta();
 

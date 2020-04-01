@@ -32,7 +32,7 @@ public class DistantBarcode {
 
         // Here using the priority queue to sort the map with highest value first
         // Descending sort
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> e.getValue()));
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> -e.getValue()));
         pq.addAll(map.entrySet());
 
         int idx = 0;

@@ -1,6 +1,7 @@
 package DynamicProgramming;
 
 /**
+ * https://www.youtube.com/watch?v=PwDqpOMwg6U&t=280s
  * https://leetcode.com/problems/range-sum-query-2d-immutable/
  * https://raw.githubusercontent.com/mission-peace/interview/master/src/com/interview/dynamic/Immutable2DSumRangeQuery.java
  */
@@ -21,6 +22,7 @@ public class Immutable2DSumRangeQuery {
 
         for (int i = 1; i < T.length; i++) {
             for (int j = 1; j < T[0].length; j++) {
+                // T[i - 1][j - 1] is the overlap, here we are subtracting the overlap.
                 T[i][j] = T[i - 1][j] + T[i][j - 1] + matrix[i - 1][j - 1] - T[i - 1][j - 1];
             }
         }
@@ -31,6 +33,7 @@ public class Immutable2DSumRangeQuery {
         col1++;
         row2++;
         col2++;
+        // here we are adding back the overlap.
         return T[row2][col2] - T[row1 - 1][col2] - T[row2][col1 - 1] + T[row1 - 1][col1 - 1];
     }
 

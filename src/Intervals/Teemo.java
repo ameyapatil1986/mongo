@@ -28,17 +28,17 @@ import java.util.Arrays;
  */
 public class Teemo {
 
-    public static int findTime(int[] arr, int span) {
-        int reachIndex = 0;
+    public static int findTime(int[] arr, int sleepSpan) {
+        int sleptUntil = 0;
         int count = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            if (reachIndex < arr[i]) {
-                count += span;
+            if (sleptUntil < arr[i]) {
+                count += sleepSpan;
             } else {
-                count += (arr[i] + (span - 1)) - reachIndex;
+                count += (arr[i] + (sleepSpan - 1)) - sleptUntil;
             }
-            reachIndex = arr[i] + (span - 1);
+            sleptUntil = arr[i] + (sleepSpan - 1);
         }
         return count;
     }
