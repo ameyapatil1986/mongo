@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.Palindrome;
 
 import java.util.*;
 
