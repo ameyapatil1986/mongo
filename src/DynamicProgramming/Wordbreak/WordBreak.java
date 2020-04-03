@@ -6,13 +6,15 @@ import java.util.*;
  * https://leetcode.com/problems/word-break/
  * https://www.youtube.com/watch?v=YxtQUbKbdUs
  * http://www.goodtecher.com/leetcode-139-word-break/
- *
- * eg: acat
  */
 public class WordBreak {
 
     /**9i
      * https://massivealgorithms.blogspot.com/2016/12/leetcode-472-concatenated-words.html
+     *
+     * Sample example:
+     * 1) abcleet
+     * 2) leetcode
      */
     public boolean wordBreakWithDictionaryFrequency(String s, Map<String, String> wordDict) {
 

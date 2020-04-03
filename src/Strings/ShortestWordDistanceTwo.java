@@ -11,10 +11,7 @@ public class ShortestWordDistanceTwo {
 
     public ShortestWordDistanceTwo(String[] words) {
         for (int i = 0; i < words.length; i ++) {
-            if (!indexes.containsKey(words[i])) {
-                indexes.put(words[i], new ArrayList<Integer>());
-            }
-            indexes.get(words[i]).add(i);
+            indexes.putIfAbsent(words[i], new ArrayList<Integer>()).add(i);
         }
     }
 
@@ -28,10 +25,10 @@ public class ShortestWordDistanceTwo {
             int i2 = indexes2.get(j);
             min = Math.min(min, Math.abs(i1 - i2));
             if (i1 < i2) {
-                i ++;
+                i++;
             }
             else {
-                j ++;
+                j++;
             }
         }
         return min;

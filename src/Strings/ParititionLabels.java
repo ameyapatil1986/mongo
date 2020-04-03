@@ -11,7 +11,7 @@ public class ParititionLabels {
     public static List<Integer> partitionLabels(String str) {
         Map<Character, Integer> lastIndex = new HashMap<>();
 
-        for (int i = 0; i < str.length(); ++i)
+        for (int i = 0; i < str.length(); i++)
             lastIndex.put(str.charAt(i), i);
 
         List<Integer> ans = new ArrayList<>();
@@ -19,8 +19,8 @@ public class ParititionLabels {
         int start = 0;
         int end = 0;
 
-        for (int i = 0; i < str.length(); ++i) {
-            end = Math.max(end, lastIndex.get((int)str.charAt(i)));
+        for (int i = 0; i < str.length(); i++) {
+            end = Math.max(end, lastIndex.get(str.charAt(i)));
             if (i == end) {
                 ans.add(end - start + 1);
                 start = end + 1;

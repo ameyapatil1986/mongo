@@ -8,29 +8,29 @@ import java.util.*;
  */
 public class WordBreak2 {
 
-    public boolean wordBreakWithDictionaryFrequency(String s, Map<String, String> wordDict) {
-
-        boolean[] isWordBreak = new boolean[s.length() + 1];
-
-        isWordBreak[0] = true;
-
-        for (int i = 1; i <= s.length() ; i++) {
-            for (int j = 0; j < i; j++) {
-                if (isWordBreak[j]) {
-                    if (wordDict.containsKey(s.substring(j, i))) {
-                        /**
-                         * reduce frequency in dictionary
-                         */
-
-                        isWordBreak[i] = true;
-                        break;
-                    }
-                }
-            }
-        }
-
-        return isWordBreak[s.length()];
-    }
+//    public boolean wordBreakWithDictionaryFrequency(String s, Map<String, String> wordDict) {
+//
+//        boolean[] isWordBreak = new boolean[s.length() + 1];
+//
+//        isWordBreak[0] = true;
+//
+//        for (int i = 1; i <= s.length() ; i++) {
+//            for (int j = 0; j < i; j++) {
+//                if (isWordBreak[j]) {
+//                    if (wordDict.containsKey(s.substring(j, i))) {
+//                        /**
+//                         * reduce frequency in dictionary
+//                         */
+//
+//                        isWordBreak[i] = true;
+//                        break;
+//                    }
+//                }
+//            }
+//        }
+//
+//        return isWordBreak[s.length()];
+//    }
 
 
     public List<String> wordBreak(String s, Set<String> wordDict) {
@@ -38,7 +38,7 @@ public class WordBreak2 {
         pos[0]=new ArrayList<String>();
 
         for(int i = 0; i < s.length(); i++) {
-            if (pos[i] != null){
+            if (pos[i] != null) {
                 for(int j = i + 1; j <= s.length(); j++) {
                     String sub = s.substring(i,j);
                     if (wordDict.contains(sub)) {
@@ -55,7 +55,7 @@ public class WordBreak2 {
             }
         }
 
-        if (pos[s.length()]==null) {
+        if (pos[s.length()] == null) {
             return new ArrayList<String>();
         } else {
             List<String> result = new ArrayList<String>();
@@ -64,14 +64,14 @@ public class WordBreak2 {
         }
     }
 
-    public void dfs(List<String>[] pos, List<String> result, String curr, int i){
+    public void dfs(List<String>[] pos, List<String> result, String curr, int i) {
         if(i==0){
             result.add(curr.trim());
             return;
         }
 
         for(String s: pos[i]){
-            String combined = s + " "+  curr;
+            String combined = s + " " +  curr;
             dfs(pos, result, combined, i-s.length());
         }
     }

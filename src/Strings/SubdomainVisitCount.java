@@ -36,16 +36,17 @@ public class SubdomainVisitCount {
 
         for (String str : listOfStrings) {
 
-            String[] domainAndCount = str.split(" ");
-            int count = Integer.parseInt(domainAndCount[0]);
-            String domain = domainAndCount[1];
+            String[] CountAndDomain = str.split(" ");
+            int count = Integer.parseInt(CountAndDomain[0]);
+
+            String domain = CountAndDomain[1];
             String[] subDomains = domain.split(".");
-            String string = "";
+            String s = "";
 
             for (int i = subDomains.length - 1; i >= 0; i--) {
-                string = subDomains[i] + string;
-                map.put(string, map.getOrDefault(string, 0) + count);
-                string = "." + string;
+                s = subDomains[i] + s;
+                map.put(s, map.getOrDefault(s, 0) + count);
+                s = "." + s;
             }
         }
     }
