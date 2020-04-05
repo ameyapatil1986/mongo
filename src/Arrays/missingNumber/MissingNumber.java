@@ -4,7 +4,8 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/missing-number/
- * https://www.youtube.com/watch?v=Q-o4mtw1zJM
+ * https://www.youtube.com/watch?v=YMYVYSWL93w
+ *
  */
 public class MissingNumber {
 

@@ -69,6 +69,9 @@ interface NestedInteger {
  }
 
 
+/**
+ * https://leetcode.com/problems/flatten-nested-list-iterator/
+ */
 public class NestedIterator implements Iterator<Integer> {
     private Stack<NestedInteger> stack;
 
@@ -76,8 +79,6 @@ public class NestedIterator implements Iterator<Integer> {
         stack = new Stack<>();
         flattenList(nestedList);
     }
-
-
 
     @Override
     public boolean hasNext() {

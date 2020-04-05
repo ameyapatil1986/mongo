@@ -8,6 +8,9 @@ import java.util.Stack;
  */
 public class BasicCalculator {
 
+    /**
+     *  5 + (3 - 2 + 1) - 2
+     */
     public int calculate(String s) {
         Stack<Integer> stack = new Stack<>();
         int result = 0;

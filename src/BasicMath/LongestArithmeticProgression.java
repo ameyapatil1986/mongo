@@ -10,11 +10,12 @@ import java.util.*;
 public class LongestArithmeticProgression {
 
     public int longestArithSeqLength(int[] A) {
-        Map<Integer, Map<Integer, Integer>> dp = new HashMap<>();
+        final Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
         int res = 2;
+
         for (int i = 0; i < A.length; i++) {
             for (int j = i + 1; j < A.length; j++) {
-                Map<Integer, Integer> m = dp.computeIfAbsent(A[j] - A[i], d -> new HashMap<>());
+                Map<Integer, Integer> m = map.computeIfAbsent(A[j] - A[i], d -> new HashMap<>());
                 m.put(j, m.getOrDefault(i, 1) + 1);
                 res = Math.max(res, m.get(j));
             }

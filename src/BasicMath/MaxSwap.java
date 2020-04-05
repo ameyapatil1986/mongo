@@ -1,5 +1,8 @@
 package BasicMath;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * https://leetcode.com/problems/maximum-swap/
  */
@@ -21,6 +24,7 @@ public class MaxSwap {
                     return Integer.valueOf(new String(A));
                 }
             }
+
         }
         return num;
     }
