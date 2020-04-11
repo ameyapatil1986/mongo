@@ -5,6 +5,10 @@ package Arrays.search;
  * https://leetcode.com/articles/find-peak-element/
  * https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/
  *
+ * Youtube:
+ * https://www.youtube.com/watch?v=CFgUQUL7j_c
+ * https://www.youtube.com/watch?v=a7D77DdhlFc
+ *
  * Peak element is greater than neighbors
  *
  * eg: [ 1 2 3 4 5 1]

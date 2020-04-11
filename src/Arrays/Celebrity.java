@@ -35,10 +35,24 @@ public class Celebrity {
 
         for (int i = 0; i < n; i++) {
             if (i != celebrity) {
-                // that all the other n - 1 people know him/her but he/she does not know any of them.
                 /**
-                 * knows(celebrity, i): if 1 knows 2 and 2 knows 1, celebrity = 1
-                 * !knows(i, celebrity) : it is possible that 0 does not know anyone, but noone knows 0 either.
+                 * knows(celebrity, i)
+                 * 0 -> 1
+                 * 1 -> 2
+                 * 2 -> 3
+                 * 3 -> 0
+                 * Since 3 knows 0, this check fails.
+                 *
+                 * !knows(i, celebrity)
+                 * 0 -> 1
+                 * 1 -> 2
+                 * 2 -> 3
+                 * 3 does not know anyone.
+                 * Since 0 does not know 3, this check fails.
+                 *
+                 *
+                 *
+                 *
                  */
                 if (knows(celebrity, i) || !knows(i, celebrity))
                     return -1;

@@ -59,7 +59,7 @@ public class LexicographicSmallestSubsequenceOfDistinctChars {
             int last = sb.length() - 1;
 
             while(sb.length() > 0 && c < sb.charAt(last) && charCount.get(sb.charAt(last)) > 1) {
-                charCount.remove(sb.charAt(last));
+                //charCount.remove(sb.charAt(last));
                 set.remove(sb.charAt(last));
                 sb.deleteCharAt(last);
                 last -= 1;

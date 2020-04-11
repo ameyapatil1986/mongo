@@ -2,12 +2,14 @@ package Arrays.product;
 
 /**
  * https://www.programcreek.com/2014/03/leetcode-maximum-product-subarray-java/
+ *
+ * [1, -2,  3, -4]
  */
 public class MaxProductSubArray {
 
-    // [  1  2 ]
-    // [ -1  2 ]
-    // [  1 -2 ]
+    /**
+     *  [1, -2,  3, -4]
+     */
     public int maxProduct(int[] nums) {
         int[] max = new int[nums.length];
         int[] min = new int[nums.length];

@@ -12,13 +12,11 @@ import java.util.*;
 public class PerfectSquares {
 
     public int numSquares(int n) {
-        int max = (int) Math.sqrt(n);
-
         int[] dp = new int[n+1];
         Arrays.fill(dp, Integer.MAX_VALUE);
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= max; j++) {
+            for (int j = 1; j <= Math.sqrt(i); j++) {
                 if (j * j == i) {
                     dp[i] = 1;
                 } else if (j * j < i) {

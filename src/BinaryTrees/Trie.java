@@ -37,7 +37,7 @@ public class Trie {
     private TrieNode root;
 
     public Trie () {
-        root = new TrieNode(new HashMap<Character, TrieNode>(), null, null);
+        root = new TrieNode(new HashMap<Character, TrieNode>(), null);
     }
 
     /**
@@ -45,12 +45,10 @@ public class Trie {
      */
     private static class TrieNode {
         Map<Character, TrieNode> map;
-        String word;
         String meaning;
 
-        public TrieNode(Map<Character, TrieNode> map, String word, String meaning) {
+        public TrieNode(Map<Character, TrieNode> map, String meaning) {
             this.map = map;
-            this.word = word;
             this.meaning = meaning;
         }
     }
@@ -58,18 +56,17 @@ public class Trie {
     public void add (String word, String meaning) {
         TrieNode node = root;
         char[] ch = word.toCharArray();
-        int i = 0;
 
-        for (node = root; i < ch.length;  node = node.map.get(ch[i]), i++) {
+        for (int i = 0; i < ch.length; i++) {
             //create a child node for each new alphabet.
-            node.map.putIfAbsent(ch[i], new TrieNode(new HashMap<Character, TrieNode>(), null, null));
+            node.map.putIfAbsent(ch[i], new TrieNode(new HashMap<>(), null));
+            node = node.map.get(ch[i]);
         }
 
         /*
          * Helper: for a word like CHD, we will have 4 nodes.
          * (root) --- (c-node) -- (h-node) -- (d-node)
          */
-        node.word = word;
         node.meaning = meaning;
     }
 
@@ -107,21 +104,21 @@ public class Trie {
         node.map.clear();
     }
 
-    public void print() {
-        printWhole(root);
-    }
+//    public void print() {
+//        printWhole(root);
+//    }
 
-    private void printWhole(TrieNode node) {
-        if (node == null) {
-            return;
-        }
-        if (node.word != null) {
-            System.out.println("Word: " + node.word + " Meaning: " + node.meaning);
-        }
-        for (TrieNode n : node.map.values()) {
-            printWhole(n);
-        }
-    }
+//    private void printWhole(TrieNode node) {
+//        if (node == null) {
+//            return;
+//        }
+//        if (node.word != null) {
+//            System.out.println("Word: " + node.word + " Meaning: " + node.meaning);
+//        }
+//        for (TrieNode n : node.map.values()) {
+//            printWhole(n);
+//        }
+//    }
 
     public static void main(String[] args) {
         Trie trie = new Trie();
@@ -134,13 +131,13 @@ public class Trie {
         System.out.println("Expected endure, Actual: " + trie.getMeaning("cope"));
         System.out.println("Expected null, Actual: " + trie.getMeaning("co"));
 
-        trie.print();
+//        trie.print();
 
         trie.prune("cop");
 
         System.out.println("Expected police, Actual: " +trie.getMeaning("cop"));
         System.out.println("Expected null, Actual: " +trie.getMeaning("cope"));
 
-        trie.print();
+//        trie.print();
     }
 }

@@ -53,6 +53,7 @@ public class GameOfLife {
                         continue;
 
                     // Any live cell with more than three live neighbors dies, as if by over-population.
+                    // Any live cell with less than three live neighbors dies, as if by under-population.
                     if (around < 2 || around > 3)
                         board[i][j] = die;
                 }

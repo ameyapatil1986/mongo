@@ -33,7 +33,7 @@ public class LongestSubstringKcharacters {
         for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            charFrequency.put(c, charFrequency.getOrDefault(c, 0) + 1);
+                     charFrequency.put(c, charFrequency.getOrDefault(c, 0) + 1);
 
             if (charFrequency.size() <= k) {
                 result = Math.max(result, i - j +1);

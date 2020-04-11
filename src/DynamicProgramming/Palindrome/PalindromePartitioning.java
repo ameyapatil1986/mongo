@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class PalindromePartitioning {
 
-    public static int partition(String s) {
+    public List<List<String>> partition(String s) {
         int n = s.length();
         boolean palindrome[][] = new boolean[n][n]; //boolean table
 
@@ -39,26 +39,29 @@ public class PalindromePartitioning {
             }
         }
 
-        int[] cuts = new int[n];
 
-        for(int i = 0; i < n; i++) {
-            int temp = Integer.MAX_VALUE;
-            if(palindrome[0][i]) {
-                cuts[i] = 0;
-            } else {
-                for(int j = 0; j < i; j++) {
-                    if((palindrome[j+1][i])) {
-                        temp = Math.min(temp, cuts[j] + 1);
-                    }
-                }
-                cuts[i] = temp;
-            }
-        }
+        // word break -2
 
-        return cuts[n-1];
+
+//        int[] cuts = new int[n];
+//
+//        for(int i = 0; i < n; i++) {
+//            int temp = Integer.MAX_VALUE;
+//            if(palindrome[0][i]) {
+//                cuts[i] = 0;
+//            } else {
+//                for(int j = 0; j < i; j++) {
+//                    if((palindrome[j+1][i])) {
+//                        temp = Math.min(temp, cuts[j] + 1);
+//                    }
+//                }
+//                cuts[i] = temp;
+//            }
+//        }
+
+        return null;
     }
 
     public static void main(String args[]) {
-        System.out.println(partition("aab"));
     }
 }

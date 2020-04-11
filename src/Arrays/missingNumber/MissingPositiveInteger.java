@@ -7,8 +7,6 @@ import java.util.*;
  * https://leetcode.com/problems/first-missing-positive/
  * https://github.com/Nideesh1/Algo/blob/master/leetcode/L_41.java
  * https://www.youtube.com/watch?v=2QugZILS_Q8
- * https://www.youtube.com/watch?v=K8qVpQfNoy0
- * https://www.youtube.com/watch?v=Q-o4mtw1zJM
  */
 public class MissingPositiveInteger {
 
@@ -48,11 +46,12 @@ public class MissingPositiveInteger {
             }
         }
 
+        // [ 0, 0, 1]
         if(nums[0] > 0) {
             return n;
         }
 
-        // [ 1, 2, 0 ]
+        // [ 1, 2, 3, 4 ]
         return n + 1;
     }
 

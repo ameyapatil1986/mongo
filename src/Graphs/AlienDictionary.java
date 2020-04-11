@@ -13,14 +13,16 @@ public class AlienDictionary {
      */
     public String alienOrder(String[] words) {
 
-        if(words == null || words.length == 0)
+        if (words == null || words.length == 0)
             return "";
 
         Map<Character, Set<Character>> map = new HashMap<Character, Set<Character>>();
         Map<Character, Integer> inDegree = new HashMap<Character, Integer>();
         StringBuilder sb = new StringBuilder();
 
-        // put all word in-degree 0
+        // According to Leetcode:  There may be multiple valid order of letters, return any one of them is fine.
+        // Thus, if there is only 1 word in the dictionary called "abcd" then any order is fine.
+        // i.e. : abcd is same as bdca.
         for(String s: words){
             for(char c: s.toCharArray()){
                 inDegree.put(c, 0);

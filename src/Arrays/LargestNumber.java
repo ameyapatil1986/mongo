@@ -19,14 +19,15 @@ public class LargestNumber {
             arr[i] = String.valueOf(nums[i]);
         }
 
-//        Arrays.sort(arr, Comparator.comparing((a, b) -> (b + a).compareTo((String)a + b)));
+        // https://stackoverflow.com/questions/61043870/how-to-translate-following-comparator-into-compatator-comparing
+        Arrays.sort(arr, Comparator.comparing((a, b) -> (b + a).compareTo((String)a + b)));
 
-        // descending array.
-        Arrays.sort(arr, new Comparator<String>(){
-            public int compare(String a, String b){
-                return (b + a).compareTo(a + b);
-            }
-        });
+//        // descending array.
+//        Arrays.sort(arr, new Comparator<String>(){
+//            public int compare(String a, String b){
+//                return (b + a).compareTo(a + b);
+//            }
+//        });
 
         if(arr[0].equals("0")) return "0";
 

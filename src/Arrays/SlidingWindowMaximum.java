@@ -20,7 +20,7 @@ public class SlidingWindowMaximum {
             return new int[0];
 
         // array size of 4 and queue of size 3, result should be of size = 2.
-        int[] result = new int[nums.length + 1 - k];
+        int[] result = new int[nums.length - k + 1];
 
         final LinkedList<Integer> deque = new LinkedList<Integer>();
 
@@ -37,8 +37,9 @@ public class SlidingWindowMaximum {
 
             deque.add(i);
 
-            if (i + 1 - k >= 0) {
-                result[i + 1 - k] = nums[deque.peek()]; // peek's the head.
+            // similar to palindrome sub-sequencing : n - currLen + 1
+            if (i - k + 1 >= 0) {
+                result[i - k + 1] = nums[deque.peek()]; // peek's the head.
             }
         }
 

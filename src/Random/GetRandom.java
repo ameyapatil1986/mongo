@@ -54,16 +54,16 @@ public class GetRandom {
 
     /** Get a random element from the set. */
     public int getRandom() {
-        if (valueMap.size() == 0) {
+        if (idxMap.size() == 0) {
             return -1;
         }
 
-        if (valueMap.size() == 1) {
+        if (idxMap.size() == 1) {
             return idxMap.get(0);
         }
 
         Random r = new Random();
-        int idx = r.nextInt(valueMap.size());
+        int idx = r.nextInt(idxMap.size());
 
         return idxMap.get(idx);
     }

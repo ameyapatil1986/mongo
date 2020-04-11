@@ -9,6 +9,10 @@ public class MultiplyPreviousAndNextIndexes {
     //    Output: arr[] = {6, 8, 15, 24, 30}
     public static void change(int[] arr) {
 
+        // Nothing to do when array size is 1
+        if (arr.length <= 1)
+            return;
+
         int prev = arr[0];
         for (int i = 0; i < arr.length - 1; i++) {
             int result = prev * arr[i + 1];

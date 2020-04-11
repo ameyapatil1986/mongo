@@ -18,11 +18,11 @@ public class HIndex {
             citationsFrequency[Math.min(citations.length,c)]++;
         }
 
-        int k=citations.length;
-        for(int s=citationsFrequency[k]; k > s; s += citationsFrequency[k]){
-            k--;
+        int s = 0;
+        for (int k = citationsFrequency.length - 1 ; s < k; k--) {
+            s += citationsFrequency[k];
         }
 
-        return k;
+        return s;
     }
 }
