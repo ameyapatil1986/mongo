@@ -9,24 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0624665e-5253-4ea4-a620-c1973536b705" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Celebrity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Celebrity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/DuplicateNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/DuplicateNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/HIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/HIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/LargestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/LargestNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/QueueHeight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/SlidingWindowMaximum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/SlidingWindowMaximum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingPositiveInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingPositiveInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/product/MaxProductSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/product/MaxProductSubArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/product/MultiplyPreviousAndNextIndexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/product/MultiplyPreviousAndNextIndexes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/search/PeakElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/search/PeakElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTrees/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTrees/Trie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Palindrome/PalindromePartitioning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming/Palindrome/PalindromePartitioning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/PerfectSquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming/PerfectSquares.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphs/AlienDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/AlienDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrices/GameOfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/GameOfLife.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Random/GetRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Random/GetRandom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Strings/substring/LongestSubstringKcharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strings/substring/LongestSubstringKcharacters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Strings/susbsequence/LexicographicSmallestSubsequenceOfDistinctChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strings/susbsequence/LexicographicSmallestSubsequenceOfDistinctChars.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,28 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Palindrome/PalindromePartitioning.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Wordbreak/WordBreak2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Wordbreak/WordBreak.java">
+        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/CountBinaryTrees.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="25" selection-start-line="18" selection-end-line="40" selection-end-column="5" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -146,7 +110,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1461" />
+    <option name="x" value="1550" />
     <option name="y" value="23" />
     <option name="width" value="1683" />
     <option name="height" value="982" />
@@ -194,6 +158,12 @@
               <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mongo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Threads" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -204,7 +174,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586609597884" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586612032369" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -283,10 +253,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1461" y="23" width="1683" height="982" extended-state="0" />
+    <frame x="1550" y="23" width="1683" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80686694" visible="true" weight="0.17001829" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80686694" visible="true" weight="0.17184643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -345,27 +315,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Stack/Parenthesis/RemoveInvalidParen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stack/Parenthesis/LongestValidParen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Stack/DecodeString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -674,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Palindrome/LongestPalindromicSubsequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Wordbreak/WordBreak.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -697,8 +639,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Palindrome/PalindromePartitioning.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="782">
+          <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Palindrome/LongestPalindromicSubsequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Immutable2DSumRangeQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Images/IMG_9618.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/CountBinaryTrees.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

@@ -19,7 +19,7 @@ public class MajorityElement {
             }
         }
 
-        return result;
+        return count > 0 ? result : -1;
     }
 
 }

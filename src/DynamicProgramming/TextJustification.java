@@ -43,7 +43,7 @@ public class TextJustification {
                 }
             } else {
                 int numberOfWords = i - startIndex;
-                int spacesBetweenWords = trailingWhiteSpaces / numberOfWords;
+                int spacesBetweenWords = trailingWhiteSpaces / (numberOfWords - 1);
 
                 String space = " ";
                 for (int x = 0; x < spacesBetweenWords; x++) {
