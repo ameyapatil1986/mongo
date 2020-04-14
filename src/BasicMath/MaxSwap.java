@@ -10,6 +10,7 @@ public class MaxSwap {
 
     public int maximumSwap(int num) {
 
+        // convert number into an array
         int[] A = new int[Integer.toString(num).length()];
         for (int i = A.length - 1; i  >= 0 ; i--) {
             A[i] = num % 10;
@@ -22,11 +23,13 @@ public class MaxSwap {
         }
 
         for (int i = 0; i < A.length; i++) {
-            for (int d = 9; A[i] < d; d--) {
-                if (lastIndexMap.containsKey(d) && lastIndexMap.get(d) > i) {
-                    int tmp = A[i];
-                    A[i] = A[lastIndexMap.get(d)];
-                    A[lastIndexMap.get(d)] = tmp;
+            int num1 = A[i];
+            for (int num2 = 9; num1 < num2; num2--) {
+                if (lastIndexMap.containsKey(num2) && lastIndexMap.get(num2) > i) {
+
+                    // swap indexes.
+                    A[i] = num2;
+                    A[lastIndexMap.get(num2)] = num1;
 
 
                     // convert array back to the number.
