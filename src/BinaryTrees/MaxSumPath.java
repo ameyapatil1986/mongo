@@ -19,24 +19,25 @@ public class MaxSumPath {
         }
     }
 
-    public int maxPathSum(TreeNode root) {
-        int max[] = new int[1];
-        max[0] = Integer.MIN_VALUE;
-        calculateSum(root, max);
-        return max[0];
+    private class MaxSum {
+        int maxSum = Integer.MIN_VALUE;
     }
 
-    public int calculateSum(TreeNode root, int[] max) {
-        if (root == null)
+    public int maxPathSum(TreeNode root) {
+        MaxSum maxSum = new MaxSum();
+        calculateSum(root, maxSum);
+        return maxSum.maxSum;
+    }
+
+    public int calculateSum(TreeNode node, MaxSum pMaxSum) {
+        if (node == null)
             return 0;
 
-        int left = calculateSum(root.left, max);
-        int right = calculateSum(root.right, max);
+        int left = Math.max(0, calculateSum(node.left, pMaxSum));
+        int right = Math.max(0, calculateSum(node.right, pMaxSum));
 
-        int current = Math.max(root.val, Math.max(root.val + left, root.val + right));
+        pMaxSum.maxSum = Math.max(pMaxSum.maxSum, left + node.val + right);
 
-        max[0] = Math.max(max[0], Math.max(current, left + root.val + right));
-
-        return current;
+        return Math.max(left, right) + node.val;
     }
 }

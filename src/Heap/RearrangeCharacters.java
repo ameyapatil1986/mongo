@@ -12,8 +12,6 @@ import java.util.*;
  */
 
 class RearrangeCharacters {
-    static int MAX_CHAR = 26;
-
     // Function to rearrange character of a string
     // so that no char repeat twice
     static void rearrangeString(String str) {
