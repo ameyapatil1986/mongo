@@ -16,7 +16,7 @@ public class SlidingWindowMaximum {
 
     public int[] maxSlidingWindow(int[] nums, int k) {
 
-        if (nums==null || nums.length==0)
+        if (nums == null || nums.length == 0)
             return new int[0];
 
         // array size of 4 and queue of size 3, result should be of size = 2.

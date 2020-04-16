@@ -14,34 +14,34 @@ public class BasicCalculator {
     public int calculate(String s) {
         Stack<Integer> stack = new Stack<>();
         int result = 0;
-        int sign = 1;
+        int prevSign = 1;
         int number = 0;
 
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) {
                 number = number * 10 + (c - '0');
             } else if (c == '+') {
-                result += sign * number;
-                sign = 1;
+                result += prevSign * number;
+                prevSign = 1;
                 number = 0;
             } else if (c == '-') {
-                result += sign * number;
-                sign = -1;
+                result += prevSign * number;
+                prevSign = -1;
                 number = 0;
             } else if (c == '(') {
                 stack.push(result);
-                stack.push(sign);
+                stack.push(prevSign);
                 result = 0;
-                sign = 1;
+                prevSign = 1;
             } else if (c == ')') {
-                result += sign * number;
+                result += prevSign * number;
                 number = result;
-                sign = stack.pop();
+                prevSign = stack.pop();
                 result = stack.pop();
             }
         }
 
-        result += sign * number;
+        result += prevSign * number;
         return result;
     }
 }

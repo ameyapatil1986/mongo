@@ -42,8 +42,6 @@ public class OptimalUtilization {
             if (target - currSum < min) {
                 min = target - currSum;
                 result.clear();
-                currI = left[0];
-                currJ = right[0];
                 result.add(new int[]{left[0], right[0]});
             }
 

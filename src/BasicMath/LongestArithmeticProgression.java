@@ -15,7 +15,8 @@ public class LongestArithmeticProgression {
 
         for (int i = 0; i < A.length; i++) {
             for (int j = i + 1; j < A.length; j++) {
-                Map<Integer, Integer> m = map.computeIfAbsent(A[j] - A[i], d -> new HashMap<>());
+                int key = A[j] - A[i];
+                Map<Integer, Integer> m = map.putIfAbsent(key, new HashMap<>());
                 m.put(j, m.getOrDefault(i, 1) + 1);
                 res = Math.max(res, m.get(j));
             }

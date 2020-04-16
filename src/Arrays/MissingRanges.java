@@ -20,20 +20,16 @@ public class MissingRanges {
         int indexOfLower = 0;// findIndexOfLower. if lower is missing then the one which is higher.
         int indexOfHigher = 0;// findIndexOfHigher. if higher is missing then the one which is lesser..
 
-        int lb = 0;
         if (lower < nums[indexOfLower]) {
             res.add(getRange(lower, nums[indexOfLower] - 1));
         }
-        lb = nums[indexOfLower] + 1;
 
-
-        for (int i = indexOfLower + 1; i < indexOfHigher; i++) {
-            res.add(getRange(lb, nums[i] - 1));
-            lb = nums[i] + 1;
+        for (int i = indexOfLower; i < indexOfHigher; i++) {
+            res.add(getRange(nums[i] + 1, nums[i + 1] - 1));
         }
 
-        if (lb < upper) {
-            res.add(getRange(lb, upper));
+        if (nums[indexOfHigher] < upper) {
+            res.add(getRange(nums[indexOfHigher], upper));
         }
 
         return res;

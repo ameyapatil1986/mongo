@@ -29,7 +29,7 @@ public class NextPermutation {
             return;
         }
 
-        // best example: [ 3 5 4 2 ]
+        // best example: [ 3 5 4 2 1]
         // scan from right to left, find the first element/smallest that is greater than p.
         // look at https://www.programcreek.com/2014/06/leetcode-next-permutation-java/ for example.
         int idx = nums.length - 1;
@@ -42,7 +42,7 @@ public class NextPermutation {
 
         swap(nums, mark, idx);
 
-        reverse(nums, mark + 1, nums.length - 1);
+        reverse(nums, mark, nums.length - 1);
     }
 
     private void swap(int[] nums, int i, int j) {
