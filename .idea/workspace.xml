@@ -8,19 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0624665e-5253-4ea4-a620-c1973536b705" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/CanPlaceFlowers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/CanPlaceFlowers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/Celebrity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/Celebrity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/HIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/HIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/LargestNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/LargestNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/MissingRanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/MissingRanges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/container/TrappingRainwaterHistogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/container/TrappingRainwaterHistogram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingPositiveInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingPositiveInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/search/PeakElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/search/PeakElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/BasicCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/BasicCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Intervals/Teemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Intervals/Teemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Strings/ShortestWordDistanceTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strings/ShortestWordDistanceTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,28 +27,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Longest/LongestDecreasingSequence.java">
+        <entry file="file://$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DynamicProgramming/Longest/LongestRepeatingSubsequence.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Strings/ShortestWordDistanceTwo.java">
+        <entry file="file://$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -85,8 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DynamicProgramming/TextJustification.java" />
-        <option value="$PROJECT_DIR$/src/DynamicProgramming/PalindromePartitioning.java" />
         <option value="$PROJECT_DIR$/src/DynamicProgramming/Immutable2DSumRangeQuery.java" />
         <option value="$PROJECT_DIR$/src/DynamicProgramming/EqualSubset.java" />
         <option value="$PROJECT_DIR$/src/DynamicProgramming/LongestPalindromicSubsequence.java" />
@@ -136,12 +114,14 @@
         <option value="$PROJECT_DIR$/src/Arrays/MissingRanges.java" />
         <option value="$PROJECT_DIR$/src/BasicMath/BasicCalculator.java" />
         <option value="$PROJECT_DIR$/src/Strings/ShortestWordDistanceTwo.java" />
+        <option value="$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java" />
+        <option value="$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1596" />
-    <option name="y" value="23" />
+    <option name="x" value="1497" />
+    <option name="y" value="24" />
     <option name="width" value="1871" />
     <option name="height" value="1031" />
   </component>
@@ -186,6 +166,18 @@
               <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mongo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Matrices" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Strings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -204,7 +196,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587307052011" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587308688067" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -283,10 +275,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1596" y="23" width="1871" height="1031" extended-state="0" />
+    <frame x="1497" y="24" width="1871" height="1031" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80686694" visible="true" weight="0.1377802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80686694" visible="true" weight="0.14324768" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -345,27 +337,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Arrays/container/ContainerWithMostWater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Arrays/container/TrappingRainwaterHistogram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Arrays/missingNumber/MissingNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Arrays/missingNumber/MissingPositiveInteger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -700,8 +671,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Strings/ShortestWordDistanceTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="37" column="52" lean-forward="true" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
         </state>
       </provider>
     </entry>

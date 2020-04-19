@@ -17,27 +17,8 @@ import java.util.Stack;
  */
 public class LargestRectangleHistogram {
 
-
-//    public int largestRectangleArea(int[] arr) {
-//        Stack<Integer > stack = new Stack<>();
-//        int max = 0;
-//
-//        for (int i = 0; i <= arr.length; i++) {
-//
-//            while (!stack.isEmpty() && (i == arr.length || arr[stack.peek()] <= arr[i])) {
-//                int height = arr[stack.pop()];
-//                int width = (!stack.isEmpty()) ? i - stack.peek() - 1 : i;
-//                max = Math.max(max, height * width);
-//            }
-//
-//            stack.push(i);
-//        }
-//
-//        return max;
-//    }
-
-    public int largestRectangleArea(int[] height) {
-        if (height == null || height.length == 0) {
+    public int largestRectangleArea(int[] heights) {
+        if (heights == null || heights.length == 0) {
             return 0;
         }
 
@@ -46,28 +27,22 @@ public class LargestRectangleHistogram {
         int max = 0;
         int i = 0;
 
-        while (i < height.length) {
+        while (i < heights.length) {
             // push index to stack in ascending order.
-            if (stack.isEmpty() || height[stack.peek()] <= height[i]) {
+            if (stack.isEmpty() || heights[stack.peek()] <= heights[i]) {
                 stack.push(i);
                 i++;
             } else {
-                int heightValue = height[stack.pop()];
-                //calculate max value when the current height is less than the previous one
-
-                //if stack is empty means everything till i has to be
-                //greater or equal to input[top] so get area by
-                //input[top] * i;
-                int w = stack.isEmpty() ? i: i - (stack.peek() + 1);
-                max = Math.max(heightValue * w, max);
+                int height = heights[stack.pop()];
+                int width = stack.isEmpty() ? i : i - (stack.peek() + 1);
+                max = Math.max(height * width, max);
             }
         }
 
         while (!stack.isEmpty()) {
-            int heightValue = height[stack.pop()];
-            //calculate max value when the current height is less than the previous one
-            int w = stack.isEmpty() ? i: i - (stack.peek() + 1);
-            max = Math.max(heightValue * w, max);
+            int height = heights[stack.pop()];
+            int width = stack.isEmpty() ? i : i - (stack.peek() + 1);
+            max = Math.max(height * width, max);
         }
 
         return max;

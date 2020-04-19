@@ -13,7 +13,7 @@ public class FindElementsInMatrices {
 
         while (l <= r ) {
             int mid = (l + r) / 2;
-            int val = matrix[ mid/col ][ mid%col ];
+            int val = matrix[ mid/col ][ mid%col ]; // Only 1 conversion step => a[mid] converts into matrix[mid/col][mid%col]
 
             if(val == target) return true;
 
