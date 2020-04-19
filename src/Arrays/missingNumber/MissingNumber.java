@@ -11,7 +11,6 @@ public class MissingNumber {
 
     public int missingNUmber(int[] nums) {
         int sum = Arrays.stream(nums).sum();
-        int n = nums.length + 1;
-        return (n * (n - 1) / 2) - sum;
+        return (nums.length * (nums.length - 1) / 2) - sum;
     }
 }

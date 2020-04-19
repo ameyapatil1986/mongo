@@ -9,20 +9,22 @@ package Arrays;
 public class HIndex {
 
     /**
-     * citations - [3,0,5,1,5], [ 7 7 7 ], [ 0 0 0]
+     * citations - [0 1 2 3 3 3], [0 0 0], [7 7 7]
      */
     public int hIndex(int[] citations) {
         int[] citationsFrequency = new int[citations.length+1];
 
         for(int c: citations){
-            citationsFrequency[Math.min(citations.length,c)]++;
+            citationsFrequency[Math.min(citationsFrequency.length - 1,c)]++;
         }
 
+        // [0 1 2 3 3 3], [0 0 0], [7 7 7]
         int s = 0;
-        for (int k = citationsFrequency.length - 1 ; s < k; k--) {
+        int k;
+        for (k = citationsFrequency.length - 1 ; s <= k; k--) {
             s += citationsFrequency[k];
         }
 
-        return s;
+        return k + 1;
     }
 }

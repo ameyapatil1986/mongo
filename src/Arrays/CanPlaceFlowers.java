@@ -1,5 +1,8 @@
 package Arrays;
 
+/**
+ * https://leetcode.com/problems/can-place-flowers/
+ */
 public class CanPlaceFlowers {
 
     private static boolean canPlace(int[] arr, int i) {
@@ -11,7 +14,9 @@ public class CanPlaceFlowers {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0 && canPlace(arr, i)) {
-                arr[i++] = 1;
+                arr[i] = 1;
+
+                i++; // skip the next position.
                 count++;
 
                 if (count >= n) {

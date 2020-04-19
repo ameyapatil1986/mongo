@@ -16,14 +16,14 @@ public class TrappingRainwaterHistogram {
 
         while (low < high) {
 
-            leftMax = Math.max(arr[low], leftMax);
-            rightMax = Math.max(arr[high], rightMax);
+            leftMax = Math.max(leftMax, arr[low]);
+            rightMax = Math.max(rightMax, arr[high]);
 
             if (arr[low] < arr[high]) {
-                result  = result + (leftMax - arr[low]);
+                result += leftMax - arr[low];
                 low++;
             } else {
-                result = result + (rightMax - arr[high]);
+                result += rightMax - arr[high];
                 high--;
             }
         }

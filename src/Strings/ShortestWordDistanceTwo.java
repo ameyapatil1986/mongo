@@ -22,9 +22,9 @@ public class ShortestWordDistanceTwo {
         int i = 0, j = 0;
         while (i < indexes1.size() && j < indexes2.size()) {
             int i1 = indexes1.get(i);
-            int i2 = indexes2.get(j);
-            min = Math.min(min, Math.abs(i1 - i2));
-            if (i1 < i2) {
+            int j1 = indexes2.get(j);
+            min = Math.min(min, Math.abs(i1 - j1));
+            if (i1 < j1) {
                 i++;
             }
             else {

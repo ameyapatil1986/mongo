@@ -33,7 +33,7 @@ public class PeakElement {
 
             if ((mid == 0 || array[mid - 1] <= array[mid]) && (mid == n - 1 || array[mid] >= array[mid + 1])) {
                 return array[mid];
-            } else if (mid > 0 &&  array[mid] < array[mid - 1]) {
+            } else if (mid > 0 &&  array[mid - 1] > array[mid]) {
                 end = mid - 1; // go left.
             } else {
                 start = mid + 1;

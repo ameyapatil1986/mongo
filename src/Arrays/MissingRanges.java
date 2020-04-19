@@ -24,12 +24,12 @@ public class MissingRanges {
             res.add(getRange(lower, nums[indexOfLower] - 1));
         }
 
-        for (int i = indexOfLower; i < indexOfHigher; i++) {
+        for (int i = indexOfLower; i <   indexOfHigher; i++) {
             res.add(getRange(nums[i] + 1, nums[i + 1] - 1));
         }
 
         if (nums[indexOfHigher] < upper) {
-            res.add(getRange(nums[indexOfHigher], upper));
+            res.add(getRange(nums[indexOfHigher] + 1, upper));
         }
 
         return res;

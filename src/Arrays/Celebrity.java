@@ -50,9 +50,6 @@ public class Celebrity {
                  * 3 does not know anyone.
                  * Since 0 does not know 3, this check fails.
                  *
-                 *
-                 *
-                 *
                  */
                 if (knows(celebrity, i) || !knows(i, celebrity))
                     return -1;

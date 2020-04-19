@@ -15,33 +15,32 @@ public class BasicCalculator {
         Stack<Integer> stack = new Stack<>();
         int result = 0;
         int prevSign = 1;
-        int number = 0;
+        int prevNumber = 0;
 
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) {
-                number = number * 10 + (c - '0');
+                prevNumber = prevNumber * 10 + (c - '0');
             } else if (c == '+') {
-                result += prevSign * number;
+                result += prevSign * prevNumber;
                 prevSign = 1;
-                number = 0;
+                prevNumber = 0;
             } else if (c == '-') {
-                result += prevSign * number;
+                result += prevSign * prevNumber;
                 prevSign = -1;
-                number = 0;
+                prevNumber = 0;
             } else if (c == '(') {
                 stack.push(result);
                 stack.push(prevSign);
                 result = 0;
-                prevSign = 1;
             } else if (c == ')') {
-                result += prevSign * number;
-                number = result;
+                result += prevSign * prevNumber;
+                prevNumber = result;
                 prevSign = stack.pop();
                 result = stack.pop();
             }
         }
 
-        result += prevSign * number;
+        result += prevSign * prevNumber;
         return result;
     }
 }

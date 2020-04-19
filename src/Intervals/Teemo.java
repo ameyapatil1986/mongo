@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * Example 1:
  *
- * Input: [1,4], 2
+ * Input: [1,3], 2
  * Output: 4
  * Explanation: At time point 1, Teemo starts attacking Ashe and makes Ashe be poisoned immediately.
  * This poisoned status will last 2 seconds until the end of time point 2.

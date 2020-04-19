@@ -46,9 +46,9 @@ public class MissingPositiveInteger {
             }
         }
 
-        // [ 0, 0, 1]
+        // [ 0, 1, 2, 3]
         if(nums[0] > 0) {
-            return n;
+            return n;    // return 4.
         }
 
         // [ 1, 2, 3, 4 ]
