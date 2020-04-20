@@ -8,36 +8,48 @@ import java.util.*;
  */
 public class FindAllAnagramsInString {
 
-    public static List<Integer> count(String s, String p) {
-
+    public static List<Integer> findAllAnagrams(String s, String p) {
         List<Integer> result = new ArrayList<>();
 
-        final Map<Character, Integer> mapOfPCount = new HashMap<>();
-        for (int i = 0; i < p.length(); i++) {
-            mapOfPCount.putIfAbsent(p.charAt(i), mapOfPCount.getOrDefault(p.charAt(i), 0) + 1);
+        if (s.length() == 0 || s == null) {
+            return result;
         }
 
-        final Map<Character, Integer> mapOfSCount = new HashMap<>();
-        int count = 0;
-        for (int i = 0; i < s.length(); i++) {
+        int[] charFrequency = new int[26];
+        for (char c : p.toCharArray()) {
+            charFrequency[c - 'a'] ++;
+        }
 
-            if (mapOfPCount.containsKey(s.charAt(i))) {
-                mapOfSCount.putIfAbsent(p.charAt(i), mapOfPCount.getOrDefault(p.charAt(i), 0) + 1);
-                count++;
+        int left = 0;
+        int right = 0;
+        int count = p.length();
 
-                if (count == p.length()) {
-                    if (mapOfPCount.equals(mapOfSCount)) {
-                        result.add(i - p.length());
-                    }
+        while (right < s.length()) {
+
+            if (charFrequency[s.charAt(right) - 'a'] >= 1) {
+                count--;
+            }
+            charFrequency[s.charAt(right) - 'a']--;
+            right++;
+
+            if (count == 0) {
+                result.add(left);
+            }
+
+            if (right - left == p.length()) {
+                if (charFrequency[s.charAt(left) - 'a'] >= 0) {
+                    count++;
                 }
-            } else {
-                // O (p)
-                // https://stackoverflow.com/questions/6757868/map-clear-vs-new-map-which-one-will-be-better
-                mapOfSCount.clear();
-                count = 0;
+                charFrequency[s.charAt(left) - 'a']++;
+                left++;
             }
         }
 
         return result;
     }
+
+    public static void main(String[] args) {
+        System.out.println(findAllAnagrams("aabc", "abc"));
+    }
+
 }

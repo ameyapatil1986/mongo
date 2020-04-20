@@ -34,6 +34,9 @@ public class LongestEqualContigousZeroAndOne {
             }
         }
 
+        // it will always be 0.
+        int k = 0;
+
         Map<Integer, Integer> sumIndex = new HashMap<>();
         sumIndex.put(0, -1);
         int sum = 0;
@@ -41,10 +44,12 @@ public class LongestEqualContigousZeroAndOne {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
 
-            if (sumIndex.containsKey(sum)) {
-                max = Math.max(max, i - sumIndex.get(sum));
-            } else {
+            if (!sumIndex.containsKey(sum - k)) {
                 sumIndex.put(sum, i);
+            }
+
+            if (sumIndex.containsKey(sum - k)) {
+                max = Math.max(max, i - sumIndex.get(sum));
             }
         }
         return max;

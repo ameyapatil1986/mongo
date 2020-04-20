@@ -66,12 +66,12 @@ public class LongestPalindromeSubstring {
     }
 
     // longest palindromic substring
-    public static String longestPalindromicSubstring(String s, int[] p) {
+    public static String longestPalindromicSubstring(String s, int[] palindromeSize) {
         int length = 0;   // length of longest palindromic substring
         int center = 0;   // center of longest palindromic substring
-        for (int i = 1; i < p.length-1; i++) {
-            if (p[i] > length) {
-                length = p[i];
+        for (int i = 1; i < palindromeSize.length-1; i++) {
+            if (palindromeSize[i] > length) {
+                length = palindromeSize[i];
                 center = i;
             }
         }

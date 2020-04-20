@@ -18,11 +18,11 @@ public class LongestPalindromicSubsequence {
         for (int currLen = 2; currLen <= n; currLen++) {
             for (int i = 0; i < n - currLen + 1; i++) {
                 int j = i + currLen - 1;
-                    if (s.charAt(i) == s.charAt(j)) {
-                             palindrome[i][j] = palindrome[i+1][j-1] + 2;
-                    } else {
-                        palindrome[i][j] = Math.max(palindrome[i + 1][j], palindrome[i][j - 1]);
-                    }
+                if (s.charAt(i) == s.charAt(j)) {
+                    palindrome[i][j] = palindrome[i+1][j-1] + 2;
+                } else {
+                    palindrome[i][j] = Math.max(palindrome[i+1][j], palindrome[i][j-1]);
+                }
             }
         }
         return palindrome[0][n-1];

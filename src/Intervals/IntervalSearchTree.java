@@ -91,7 +91,6 @@ public class IntervalSearchTree {
                 inode = inode.right;
             }
         }
-
     }
 
     /**

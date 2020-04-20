@@ -26,8 +26,10 @@ public class DNASequenceRepeat {
 
         for (int i = 0; i < s.length(); i++) {
             if (i > 9)
-                rhash -= Two_POW_9 * encodings.get(s.charAt(i - 10));
+                rhash = rhash -  Two_POW_9 * encodings.get(s.charAt(i - 10));
 
+            // just assume if the first 4 characters were A C G T. Then the rhash will be equal to
+            // 8 * 0 + 4 * 1 + 2 * 2 + 3 = 8 + 4  + 4 + 3 = 19
             rhash = 2 * rhash + encodings.get(s.charAt(i));
 
             if (i > 8) {

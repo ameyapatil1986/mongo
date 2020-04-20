@@ -27,15 +27,15 @@ public class MissingPositiveInteger {
         }
 
         for(int i = 0; i < nums.length; i++) {
-            int v = Math.abs(nums[i]);
+            int index = Math.abs(nums[i]);
 
             //simply invalidating an index v and it's content
             //because we found a value v
             // [1, 2, 3, 4 ]
-            if (v == nums.length) {
+            if (index == nums.length) {
                 nums[0] = -1 * Math.abs(nums[0]);
             } else {
-                nums[v] = -1 * Math.abs(nums[v]);
+                nums[index] = -1 * Math.abs(nums[index]);
             }
         }
 

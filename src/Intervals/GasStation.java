@@ -42,7 +42,6 @@ public class GasStation {
      * https://baihuqian.github.io/2018-06-23-gas-station/
      */
     public int canCompleteCircuit(int[] gas, int[] cost) {
-
         // std
         int start = 0;
         int tank = 0;

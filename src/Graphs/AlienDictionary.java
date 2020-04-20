@@ -84,6 +84,14 @@ public class AlienDictionary {
             }
         }
 
+        /**
+         *
+         * apqr
+         * bpqr
+         * apqr
+         * bpqr
+         *
+         */
         if(sb.length() != inDegree.size()) return "";
 
         return sb.toString();

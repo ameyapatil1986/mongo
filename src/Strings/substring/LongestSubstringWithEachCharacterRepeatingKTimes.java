@@ -29,7 +29,6 @@ public class LongestSubstringWithEachCharacterRepeatingKTimes {
                 map.putIfAbsent(s.charAt(i), map.getOrDefault(s.charAt(i),0) + 1);
             }
 
-
             if (map.values().stream().allMatch(e ->  e > k)) {
                 return s.length();
             }

@@ -39,7 +39,7 @@ public class GetRandom {
             idxMap.remove(idx);
 
             if (!idxMap.isEmpty()) {
-              Integer tailElem = idxMap.get(idxMap.size());
+              Integer tailElem = idxMap.remove(idxMap.size());
               if (tailElem != null) {
                   idxMap.put(idx, tailElem);
                   valueMap.put(tailElem, idx);
