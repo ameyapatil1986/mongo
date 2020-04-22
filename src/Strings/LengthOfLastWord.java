@@ -16,13 +16,11 @@ public class LengthOfLastWord {
 
         for (int i = len - 1; i >= 0; i--) {
             char c = s.charAt(i);
-            if((c>='a' && c<='z') || (c>='A' && c<='Z')){
-                result++;
-            } else {
-                break;
+            if(c == ' '){
+                return s.length() - i - 1;
             }
         }
 
-        return result;
+        return s.length();
     }
 }

@@ -14,36 +14,20 @@ public class OneEditDistance {
             return false;
         }
 
-        int i = 0;
-        int j = 0;
-        int count = 0;
-
-        while (i < s.length() && j < t.length()){
-            if (s.charAt(i)==t.charAt(j)){
-                i++;
-                j++;
-            } else {
-                count++;
-
-                if (count>1)
-                    return false;
-
-                if (s.length() > t.length()) {
-                    i++;
-                } else if(s.length() < t.length()){
-                    j++;
-                } else {
-                    i++;
-                    j++;
+        int diff = 0;
+        if (s.length() == t.length()) {
+            for (int i = 0; i < s.length(); i++) {
+                if (s.charAt(i) != t.charAt(i)) {
+                    diff++;
+                    if (diff > 0) {
+                        return false;
+                    }
                 }
             }
+
+            return true;
         }
 
-        // abc, abcd
-        if (i < s.length() || j < s.length()){
-            count++;
-        }
-
-       return count == 1;
+        return s.substring(0, s.length() - 1).equals(t) || s.substring(1, s.length()).equals(t);
     }
 }

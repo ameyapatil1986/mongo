@@ -28,8 +28,10 @@ public class AnagramBuckets {
 
     public static void anagramBuckets(List<String> anagramBuckets) {
         Map<String, List<String>> bucketMap = new HashMap<>();
-        anagramBuckets.stream()
-            .forEach(word -> bucketMap.putIfAbsent(sortString(word), new ArrayList<>()).add(word));
+
+        for (String s : anagramBuckets) {
+          bucketMap.putIfAbsent(sortString(s), new ArrayList<>()).add(s);
+        }
     }
 
     public static void main(String[] args) {
