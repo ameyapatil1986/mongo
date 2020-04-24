@@ -35,7 +35,7 @@ public class SubstringWithWrappedAroundString {
                 maxLen = 1;
             }
 
-            charCount.put(p.charAt(i), Math.max(charCount.getOrDefault(p.charAt(i), 0), maxLen));
+            charCount.put(p.charAt(i), Math.max(charCount.getOcrDefault(p.charAt(i), 0), maxLen));
         }
 
         return charCount.values().stream().mapToInt(Integer::intValue).sum();
