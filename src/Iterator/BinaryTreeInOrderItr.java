@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/binary-search-tree-iterator/
  */
-public class BinaryTreeInOrderItr {
+public class  BinaryTreeInOrderItr {
 
     class TreeNode {
         TreeNode left;

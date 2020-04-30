@@ -74,6 +74,7 @@ public class TimeBasedMap {
                 return mid;
             }
 
+            // exactly same comparison as matrix searcg 2.
             if (list.get(mid).getTime() < timestamp && (mid == list.size() - 1 || timestamp < list.get(mid + 1).getTime())) {
                 return mid;
             }

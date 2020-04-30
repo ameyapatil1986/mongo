@@ -50,31 +50,31 @@ public class CopyArbit<T> {
         size++;
     }
 
-    public void makeArbitrary (int srcPos, int destPos) {
-        if (first == null) throw new NoSuchElementException("Linkedlist is empty.");
-
-        if (srcPos > size || srcPos < 1) {
-            throw new IllegalArgumentException("The srcPos  " + srcPos + " is out of bound");
-        }
-
-        if (destPos > size || destPos < 1) {
-            throw new IllegalArgumentException("The destPos  " + destPos + " is out of bound");
-        }
-
-        Node<T> source =  getNodeAtPos(srcPos);
-        Node<T> destination =  getNodeAtPos(destPos);
-
-        source.arbit = destination;
-    }
-
-    private Node<T> getNodeAtPos(int nodeNum) {
-        int ctr = 0;
-        Node<T> x = first;
-
-        for (; x != null && ctr < nodeNum - 1; x = x.next, ctr++);
-
-        return x;
-    }
+//    public void makeArbitrary (int srcPos, int destPos) {
+//        if (first == null) throw new NoSuchElementException("Linkedlist is empty.");
+//
+//        if (srcPos > size || srcPos < 1) {
+//            throw new IllegalArgumentException("The srcPos  " + srcPos + " is out of bound");
+//        }
+//
+//        if (destPos > size || destPos < 1) {
+//            throw new IllegalArgumentException("The destPos  " + destPos + " is out of bound");
+//        }
+//
+//        Node<T> source =  getNodeAtPos(srcPos);
+//        Node<T> destination =  getNodeAtPos(destPos);
+//
+//        source.arbit = destination;
+//    }
+//
+//    private Node<T> getNodeAtPos(int nodeNum) {
+//        int ctr = 0;
+//        Node<T> x = first;
+//
+//        for (; x != null && ctr < nodeNum - 1; x = x.next, ctr++);
+//
+//        return x;
+//    }
 
     public CopyArbit<T> getCopy() {
         if (first == null) {

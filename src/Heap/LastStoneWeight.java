@@ -31,7 +31,7 @@ public class LastStoneWeight {
         while (!pq.isEmpty()) {
             int first = pq.poll();
             int second = pq.poll();
-            int rem = Math.abs(first - second);
+            int rem = first - second;
             if (rem > 0) {
                 pq.offer(rem);
             }

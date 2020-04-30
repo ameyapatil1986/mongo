@@ -19,7 +19,7 @@ public class Reorder {
     public void reorderList(Node head) {
         if (head == null || head.next == null) return;
         Node slow = head;
-        Node fast = head;
+        Node fast = head.next;
 
         for ( ;fast != null && fast.next != null;  slow = slow.next, fast = fast.next.next);
 

@@ -69,27 +69,45 @@ public class LevelOrderTraversal<T> {
         queue.add(root);
         queue.add(null);
 
-        List<T> currentLevel = new ArrayList<>();
+        int max = 1; // width is 1 for first level with only a root.
 
         while (!queue.isEmpty()) {
             TreeNode<T> currNode = queue.poll();
 
             if (currNode == null) {
-                levelOrder.add(currentLevel);
+                max = Math.max(max, queue.size());
 
-                // if next level existed, then size should have been > 2.
                 if (queue.size() > 0) {
-                    currentLevel = new ArrayList<>();
                     queue.add(null); // add new end-of-row-marker.
                 }
+
             } else {
-                currentLevel.add(currNode.item);
 
                 if (currNode.left != null) queue.add(currNode.left);
                 if (currNode.right != null) queue.add(currNode.right);
+
             }
         }
 
         return levelOrder;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -125,7 +125,7 @@ public class JoinLevelsWithoutAuxStore<E> {
 
             List<TreeNode<E>> nodeList= new ArrayList<TreeNode<E>>();
 
-            for (TreeNode<E> currentNode = firstNode; currentNode != null;) {
+            for (TreeNode<E> currentNode = firstNode; currentNode != null; ) {
                 if (currentNode.left != null) {
                     nodeList.add(currentNode.left);
                 }

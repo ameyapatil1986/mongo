@@ -74,57 +74,75 @@ public class Diameter {
         }
     }
 
-
-    public int diameter() {
-        return diameterHelper(root);
+    public class DiameterData {
+        int diameter;
     }
 
-    private int diameterHelper(TreeNode node) {
-        if (node == null) {
+    public int calculateDiamter(TreeNode node, DiameterData pDiameter) {
+        if (node == null)
             return 0;
-        }
 
-        int currentDiam = binaryTreeHeight(node.left) + binaryTreeHeight(node.right) + 1;
+        int left = calculateDiamter(node.left, pDiameter);
+        int right = calculateDiamter(node.right, pDiameter);
 
-        int leftDiam = diameterHelper(node.left);
-        int rightDiam = diameterHelper(node.right);
+        pDiameter.diameter = Math.max(pDiameter.diameter, left + 1 + right);
 
-        // use math.max as it makes code more readable.
-        return Math.max(currentDiam,  Math.max(leftDiam, rightDiam));
+        return Math.max(left, right) + 1;
     }
 
-    /**
-     * If the term is found then use the term:
-     * http://stackoverflow.com/questions/18903631/what-is-the-term-for-number-of-nodes-from-root-to-the-leaf-in-binary-tree
-     *
-     * else for sake of interview lets stick to the term height.
-     *
-     */
-    private int binaryTreeHeight(TreeNode node) {
-        if (node == null) {
-            return 0; // NOTE: "This is a count of number of nodes (inclusive) not count of number of edges"
-        }
-        int leftHeight = binaryTreeHeight(node.left);
-        int rightHeight = binaryTreeHeight(node.right);
 
-        return Math.max(rightHeight, leftHeight) + 1;
-    }
+    //    public int diameter() {
+//        return diameterHelper(root);
+//    }
+//
+//    private int diameterHelper(TreeNode node) {
+//        if (node == null) {
+//            return 0;
+//        }
+//
+//        int currentDiam = binaryTreeHeight(node.left) + binaryTreeHeight(node.right) + 1;
+//
+//        int leftDiam = diameterHelper(node.left);
+//        int rightDiam = diameterHelper(node.right);
+//
+//        // use math.max as it makes code more readable.
+//        return Math.max(currentDiam,  Math.max(leftDiam, rightDiam));
+//    }
+
+
+
+//    /**
+//     * If the term is found then use the term:
+//     * http://stackoverflow.com/questions/18903631/what-is-the-term-for-number-of-nodes-from-root-to-the-leaf-in-binary-tree
+//     *
+//     * else for sake of interview lets stick to the term height.
+//     *
+//     */
+//    private int binaryTreeHeight(TreeNode node) {
+//        if (node == null) {
+//            return 0; // NOTE: "This is a count of number of nodes (inclusive) not count of number of edges"
+//        }
+//        int leftHeight = binaryTreeHeight(node.left);
+//        int rightHeight = binaryTreeHeight(node.right);
+//
+//        return Math.max(rightHeight, leftHeight) + 1;
+//    }
 
 
     public static void main(String[] args) {
-        // balanced tree
-        Integer[] a = {1, 2, 3, 4, 5, 6, 7};
-        Diameter diameter = new Diameter();
-        diameter.createBinaryTree(a);
-        System.out.print("Expected 5, Actual: ");
-        System.out.println(diameter.diameter());
-
-        // unbalanced tree
-        Integer[] a1 = {1, 2, 3, null, null, 6, 7};
-        Diameter diameter1 = new Diameter();
-        diameter1.createBinaryTree(a1);
-        System.out.print("Expected 4, Actual: ");
-        System.out.println(diameter1.diameter());
+//        // balanced tree
+//        Integer[] a = {1, 2, 3, 4, 5, 6, 7};
+//        Diameter diameter = new Diameter();
+//        diameter.createBinaryTree(a);
+//        System.out.print("Expected 5, Actual: ");
+//        System.out.println(diameter.diameter());
+//
+//        // unbalanced tree
+//        Integer[] a1 = {1, 2, 3, null, null, 6, 7};
+//        Diameter diameter1 = new Diameter();
+//        diameter1.createBinaryTree(a1);
+//        System.out.print("Expected 4, Actual: ");
+//        System.out.println(diameter1.diameter());
 
     }
 }

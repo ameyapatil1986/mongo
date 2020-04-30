@@ -47,6 +47,7 @@ public class WordBreak2 {
                             list.add(sub);
                             pos[j]=list;
                         } else {
+                            // eg: bate and ate.
                             pos[j].add(sub);
                         }
 

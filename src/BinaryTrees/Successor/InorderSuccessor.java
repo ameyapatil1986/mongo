@@ -26,27 +26,27 @@ public class InorderSuccessor {
         if(root==null)
             return null;
 
-        TreeNode next = null;
-        TreeNode c = root;
-        while (c!=null && c.val!=p.val) {
-            if(c.val > p.val){
-                next = c;
-                c = c.left;
+        TreeNode prev = null;
+        TreeNode current = root;
+        while (current!=null && current.val != p.val) {
+            if(p.val < current.val){
+                prev = current;
+                current = current.left;
             }else{
-                c= c.right;
+                current= current.right;
             }
         }
 
-        if(c==null)
+        if(current==null)
             return null;
 
-        if(c.right==null)
-            return next;
+        if(current.right==null)
+            return prev;
 
-        c = c.right;
-        while(c.left!=null)
-            c = c.left;
+        current = current.right;
+        while(current.left!=null)
+            current = current.left;
 
-        return c;
+        return current;
     }
 }

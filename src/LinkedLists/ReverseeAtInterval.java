@@ -94,12 +94,10 @@ public class ReverseeAtInterval<T> implements Iterable<T> {
 
             if (last == null) {
                 first = current.first;
-                last = current.last;
             } else {
                 last.next = current.first;
-                last = current.last;
             }
-
+            last = current.last;
             inputNode = current.next;
         }
 

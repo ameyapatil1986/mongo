@@ -40,8 +40,9 @@ public class SubtreeMaxAvg {
         int sum = 0;
         int count = 0;
         double maxAvg = 0.0;
+
         for (TreeNode currChild : node.nodes) {
-            NodeData nodeData = getAvg(node);
+            NodeData nodeData = getAvg(currChild);
             sum += nodeData.sum;
             count += nodeData.count;
             maxAvg = Math.max(maxAvg, nodeData.maxAvgSoFar);
