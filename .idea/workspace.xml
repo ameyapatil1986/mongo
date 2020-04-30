@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0624665e-5253-4ea4-a620-c1973536b705" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/container/ContainerWithMostWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/container/ContainerWithMostWater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/missingNumber/MissingNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/remove/RemoveDuplicateSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/remove/RemoveDuplicateSorted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/CountIslands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/CountIslands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/LongestIncreasingPathMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/LongestIncreasingPathMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/WallsAndGates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/WallsAndGates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/OverlappingRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/OverlappingRectangles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/PrimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/PrimeUtil.java" afterDir="false" />
-    </list>
+    <list default="true" id="0624665e-5253-4ea4-a620-c1973536b705" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,19 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Arrays/remove/RemoveDuplicateSorted.java">
+        <entry file="file://$PROJECT_DIR$/src/Arrays/search/NumberOfOccurrencesInSortedArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strings/RunLengthEncoding.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="91" />
+            <state relative-caret-position="325">
+              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -154,13 +135,6 @@
               <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mongo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Arrays" type="462c0819:PsiDirectoryNode" />
-              <item name="remove" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Backtrack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -172,7 +146,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588262423369" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588263362026" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -252,7 +226,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1494" y="23" width="1783" height="1018" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80331755" visible="true" weight="0.1579552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -325,13 +298,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BinaryTrees/CountNodesInAGivenRange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BinaryTrees/CreateCompleteBinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -677,8 +643,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Arrays/remove/RemoveDuplicateSorted.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="789">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arrays/search/NumberOfOccurrencesInSortedArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
