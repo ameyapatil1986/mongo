@@ -28,14 +28,12 @@ public class CountIslands {
         }
     }
 
-    private static void dfs(int row, int col, int[][] m, boolean[][] visited) {
+    private static void dfs(int row, int col, int[][] m) {
         if (row < 0 || row == m.length || col < 0 || col == m[0].length) return; // initial check
 
-        if (m[row][col] == 0) return; // initial check
+        if (m[row][col] != 1) return; // initial check
 
-        if (visited[row][col]) return; // visited = true check
-
-        visited[row][col] = true; // mark visited.
+        m[row][col] = -1;
 
         /**
          *  https://www.careercup.com/question?id=5998719358992384
@@ -43,7 +41,7 @@ public class CountIslands {
          */
         for (Direction direction : Direction.values()) {
             // sum = sum + dfs();
-            dfs(row + direction.getRowDelta(), col + direction.getColDelta(), m, visited);
+            dfs(row + direction.getRowDelta(), col + direction.getColDelta(), m);
         }
         // return sum + 1;
     }
@@ -60,12 +58,15 @@ public class CountIslands {
 
         for (int row = 0; row < m.length; row++) {
             for (int col = 0; col < m[0].length; col++) {
-                if (m[row][col] == 1 && !visited[row][col]) {
-                    dfs(row, col, m, visited);
+                if (m[row][col] == 1) {
+                    dfs(row, col, m);
                     count++;
                 }
             }
         }
+
+        // go through matrix and convert all -1's into +1's
+
         return count;
     }
 }

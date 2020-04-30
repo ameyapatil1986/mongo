@@ -54,6 +54,7 @@ public class LongestIncreasingPathMatrix {
             return 0;
         }
 
+        // remember we are counting backwards.
         if (dp[row][col] > 0) {
             return dp[row][col];
         }

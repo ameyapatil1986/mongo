@@ -69,10 +69,13 @@ public class WallsAndGates {
         }
 
         // false condition  + already visited.
-        if (rooms[row][col] == -1 || distance > rooms[row][col]) {
+        if (rooms[row][col] == -1) {
             return;
         }
 
+        if (distance > rooms[row] [col]) {
+            return;
+        }
 
         // Set condition + Mark as visited
         rooms[row][col] = distance;

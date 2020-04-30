@@ -30,7 +30,7 @@ public final class RemoveDuplicateSorted {
     /*
      * NOTE - Since, input is sorted, we ignore the case of 'order NOT maintained-same array'.
      */
-    public static int orderMaintainedSameArray(int[] a) {
+    public static int[] orderMaintainedSameArray(int[] a) {
         if (a == null) {
             throw new NullPointerException();
         } 
@@ -39,6 +39,9 @@ public final class RemoveDuplicateSorted {
         
         for (int i = 0; i < a.length; i++) {
             // include last element by default, if not the last element, do the check for duplication.
+
+            // run-length enocoding is the opposite.
+            //  while (i < (source.length() - 1) && source.charAt(i) == source.charAt(i + 1)) {
             if (i == a.length - 1 || a[i] != a[i + 1]) {
                 a[ctr] = a[i];
                 ctr++;
@@ -49,6 +52,8 @@ public final class RemoveDuplicateSorted {
          * Since collection sort does not return an array we too, will not
          * return an array.
          */
-        return ctr;
+        int[] b = new int[ctr];
+        System.arraycopy(a, 0, b, 0, ctr);
+        return b;
     }
 }
