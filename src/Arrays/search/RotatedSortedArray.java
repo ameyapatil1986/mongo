@@ -51,6 +51,7 @@ public class RotatedSortedArray {
     public static int pivotSearch(int[] a, int x) {
         int pivot = getPivot(a);
 
+        // Array is already sorted.
         if (pivot == -1) {
             return binarySearch(a, 0, a.length - 1, x);
         }

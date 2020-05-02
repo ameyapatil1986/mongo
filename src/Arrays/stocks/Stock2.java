@@ -3,6 +3,7 @@ package Arrays.stocks;
 import java.util.*;
 
 /**
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * https://www.cluelesscode.com/best-time-to-buy-and-sell-stock-ii-cpp/
  */
 public class Stock2 {

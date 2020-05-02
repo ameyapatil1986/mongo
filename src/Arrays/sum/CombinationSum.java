@@ -41,9 +41,7 @@ public class CombinationSum {
         return ret;
     }
 
-    public static void combinationSumHelper(int[] candidates, int target, int start, int sum,
-        List<ArrayList<Integer>> ret,
-        List<Integer> list) {
+    public static void combinationSumHelper(int[] candidates, int target, int start, int sum, List<ArrayList<Integer>> ret, List<Integer> list) {
 
         if (sum > target) return;// Note: This method cannot finish large set if this line is missing
 

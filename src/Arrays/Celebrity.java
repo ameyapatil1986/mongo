@@ -37,8 +37,8 @@ public class Celebrity {
             if (i != celebrity) {
                 /**
                  * knows(celebrity, i)
-                 * 0 -> 1
-                 * 1 -> 2
+                 * 0 -> 1, 2, 3
+                 * 1 -> 2, 3
                  * 2 -> 3
                  * 3 -> 0
                  * Since 3 knows 0, this check fails.

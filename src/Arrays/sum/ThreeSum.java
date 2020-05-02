@@ -14,33 +14,36 @@ public class ThreeSum {
 
         ArrayList<List<Integer>> result = new ArrayList<>();
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length - 2; i++) {
             // The solution set must not contain duplicate triplets.
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
-            int j = i + 1;
-            int k = nums.length - 1;
+            int k = i + 1;
+            int l = nums.length - 1;
 
-            while (j < k) {
-                if (k < nums.length - 1 && nums[k] == nums[k + 1]) {
-                    k--;
-                    continue;
+            while (k < l) {
+                if (nums[i] + nums[k] + nums[l] > 0) {
+                    l--;
+                } else if (nums[i] + nums[k] + nums[l] < 0) {
+                    k++;
+                } else {
+                    ArrayList<Integer> list = new ArrayList<>();
+                    list.add(nums[i]);
+                    list.add(nums[k]);
+                    list.add(nums[l]);
+                    result.add(list);
+                    k++;
+                    l--;
                 }
 
-                if (nums[i] + nums[j] + nums[k] > 0) {
-                    k--;
-                } else if (nums[i] + nums[j] + nums[k] < 0) {
-                    j++;
-                } else {
-                    ArrayList<Integer> l = new ArrayList<>();
-                    l.add(nums[i]);
-                    l.add(nums[j]);
-                    l.add(nums[k]);
-                    result.add(l);
-                    j++;
-                    k--;
+                while(k<l && nums[l]==nums[l+1] ){
+                    l--;
+                }
+
+                while(k<l && nums[k]==nums[k-1]){
+                    k++;
                 }
             }
         }

@@ -31,7 +31,7 @@ public class HIndex {
     public int hIndex(int[] citations) {
         int[] citationsFrequency = new int[citations.length+1];
 
-        for(int c: citations){
+        for(int c: citations) {
             citationsFrequency[Math.min(citationsFrequency.length - 1,c)]++;
         }
 

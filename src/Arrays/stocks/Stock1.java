@@ -1,17 +1,20 @@
 package Arrays.stocks;
 
+/**
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ */
 public class Stock1 {
 
     public int maxProfit(int[] prices) {
         if(prices==null||prices.length<=1)
             return 0;
 
-        int min=prices[0]; // min so far
-        int result=0;
+        int min = prices[0]; // min so far
+        int result = 0;
 
-        for(int i=1; i<prices.length; i++){
-            result = Math.max(result, prices[i]-min);
-            min = Math.min(min, prices[i]);
+        for(int i = 1; i < prices.length; i++) {
+            result = Math.max(result, prices[i] - min);
+            min    = Math.min(min, prices[i]);
         }
 
         return result;

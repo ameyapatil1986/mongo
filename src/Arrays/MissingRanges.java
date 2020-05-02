@@ -17,8 +17,13 @@ public class MissingRanges {
         }
 
 
-        int indexOfLower = 0;// findIndexOfLower. if lower is missing then the one which is higher.
-        int indexOfHigher = 0;// findIndexOfHigher. if higher is missing then the one which is lesser..
+        // findIndexOfLower. if lower is missing then the one which is higher.
+        // if (a[mid] > x && ((mid == 0) || (x  < a[mid - 1]))
+        int indexOfLower = 0;
+
+        // findIndexOfHigher. if higher is missing then the one which is lesser.
+        // if (a[mid] < x && ((mid == a.length - 1) || x < a[mid + 1]))
+        int indexOfHigher = 0;
 
         if (lower < nums[indexOfLower]) {
             res.add(getRange(lower, nums[indexOfLower] - 1));

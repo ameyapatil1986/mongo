@@ -12,23 +12,18 @@ public class PlusOne {
         int carry = 1;
         for (int i = digits.length - 1; i >= 0; i--) {
             int sum = digits[i] + carry;
+            digits[i] = sum % 10;
             if (sum >= 10) {
                 carry = 1;
             } else {
-                carry = 0;
+                return digits;;
             }
-            digits[i] = sum % 10;
         }
 
-        if (carry == 1) {
-            int[] result = new int[digits.length + 1];
-            System.arraycopy(digits, 0, result, 1, digits.length);
-            result[0] = 1;
-            return result;
-        } else {
-            //int[] result = new int[digits.length];
-            return digits;
-        }
+        int[] result = new int[digits.length + 1];
+        System.arraycopy(digits, 0, result, 1, digits.length);
+        result[0] = 1;
+        return result;
     }
 
 }

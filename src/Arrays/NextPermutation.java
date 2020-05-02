@@ -42,7 +42,7 @@ public class NextPermutation {
 
         swap(nums, mark, idx);
 
-        reverse(nums, mark, nums.length - 1);
+        reverse(nums, mark + 1, nums.length - 1);
     }
 
     private void swap(int[] nums, int i, int j) {
