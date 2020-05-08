@@ -2,6 +2,10 @@ package Matrices;
 
 import java.util.*;
 
+
+/**
+ * O(n)
+ */
 public class ValidSudoku {
 
    public boolean isSudokuValidator(char[][] board) {
@@ -10,6 +14,9 @@ public class ValidSudoku {
            for (int  j = 0; j < 9; j++) {
                char current_val = board[i][j];
                if (current_val != '.') {
+                   /**
+                    * set.add returns true if this set did not already contain the specified element
+                    */
                    if (!seen.add(current_val + " found in row " + i) ||
                         !seen.add(current_val + " found in col " + j) ||
                          !seen.add(current_val + " found in sub_box " + i/3 + "-" + j/3)) {

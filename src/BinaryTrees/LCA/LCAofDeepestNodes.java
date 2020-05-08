@@ -53,8 +53,10 @@ public class LCAofDeepestNodes {
     }
     private Pair getLca(TreeNode pNode, int d) {
         if (pNode == null) return new Pair(null, d);
+
         Pair l = getLca(pNode.left, d + 1);
         Pair r = getLca(pNode.right, d + 1);
+
         if (l.d == r.d) {
             return new Pair(pNode, l.d);
         } else {

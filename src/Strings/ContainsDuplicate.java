@@ -2,6 +2,10 @@ package Strings;
 
 import java.util.*;
 
+
+/**
+ * O(n)
+ */
 public class ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {

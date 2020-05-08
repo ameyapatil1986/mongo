@@ -13,6 +13,8 @@ import java.util.*;
  * Input: "zab"
  * Output: 6
  * Explanation: There are six substrings "z", "a", "b", "za", "ab", "zab" of string "zab" in the string s
+ *
+ * O(n)
  */
 public class SubstringWithWrappedAroundString {
 
@@ -35,7 +37,7 @@ public class SubstringWithWrappedAroundString {
                 maxLen = 1;
             }
 
-            charCount.put(p.charAt(i), Math.max(charCount.getOcrDefault(p.charAt(i), 0), maxLen));
+            charCount.put(p.charAt(i), Math.max(charCount.getOrDefault(p.charAt(i), 0), maxLen));
         }
 
         return charCount.values().stream().mapToInt(Integer::intValue).sum();

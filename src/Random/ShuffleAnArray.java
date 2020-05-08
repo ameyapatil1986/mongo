@@ -3,6 +3,10 @@ package Random;
 import java.util.Random;
 import java.util.*;
 
+
+/**
+ * O(n)
+ */
 public class ShuffleAnArray {
 
     int[] original = null;

@@ -5,6 +5,8 @@ import java.util.*;
 
 /**
  * http://buttercola.blogspot.com/2016/01/leetcode-wiggle-sort-ii.html
+ *
+ * O(nlogn)
  */
 public class WiggleSort {
 

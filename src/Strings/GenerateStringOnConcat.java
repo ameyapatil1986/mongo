@@ -1,5 +1,8 @@
 package Strings;
 
+/**
+ * O(n)
+ */
 public class GenerateStringOnConcat {
     // Function that returns true
     // if str = a + b or str = b + a

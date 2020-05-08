@@ -12,6 +12,9 @@ import java.util.*;
  *
  *
  *  Sample example: s = "3[a2[b]]" return "abbabbabb".
+ *
+ *
+ *  Time complexity: O(n), according to : https://zhuhan0.blogspot.com/2017/09/394-decode-string.html
  */
 public class DecodeString {
 

@@ -8,6 +8,10 @@ package Strings;
  *      1 1
  *      2 1
  *      1 2 1 1
+ *
+ *  The overall time complexity is O(ln).
+ *  l - length of string.
+ *  n - number of strings.
  */
 public class CountAndSay {
 

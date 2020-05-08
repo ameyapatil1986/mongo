@@ -1,5 +1,8 @@
 package Matrices;
 
+/**
+ * O ( n * m )
+ */
 public class MaximumRectangularSubmatrixOf1s {
 
     public int maximum(int input[][]) {

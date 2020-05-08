@@ -5,6 +5,8 @@ import java.util.*;
 
 /**
  * https://leetcode.com/articles/find-and-replace-pattern/
+ *
+ * O(n)
  */
 public class FindAndReplacePattern {
 

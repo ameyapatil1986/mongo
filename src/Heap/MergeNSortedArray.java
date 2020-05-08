@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 
 /**
  * Complexity:
- * Time : O (nm log n ) :
+ * Time : O (m  n-log-n ) :
  * n is the number of lists.
  * m is the max size of list.
  *

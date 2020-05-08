@@ -9,11 +9,11 @@ import java.util.Queue;
 /**
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  */
-public class LevelOrderTraversal<T> {
+public class MaxWidth<T> {
 
     private TreeNode<T> root;
 
-    public LevelOrderTraversal(List<T> items) {
+    public MaxWidth(List<T> items) {
         create(items);
     };
 

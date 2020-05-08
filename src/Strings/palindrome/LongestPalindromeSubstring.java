@@ -16,8 +16,11 @@ package Strings.palindrome;
  *
  ******************************************************************************/
 
-public class LongestPalindromeSubstring {
 
+/**
+ * Complexity: O(n)
+ */
+public class LongestPalindromeSubstring {
 
     static char[] getFormattedArray(String s) {
         char[] t = new char[s.length() * 2 + 1];

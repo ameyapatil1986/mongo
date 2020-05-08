@@ -14,6 +14,9 @@ import java.util.ArrayList;
  *
  * Input: "()())()"
  * Output: ["()()()", "(())()"]
+ *
+ * Complexity:
+ * O( length * 2 ^ (length/2) )
  */
 public class RemoveInvalidParen {
 

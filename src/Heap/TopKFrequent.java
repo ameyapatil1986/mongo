@@ -3,6 +3,10 @@ package Heap;
 import java.util.List;
 import java.util.*;
 
+
+/**
+ * O(n log k )
+ */
 public class TopKFrequent {
 
     public List<Integer> topKFrequent(int[] nums, int k) {

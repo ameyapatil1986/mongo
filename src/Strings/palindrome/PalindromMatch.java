@@ -1,5 +1,9 @@
 package Strings.palindrome;
 
+/**
+ * Complexity:
+ * O(n)
+ */
 public class PalindromMatch {
 
     public static double countPalindrome(String s) {

@@ -8,14 +8,16 @@ import java.util.*;
  * Complexity: http://www.geeksforgeeks.org/longest-common-prefix-set-4-binary-search/
  *
  * N = Number of strings
- * M = Length of the largest string string
+ * M = Length of the smallest string
  *
- * Time complexity is O(NM log M)
+ * Time complexity is O(N  * M log M)
  *
  *
  * Sample example
  * Input: ["flower","flow","flight"]
  * Output: "fl"
+ *
+ * Complexity:
  *
  */
 public class LongestPrefix {

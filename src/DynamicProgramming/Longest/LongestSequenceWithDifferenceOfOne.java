@@ -33,7 +33,7 @@ public class LongestSequenceWithDifferenceOfOne {
                 // If the element is consecutive
                 // then consider this subsequence
                 // and update dp[i] if required.
-                if ((arr[j] + 1 == arr[i]) || (arr[j] - 1 == arr[j]))
+                if (Math.abs(arr[j] - arr[i]) == 1)
                     dp[i] = Math.max(dp[i], dp[j]+1);
             }
         }

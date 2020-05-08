@@ -44,15 +44,19 @@ public class DesignTwitter {
         for(int uid: allPeopleUserFollows) {
             for (Tweet tweet : tweetMap.get(uid)) {
                 queue.add(tweet);
+                if (queue.size() > 10) {
+                    queue.poll();
+                }
             }
         }
 
         final List<Tweet> result = new ArrayList<Tweet>();
-        while(!queue.isEmpty() && result.size() < 10) {
+        while(!queue.isEmpty()) {
             Tweet top = queue.poll();
             result.add(top);
         }
 
+        Collections.reverse(result);
         return result;
     }
 

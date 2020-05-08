@@ -11,7 +11,7 @@ public class MaxSwap {
     public int maximumSwap(int num) {
 
         // convert number into an array
-        int[] A = new int[Integer.toString(num).length()];
+        int[] A = new int[String.valueOf(num).length()];
         for (int i = A.length - 1; i  >= 0 ; i--) {
             A[i] = num % 10;
             num = num / 10;
@@ -44,6 +44,7 @@ public class MaxSwap {
                 }
             }
         }
+
         return num;
     }
 }

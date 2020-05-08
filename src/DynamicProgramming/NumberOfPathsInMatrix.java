@@ -5,7 +5,7 @@ package DynamicProgramming;
  * https://www.programcreek.com/2014/05/leetcode-unique-paths-java/
  *
  */
-public class NumberOfPathsInMatrix {
+public class  NumberOfPathsInMatrix {
 
     // Returns count of possible paths to reach
     // cell at row number m and column number n from

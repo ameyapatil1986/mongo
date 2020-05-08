@@ -7,6 +7,10 @@ import java.util.*;
  * https://stackoverflow.com/questions/25952326/find-the-length-of-the-longest-valid-parenthesis-sequence-in-a-string-in-on-t
  *
  *   ")())"
+ *
+ *  Complexity:
+ *  O (n) - both time and space.
+ *
  */
 public class LongestValidParen {
 

@@ -12,7 +12,7 @@ import java.util.*;
 public class PerfectSquares {
 
     public int numSquares(int n) {
-        int[] dp = new int[n+1];
+        int[] dp = new int[n+1]; // i think this n + 1 has been added only for sake of simplicity.
         Arrays.fill(dp, Integer.MAX_VALUE);
 
         for (int i = 1; i <= n; i++) {

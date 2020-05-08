@@ -3,6 +3,10 @@ package Strings.palindrome;
 
 import java.util.stream.*;
 
+
+/**
+ * Complexity O(n)
+ */
 public class Palindrome {
 
     public boolean isPalindromeUsingIntStream(String s) {

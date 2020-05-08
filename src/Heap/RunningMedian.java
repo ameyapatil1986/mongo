@@ -17,7 +17,7 @@ import java.util.Random;
 
 /**
  * Complexity
- * O (nlogn), where n is the total sum of all elements.
+ * O (nlogn), where n is the total count of all elements.
  *
  * BB:
  * 5

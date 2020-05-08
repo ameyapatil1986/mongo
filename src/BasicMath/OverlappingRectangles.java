@@ -9,9 +9,9 @@ public class OverlappingRectangles {
 
     /**
      *  0 - left
-     *  1 - botton
+     *   1 - botton
      *  2 - right
-     *  3 - top
+     *   3 - top
      */
     public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
         // right x < left x

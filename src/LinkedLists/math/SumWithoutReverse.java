@@ -53,13 +53,11 @@ public class SumWithoutReverse {
         Node p2 = fetchNodeAtEqualLevel(ll.first, len2 - len1);
 
         NodeData d = recursively(p1, p2);
-        if (len1 > len2) {
-            recursiveLongerLinkedList(p1, len1 - len2, d);
-        } else {
-            recursiveLongerLinkedList(p2, len2 - len1, d);
-        }
 
-        return null;
+        recursiveLongerLinkedList(p1, len1 - len2, d);
+        recursiveLongerLinkedList(p2, len2 - len1, d);
+
+        return d.node;
     }
 
     // return an object with node and carry
@@ -81,7 +79,7 @@ public class SumWithoutReverse {
     }
 
     public NodeData recursiveLongerLinkedList(Node n1, int diff, NodeData pNodeData) {
-        if (diff == 0) {
+        if (diff <= 0) {
             return pNodeData;
         }
 

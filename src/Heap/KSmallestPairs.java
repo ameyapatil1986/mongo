@@ -35,7 +35,8 @@ import java.util.*;
  *
  * https://letstalkalgorithms.com/find-k-pairs-with-smallest-sum-java-solution/
  * Output would be [[1,2],[3,2],[4,2]]
- *  O(K logK).
+ *
+ * O(K logK).
  *
  */
 public class KSmallestPairs {

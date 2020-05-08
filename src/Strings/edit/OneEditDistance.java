@@ -3,6 +3,9 @@ package Strings.edit;
 /**
  * https://leetcode.com/problems/one-edit-distance/
  * https://www.programcreek.com/2014/05/leetcode-one-edit-distance-java/
+ *
+ *  Complexity:
+ *  O(n)
  */
 public class OneEditDistance {
 
@@ -19,7 +22,7 @@ public class OneEditDistance {
             for (int i = 0; i < s.length(); i++) {
                 if (s.charAt(i) != t.charAt(i)) {
                     diff++;
-                    if (diff > 0) {
+                    if (diff > 1) {
                         return false;
                     }
                 }

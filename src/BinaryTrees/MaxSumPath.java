@@ -33,11 +33,11 @@ public class MaxSumPath {
         if (node == null)
             return 0;
 
-        int left = Math.max(0, calculateSum(node.left, pMaxSum));
-        int right = Math.max(0, calculateSum(node.right, pMaxSum));
+        int leftSum = Math.max(0, calculateSum(node.left, pMaxSum));
+        int rightSum = Math.max(0, calculateSum(node.right, pMaxSum));
 
-        pMaxSum.maxSum = Math.max(pMaxSum.maxSum, left + node.val + right);
+        pMaxSum.maxSum = Math.max(pMaxSum.maxSum, leftSum + node.val + rightSum);
 
-        return Math.max(left, right) + node.val;
+        return Math.max(leftSum, rightSum) + node.val;
     }
 }

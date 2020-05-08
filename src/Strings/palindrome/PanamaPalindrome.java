@@ -2,6 +2,9 @@ package Strings.palindrome;
 
 /**
  * https://leetcode.com/problems/valid-palindrome/
+ *
+ * Complexity:
+ * O(n)
  */
 public class PanamaPalindrome {
 

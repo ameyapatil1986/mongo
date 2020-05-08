@@ -5,6 +5,8 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/max-points-on-a-line/
+ *
+ * O(n2)
  */
 public class MaxPointsOnSameLine {
 
@@ -16,7 +18,7 @@ public class MaxPointsOnSameLine {
     public double getSlope(Point[] points, int i, int j) {
         // horizontal line ( when y is equal ) has slope of 0.
         // veritical line ( when x is equal ) is slope of infinity
-        return points[j].y == points[i].y ? 0.0 : (1.0 * (points[j].y - points[i].y)) / (points[j].x - points[i].x);
+        return (1.0 * (points[j].y - points[i].y)) / (points[j].x - points[i].x);
     }
 
     public int maxPoints(Point[] points) {

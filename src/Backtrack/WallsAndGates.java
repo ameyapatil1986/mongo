@@ -43,32 +43,22 @@ public class WallsAndGates {
         int m = rooms.length;
         int n = rooms[0].length;
 
-        boolean[][] visited = new boolean[m][n];
-
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (rooms[i][j] == 0) {
-                    wallsAndGatesHelper(i, j, 0, visited, rooms);
+                    wallsAndGatesHelper(i, j, 0, rooms);
                 }
             }
         }
     }
 
-    private void wallsAndGatesHelper(int row, int col, int distance, boolean[][] visited, int[][] rooms) {
+    private void wallsAndGatesHelper(int row, int col, int distance, int[][] rooms) {
         if (row < 0 || row >= rooms.length || col < 0 || col >= rooms[0].length) {
             return;
         }
 
-        /**
-         * if ( false condition || already visited ) return
-         * set stuff  + set visisted = true
-         */
 
-        if (visited[row][col]) {
-            return;
-        }
-
-        // false condition  + already visited.
+        // false condition
         if (rooms[row][col] == -1) {
             return;
         }
@@ -79,17 +69,13 @@ public class WallsAndGates {
 
         // Set condition + Mark as visited
         rooms[row][col] = distance;
-        visited[row][col] = true;
 
 
         for (Direction dir : Direction.values()) {
             int newRow = row + dir.getY();
             int newCol = col + dir.getX();
 
-            wallsAndGatesHelper(newRow, newCol, distance + 1, visited, rooms);
+            wallsAndGatesHelper(newRow, newCol, distance + 1, rooms);
         }
-
-        // Mark as unvisited
-        visited[row][col] = false;
     }
 }

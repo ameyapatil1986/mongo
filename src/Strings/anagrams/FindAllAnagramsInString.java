@@ -5,51 +5,52 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/find-all-anagrams-in-a-string/
+ * https://github.com/cherryljr/LeetCode/blob/master/Find%20All%20Anagrams%20in%20a%20String.java
+ *
+ * Complexity:
+ * O(n)
  */
 public class FindAllAnagramsInString {
 
-    public static List<Integer> findAllAnagrams(String s, String p) {
-        List<Integer> result = new ArrayList<>();
-
-        if (s.length() == 0 || s == null) {
-            return result;
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> ans = new ArrayList<>();
+        if (s == null || s.length() == 0 || s.length() < p.length()) {
+            return ans;
         }
 
-        int[] charFrequency = new int[26];
+        Map<Character, Integer> map = new HashMap<>();
         for (char c : p.toCharArray()) {
-            charFrequency[c - 'a'] ++;
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        int left = 0;
-        int right = 0;
-        int count = p.length();
+        // The number of distinct characters
+        int counter = map.size();
+        for (int left = 0, right = 0; right < s.length(); right++) {
 
-        while (right < s.length()) {
-
-            if (charFrequency[s.charAt(right) - 'a'] >= 1) {
-                count--;
-            }
-            charFrequency[s.charAt(right) - 'a']--;
-            right++;
-
-            if (count == 0) {
-                result.add(left);
-            }
-
-            if (right - left == p.length()) {
-                if (charFrequency[s.charAt(left) - 'a'] >= 0) {
-                    count++;
+            if (map.containsKey(s.charAt(right))) {
+                map.put(s.charAt(right), map.get(s.charAt(right)) - 1);
+                if (map.get(s.charAt(right)) == 0) {
+                    counter -= 1;
                 }
-                charFrequency[s.charAt(left) - 'a']++;
+            }
+
+            while (counter <= 0) {
+
+                if (right - left + 1 == p.length()) {
+                    ans.add(left);
+                }
+
+                // put it back: eg:  xyaaaa and p is aaa
+                if (map.containsKey(s.charAt(left))) {
+                    map.put(s.charAt(left), map.get(s.charAt(left)) + 1);
+                    counter += 1;
+                }
+
                 left++;
             }
         }
 
-        return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(findAllAnagrams("aabc", "abc"));
+        return ans;
     }
 
 }

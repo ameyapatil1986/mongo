@@ -5,22 +5,22 @@ package Arrays;
  */
 public class FirstBadVersion {
 
-    public int firstBadVersion(int n) {
-        int i = 1, j = n;
+    boolean isBadVersion(int x) {
+        return true;
+    }
 
-        while (i < j) {
-            int m = (i + j) / 2;
+    public int firstBadVersion(int n) {
+        int left = 1, right = n;
+
+        while (left < right) {
+            int m = (left + right) / 2;
             if (!isBadVersion(m)) {
-                i = m + 1;
+                left = m + 1;
             } else {
-                j = m;
+                right = m;
             }
         }
 
-        if (isBadVersion(i)) {
-            return i;
-        }
-
-        return j;
+        return left;
     }
 }

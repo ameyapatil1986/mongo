@@ -34,6 +34,7 @@ public class FourSum {
                         l--;
                     } else {
                         List<Integer> t = new ArrayList<Integer>();
+                        // the whole set needs to be unique.
                         t.add(nums[i]);
                         t.add(nums[j]);
                         t.add(nums[k]);

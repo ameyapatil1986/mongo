@@ -3,7 +3,7 @@ package Matrices;
 /*
  * Generics have some issue with arrays and matrices to its best to avoid it.
  */
-final class Pixel {
+final class  Pixel {
 
     private final int color;
 

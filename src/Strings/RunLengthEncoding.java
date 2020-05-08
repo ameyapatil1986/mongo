@@ -18,7 +18,6 @@ public final class RunLengthEncoding {
 
     private RunLengthEncoding() { }
 
-
     public static String runLength (String source) {
         final StringBuilder target = new StringBuilder();
 
@@ -52,7 +51,6 @@ public final class RunLengthEncoding {
     }
 
 
-
     //    /*
     //     * pattern:
     //     * - compile:   static method that takes in the 'regex'
@@ -77,9 +75,6 @@ public final class RunLengthEncoding {
     //        return dest.toString();
     //    }
     //
-
-
-
 
 
     /**

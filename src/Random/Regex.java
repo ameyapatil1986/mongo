@@ -161,7 +161,7 @@ public final class Regex {
         assert regexPos >= 0 && regexPos <= regex.length();
         assert strPos >= 0 && strPos <= str.length(); // it should break when its == strPos, > strpos is an impossible condition.
 
-        while ((regexPos < regex.length() && strPos < str.length())) {;
+        while ((regexPos < regex.length() && strPos < str.length())) {
 
             /*
              * regex.charAt(i) == str.charAt(j)  is a boolean evaluation where swich case should / can be avoided.

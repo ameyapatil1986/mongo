@@ -5,6 +5,8 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/verifying-an-alien-dictionary/
  * https://gist.github.com/junhaowww/266896226c933460525cfdfc92c4bea8
+ *
+ * O ( numwords * wordlength )
  */
 public class AlienDictionary {
 

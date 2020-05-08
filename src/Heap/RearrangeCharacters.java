@@ -11,6 +11,11 @@ import java.util.*;
  * https://massivealgorithms.blogspot.com/2018/04/leetcode-767-reorganize-string.html
  */
 
+
+/**
+ * Complexity:
+ * O(n log n)
+ */
 class RearrangeCharacters {
     // Function to rearrange character of a string
     // so that no char repeat twice
@@ -24,6 +29,10 @@ class RearrangeCharacters {
 
         // Insert all characters with their frequencies into a priority_queue
         Queue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> -e.getValue()));
+        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
+            pq.add(entry);
+        }
+
         StringBuilder stringBuilder = new StringBuilder();
 
         // work as the previous visited element

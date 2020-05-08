@@ -5,6 +5,10 @@ import java.util.*;
 
 /**
  * https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html
+ *
+ * O(n + alhpa * log alpha)
+ * n - number of words
+ * alpha - number of alphabets in alien dictionary.
  */
 public class AlienDictionary {
 

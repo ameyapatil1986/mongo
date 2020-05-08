@@ -34,7 +34,8 @@ import java.util.*;
  * if char does not repeat use it (eg: char 'e' and 'a' )
  * if char does repeat then, it should be used lexicographically ( eg: second l was used, not first )
  *
- *
+ * Complexity:
+ * O(n)
  *
  */
 public class LexicographicSmallestSubsequenceOfDistinctChars {

@@ -76,15 +76,15 @@ public class RottenOranges {
                         continue;
                     }
 
-//                    // no orange, thus nothing to infect.
-//                    if (m[row][col] == 0) {
-//                        continue;
-//                    }
-//
-//                    // already this node is a part of queue. so ignore
-//                    if (m[row][col] == 2) {
-//                        continue;
-//                    }
+                    // no orange, thus nothing to infect.
+                    if (m[row][col] == 0) {
+                        continue;
+                    }
+
+                    // already this node is a part of queue. so ignore
+                    if (m[row][col] == 2) {
+                        continue;
+                    }
 
                     // this is the good orange
                     queue.add(new Node(row, col));

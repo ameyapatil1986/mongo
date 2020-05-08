@@ -6,6 +6,8 @@ import java.util.Set;
 
 /**
  * https://leetcode.com/problems/first-unique-character-in-a-string/
+ *
+ * O(n)
  */
 public class FirstNonRepeatingCharacter {
 

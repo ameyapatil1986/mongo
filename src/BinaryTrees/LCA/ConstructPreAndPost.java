@@ -27,10 +27,10 @@ public class ConstructPreAndPost {
             throw new IllegalArgumentException("The input is invalid");
         }
 
-        root = doNotConstruct(pre, 0, post, 0, post.length - 1);
+        root = doConstruct(pre, 0, post, 0, post.length - 1);
     }
 
-    public TreeNode doNotConstruct(int[] pre, int prePos, int[] post, int lb, int  hb) {
+    public TreeNode doConstruct(int[] pre, int prePos, int[] post, int lb, int  hb) {
 
         // leaf has been reached.
         if (lb == hb) {
@@ -48,12 +48,6 @@ public class ConstructPreAndPost {
             }
         }
 
-        //      TODO: post checkpoint.
-        //
-        //       if (leftChildIndexInPostOrder > hb) {
-        //           throw new IllegalArgumentException(" The input tree lists are not valid");
-        //       }
-
         TreeNode treeNode = new TreeNode(null, null, current);
 
         // next parent on same level is 'left subtree size' away from the node.
@@ -61,8 +55,8 @@ public class ConstructPreAndPost {
         int leftSubTreeSize = leftChildIndexInPostOrder - lb + 1; // this one is added to leftsubtree root.
         int rightChildIndexInPreOrder = leftChildIndexInPreOrder + leftSubTreeSize;
 
-        treeNode.left =  doNotConstruct (pre,  leftChildIndexInPreOrder,     post, lb,                            leftChildIndexInPostOrder);
-        treeNode.right = doNotConstruct (pre,  rightChildIndexInPreOrder,    post, leftChildIndexInPostOrder + 1, hb - 1);
+        treeNode.left =  doConstruct (pre,  leftChildIndexInPreOrder,     post, lb,                            leftChildIndexInPostOrder);
+        treeNode.right = doConstruct (pre,  rightChildIndexInPreOrder,    post, leftChildIndexInPostOrder + 1, hb - 1);
 
         return treeNode;
     }

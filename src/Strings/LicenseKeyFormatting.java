@@ -3,6 +3,8 @@ package Strings;
 /**
  * https://www.youtube.com/watch?v=v0Cof91iWIk
  * https://massivealgorithms.blogspot.com/2017/01/leetcode-482-license-key-formatting.html
+ *
+ * O(n)
  */
 public class LicenseKeyFormatting {
 

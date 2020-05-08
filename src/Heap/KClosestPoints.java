@@ -25,14 +25,10 @@ public class KClosestPoints {
         for (int i = 0; i < points.length; i++) {
             int[] p = points[i];
             Double distance = Math.sqrt((p[1]) * (p[1]) + (p[0]) * (p[0]));
+            pq.add(new PointsData(p, distance));
 
-            if (pq.size() < K) {
-                pq.add(new PointsData(p, distance));
-            } else {
-                if (distance < pq.peek().distance) {
-                    pq.poll();
-                    pq.add(new PointsData(p, distance));
-                }
+            if (pq.size() > K) {
+               pq.poll();
             }
         }
 

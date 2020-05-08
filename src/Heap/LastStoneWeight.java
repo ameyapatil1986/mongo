@@ -16,6 +16,10 @@ import java.util.*;
  * we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
  * we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
  * we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
+ *
+ * Complexity:
+ * -----------
+ * O (n log n)
  */
 public class LastStoneWeight {
 
@@ -23,7 +27,7 @@ public class LastStoneWeight {
         if(stones==null)
             return 0;
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.comparing(e -> -e));
         for (int i = 0; i < stones.length; i++) {
             pq.offer(stones[i]);
         }

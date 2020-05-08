@@ -5,6 +5,8 @@ import java.util.*;
 /**
  * https://www.youtube.com/watch?v=97_vofsFauU
  * https://leetcode.com/problems/repeated-dna-sequences/
+ *
+ * O(n)
  */
 public class DNASequenceRepeat {
 

@@ -26,7 +26,7 @@ public class LongestSubstringWithEachCharacterRepeatingKTimes {
 
             // record the frequency of each character
             for (int i = 0; i < s.length(); i++) {
-                map.putIfAbsent(s.charAt(i), map.getOrDefault(s.charAt(i),0) + 1);
+                map.put(s.charAt(i), map.getOrDefault(s.charAt(i),0) + 1);
             }
 
             if (map.values().stream().allMatch(e ->  e > k)) {

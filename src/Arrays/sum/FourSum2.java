@@ -13,7 +13,8 @@ public class FourSum2 {
         Map<Integer, Integer> map = new  HashMap<>();
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < B.length; j++) {
-                map.put(A[i] + B[j], map.getOrDefault(A[i] + B[j], 0) + 1);
+                int sum = A[i] + B[j];
+                map.put(sum, map.getOrDefault(sum, 0) + 1);
             }
         }
 
@@ -28,7 +29,8 @@ public class FourSum2 {
          */
         for (int i = 0; i < C.length; i++) {
             for (int j = 0; j < D.length; j++) {
-                ans += map.getOrDefault(-1 * (C[i] + D[j]), 0);
+                int sum = C[i] + D[j];
+                ans += map.getOrDefault(-sum, 0);
             }
         }
 

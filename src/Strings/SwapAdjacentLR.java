@@ -3,9 +3,8 @@ package Strings;
 /**
  * https://linlaw0229.github.io/2019/03/09/777-Swap-Adjacent-in-LR-String/
  *
- * Very good explanation.
- * Also:
- * *
+ * O(n)
+ *
  */
 public class SwapAdjacentLR {
 

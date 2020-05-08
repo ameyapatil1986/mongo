@@ -34,10 +34,8 @@ package Matrices;
  * ---
  * 3
  *
- *
  */
 public class FindElementsInSortedMatrix2 {
-
 
     public static int findNearestValueLesserThanOrEqualToX (int[] a, int x,  int low, int high) {
 
@@ -74,7 +72,6 @@ public class FindElementsInSortedMatrix2 {
     public static boolean matrixSearch(int[][] m, int x) {
         return matrixSearch (m, x, 0, m.length - 1, 0, m[0].length -1);
     }
-
 
     /*
      * cannot do a while loop here since we call recursion twice,
