@@ -16,7 +16,7 @@ public class PlusOne {
             if (sum >= 10) {
                 carry = 1;
             } else {
-                return digits;;
+                return digits;
             }
         }
 

@@ -2,6 +2,8 @@ package Arrays;
 
 /**
  * https://www.programcreek.com/2015/02/leetcode-increasing-triplet-subsequence-java/
+ *
+ * Sample example: [ 3 2 4 ]
  */
 public class IncreasingTriplet {
 

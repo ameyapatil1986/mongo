@@ -38,7 +38,7 @@ public class HIndex {
         // [0 1 2 3 3 3], [0 0 0], [7 7 7]
         int s = 0;
         int k;
-        for (k = citationsFrequency.length - 1 ; s <= k; k--) {
+        for (k = citationsFrequency.length - 1 ; s < k; k--) {
             s += citationsFrequency[k];
         }
 

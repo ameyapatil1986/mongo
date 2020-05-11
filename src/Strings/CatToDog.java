@@ -103,16 +103,16 @@ public class CatToDog {
 
         for (int i = 0; i < word.length(); i++) {
             char ch = wordArray[i];
-                        for (char c = 'A'; c <= 'Z'; c++) {
-                            if (c != ch) {
-                                wordArray[i] = c;
+                for (char c = 'A'; c <= 'Z'; c++) {
+                    if (c != ch) {
+                        wordArray[i] = c;
 
-                                String newWord = new String(wordArray);
-                                if (dictionary.contains(newWord) && !backtrackMap.containsKey(newWord)) {
-                                    words.add(newWord);
-                                }
-                            }
+                        String newWord = new String(wordArray);
+                        if (dictionary.contains(newWord) && !backtrackMap.containsKey(newWord)) {
+                            words.add(newWord);
                         }
+                    }
+                }
             wordArray[i] = ch;
         }
         return words;

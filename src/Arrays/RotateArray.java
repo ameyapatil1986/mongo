@@ -5,21 +5,21 @@ package Arrays;
  */
 public class RotateArray {
 
-    public static void rotate(int[] arr, int order) {
-        if (arr == null || arr.length==0 || order < 0) {
+    public static void rotate(int[] arr, int k) {
+        if (arr == null || arr.length==0 || k < 0) {
             throw new IllegalArgumentException("Illegal argument!");
         }
 
-        if(order > arr.length){
-            order = order %arr.length;
+        if(k > arr.length){
+            k = k %arr.length;
         }
 
         //length of first part
-        int a = arr.length - order;
+        int a = arr.length - k;
 
-        reverse(arr, 0, a-1);
-        reverse(arr, a, arr.length-1);
-        reverse(arr, 0, arr.length-1);
+        reverse(arr, 0,              arr.length - k - 1);
+        reverse(arr, arr.length - k, arr.length-1);
+        reverse(arr, 0,              arr.length-1);
 
     }
 

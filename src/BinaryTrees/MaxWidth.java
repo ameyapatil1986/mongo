@@ -58,12 +58,11 @@ public class MaxWidth<T> {
         }
     }
 
-    public List<List<T>> getMaxWidth() {
+    public int getMaxWidth() {
         if (root == null) {
             throw new IllegalStateException("The root cannot be null.");
         }
 
-        final List<List<T>> levelOrder = new ArrayList<>();
 
         final Queue<TreeNode<T>> queue = new LinkedList<>();
         queue.add(root);
@@ -77,10 +76,11 @@ public class MaxWidth<T> {
             if (currNode == null) {
                 max = Math.max(max, queue.size());
 
-                if (queue.size() > 0) {
-                    queue.add(null); // add new end-of-row-marker.
+                if (queue.isEmpty()) {
+                    return max;
+                } else {
+                    queue.add(null);
                 }
-
             } else {
 
                 if (currNode.left != null) queue.add(currNode.left);
@@ -89,7 +89,7 @@ public class MaxWidth<T> {
             }
         }
 
-        return levelOrder;
+        return -1;
     }
 }
 

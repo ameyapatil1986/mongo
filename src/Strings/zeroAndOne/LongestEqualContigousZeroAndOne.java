@@ -44,7 +44,7 @@ public class LongestEqualContigousZeroAndOne {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
 
-            if (!sumIndex.containsKey(sum - k)) {
+            if (!sumIndex.containsKey(sum)) {
                 sumIndex.put(sum, i);
             }
 

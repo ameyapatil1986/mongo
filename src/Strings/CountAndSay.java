@@ -3,6 +3,7 @@ package Strings;
 /**
  * https://leetcode.com/problems/count-and-say/
  * https://www.youtube.com/watch?v=usAZEcL_y-0
+ * https://medium.com/@speedforcerun/leetcode-easy-38-count-and-say-303e0bb8e51
  *
  *      1
  *      1 1

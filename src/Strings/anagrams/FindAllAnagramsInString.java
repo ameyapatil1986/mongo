@@ -40,10 +40,13 @@ public class FindAllAnagramsInString {
                     ans.add(left);
                 }
 
-                // put it back: eg:  xyaaaa and p is aaa
+                // put it back: eg:  xyaaaa and 'string p' is aaa
+                // another example: eg: aaabc and 'string p' is abc
                 if (map.containsKey(s.charAt(left))) {
                     map.put(s.charAt(left), map.get(s.charAt(left)) + 1);
-                    counter += 1;
+                    if (map.get(s.charAt(left)) == 0) {
+                        counter += 1;
+                    }
                 }
 
                 left++;
