@@ -152,11 +152,11 @@ public class SumlinkedList {
             Node curr = new Node(sum % 10);
 
             if (first == null) {
-                first = prev = curr;
+                first = curr;
             } else {
                 prev.next = curr;
-                prev = prev.next;
             }
+            prev = curr;
 
             ll1node = ll1node != null ? ll1node.next : null;
             ll2node = ll2node != null ? ll2node.next : null;
