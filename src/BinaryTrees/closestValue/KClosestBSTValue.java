@@ -26,10 +26,14 @@ public class KClosestBSTValue {
     public List<Integer> closestKValues(TreeNode<Integer> root, double target, int k) {
         Queue<Integer> list = new LinkedList<>();
 
-        Stack<TreeNode> stack = new Stack<>();
+        if (root == null) {
+            return Collections.emptyList();
+        }
+
+        final Stack<TreeNode> stack = new Stack<>();
         TreeNode<Integer> node = root;
 
-        while(!stack.isEmpty() || node != null) {
+        while(!stack.isEmpty()) {
             while(node != null){
                 stack.push(node);
                 node = node.left;

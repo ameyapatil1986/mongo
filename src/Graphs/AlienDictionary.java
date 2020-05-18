@@ -46,8 +46,7 @@ public class AlienDictionary {
                 char c2 = next.charAt(j);
 
                 if (c1 != c2) {
-                    final Set<Character> set = map.getOrDefault(c1, new HashSet<>());
-
+                    final Set<Character> set = map.putIfAbsent(c1, new HashSet<>());
                     if (!set.contains(c2)) {
                         set.add(c2);
                         /**

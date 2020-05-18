@@ -5,6 +5,26 @@ package Backtrack;
  */
 public class SurroundingRegions {
 
+    private static enum Direction {
+        NORTH(0, -1), EAST(1, 0), SOUTH(0, 1), WEST(-1, 0);
+
+        int dx;
+        int dy;
+
+        private Direction(int dx, int dy) {
+            this.dx = dx;
+            this.dy = dy;
+        }
+
+        public int getX() {
+            return dx;
+        }
+
+        public int getY() {
+            return dy;
+        }
+    }
+
     public void solve(char[][] board) {
         if(board == null || board.length==0)
             return;
@@ -35,30 +55,35 @@ public class SurroundingRegions {
         }
 
         //process the board
-        for(int i=0;i<m;i++){
-            for(int j=0; j<n; j++){
-                if(board[i][j] == 'O'){
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(board[i][j] == 'O') {
                     board[i][j] = 'X';
-                }else if(board[i][j] == '#'){
+                } else if(board[i][j] == '#') {
                     board[i][j] = 'O';
                 }
             }
         }
     }
 
-    public void merge(char[][] board, int i, int j){
-        board[i][j] = '#';
+    public void merge(char[][] board, int row, int col){
+        if (row < 0 || row >= board.length || col < 0 || col >= board[0].length) {
+            return;
+        }
 
-        int[] dx = {-1, 0, 1, 0};
-        int[] dy = {0, 1, 0, -1};
+        // false condition
+        if (board[row][col] != 0) {
+            return;
+        }
 
-        for(int k=0; k<4; k++){
-            int x = i+dx[k];
-            int y = j+dy[k];
+        board[row][col] = '#';
 
-            if(x>=0 && x<board.length && y>=0 && y<board[0].length && board[x][y]=='O'){
-                merge(board, x, y);
-            }
+
+        for (Direction dir : Direction.values()) {
+            int newRow = row + dir.getY();
+            int newCol = col + dir.getX();
+
+            merge(board, newRow, newCol);
         }
     }
 }

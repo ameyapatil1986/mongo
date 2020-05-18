@@ -25,7 +25,7 @@ public class CountNodesInAGivenRange {
             return 0;
         }
 
-        if (node.item > max) {
+        if (max < node.item) {
             return count(node.left, min, max);
         }
 

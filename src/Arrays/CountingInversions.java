@@ -33,28 +33,22 @@ public class CountingInversions {
     public static int countInversions(int[] a) {
         if (a.length == 0) throw new IllegalArgumentException("The array cannot be empty.");
         int[] myArray = new int[a.length];
-        int x =  mergeSort(a, 0, a.length - 1, myArray);
-
-        for (int i : myArray) {
-            System.out.println("-------: value is i " + i);
-        }
-
-        return x;
+        return  mergeSort(a, 0, a.length - 1);
     }
 
-    private static int mergeSort (int[] a, int low, int high, int[] myArray) {
+    private static int mergeSort (int[] a, int low, int high) {
         // means a single element array.
         if (low >= high) return 0;
 
         int mid = (low + high)/2;
 
 
-        return mergeSort (a, low, mid, myArray) +
-            mergeSort (a, mid + 1, high, myArray) +
-            merge (a, low, mid, high, myArray);
+        return mergeSort (a, low, mid) +
+            mergeSort (a, mid + 1, high) +
+            merge (a, low, mid, high);
     }
 
-    private static int merge (int[] a, int low, int mid, int high, int[] myArray) {
+    private static int merge (int[] a, int low, int mid, int high) {
         int count = 0;
         int[] temp = new int[a.length];
 
@@ -93,7 +87,6 @@ public class CountingInversions {
                  * 3, 4 || 1, 2
                  */
                 count = count + (mid - pos1 + 1);
-                myArray[i] = mid - pos1 + 1;
                 temp[i]  = a[pos2++];
             }
         }

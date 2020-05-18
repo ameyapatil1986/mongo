@@ -32,6 +32,7 @@ public class BasicCalculator {
                 stack.push(result);
                 stack.push(prevSign);
                 result = 0;
+                prevSign = 1;
             } else if (c == ')') {
                 result += prevSign * prevNumber;
                 prevNumber = result;

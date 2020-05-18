@@ -48,19 +48,21 @@ public class LCAofDeepestNodes {
     }
 
     public TreeNode lcaDeepestLeaves(TreeNode root) {
-        Pair p = getLca(root, 0);
+        Pair p = getLca(root);
         return p.node;
     }
-    private Pair getLca(TreeNode pNode, int d) {
-        if (pNode == null) return new Pair(null, d);
 
-        Pair l = getLca(pNode.left, d + 1);
-        Pair r = getLca(pNode.right, d + 1);
+
+    private Pair getLca(TreeNode pNode) {
+        if (pNode == null) return new Pair(null, 0);
+
+        Pair l = getLca(pNode.left);
+        Pair r = getLca(pNode.right);
 
         if (l.d == r.d) {
-            return new Pair(pNode, l.d);
+            return new Pair(pNode, l.d + 1);
         } else {
-            return  l.d > r.d ? l : r;
+            return  l.d > r.d ? new Pair(l.node, l.d + 1) : new Pair(r.node, l.d + 1);
         }
     }
 }

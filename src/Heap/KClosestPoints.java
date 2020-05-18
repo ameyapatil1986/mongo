@@ -20,7 +20,7 @@ public class KClosestPoints {
 
     public List<int[]> kClosest(int[][] points, int K) {
         HashMap<Double, List<Integer>> map = new HashMap<>();
-        Queue<PointsData> pq = new PriorityQueue<>(Comparator.comparing(p -> p.distance));
+        Queue<PointsData> pq = new PriorityQueue<>(Comparator.comparing(p -> -p.distance));
 
         for (int i = 0; i < points.length; i++) {
             int[] p = points[i];

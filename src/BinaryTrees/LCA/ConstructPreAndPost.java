@@ -37,7 +37,9 @@ public class ConstructPreAndPost {
             return new TreeNode(null, null, pre[prePos]);
         }
 
-        int current = pre[prePos];
+
+        TreeNode treeNode = new TreeNode(null, null, pre[prePos]);
+
         int leftChildIndexInPreOrder = prePos + 1;
 
         // search parent in post
@@ -48,7 +50,7 @@ public class ConstructPreAndPost {
             }
         }
 
-        TreeNode treeNode = new TreeNode(null, null, current);
+
 
         // next parent on same level is 'left subtree size' away from the node.
         // https://ameyapatil@bitbucket.org/ameyapatil/pointstonote.git

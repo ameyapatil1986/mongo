@@ -1,6 +1,6 @@
-package BinaryTrees;
+package BinaryTrees.Successor;
 
-public class SuccessorPredecessorWithParent {
+public class BSTInorderSuccessorPredecessorWithParent {
 
     private TreeNode root;
 

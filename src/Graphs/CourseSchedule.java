@@ -28,10 +28,6 @@ public class CourseSchedule {
             graph.addEdge(a[0], a[1], 0);
         }
 
-        for(int i = 0; i < numCourses; i++) {
-            DAGCycleDetection.cycle(graph);
-        }
-
-        return true;
+        return DAGCycleDetection.cycle(graph);
     }
 }

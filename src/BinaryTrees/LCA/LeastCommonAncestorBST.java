@@ -10,7 +10,7 @@ public class LeastCommonAncestorBST {
         TreeNode right;
         int item;
 
-        TreeNode (TreeNode left, TreeNode right, int item) {
+        TreeNode (TreeNode left, TreeNode right, int item)  {
             this.left = left;
             this.right = right;
             this.item = item;
@@ -64,7 +64,7 @@ public class LeastCommonAncestorBST {
             return findLCA(node.left, min, max);
         }
 
-        if (min > node.item) {
+        if (node.item < min) {
             return findLCA(node.right, min, max);
         }
 

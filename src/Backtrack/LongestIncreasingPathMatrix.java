@@ -38,7 +38,7 @@ public class LongestIncreasingPathMatrix {
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                max = Math.max(max, helper(i, j, matrix, dp, Integer.MIN_VALUE));
+                max = Math.max(max, helper(i, j, matrix, dp, matrix[i][j]));
             }
         }
 

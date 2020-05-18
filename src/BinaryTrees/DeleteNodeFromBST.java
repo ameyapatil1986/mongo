@@ -16,9 +16,9 @@ public class DeleteNodeFromBST {
 
         if (node == null) return node;
 
-        if (node.val > key) {
+        if (key < node.val) {
             node.left = deleteNode(node.left, key);
-        } else if (node.val < key) {
+        } else if (key > node.val) {
             node.right = deleteNode(node.right, key);
         } else {
             if (node.left == null) {

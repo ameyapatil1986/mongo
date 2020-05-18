@@ -21,7 +21,7 @@ package DynamicProgramming;
  * https://www.programcreek.com/2014/05/leetcode-paint-house-java/
  *
  */
-public class PaintHouse {
+public class  PaintHouse {
 
     public int minCost(int[][] costs) {
         if(costs==null||costs.length==0){

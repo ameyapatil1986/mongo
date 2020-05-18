@@ -14,8 +14,8 @@ public class FactorialTrailing {
          * ceiling will give 8.
          */
        while (n >= 5) {
-           numberOfFives += n / 5;  // Math.floor(n/5)
-           n = n / 5;               // Math.floor(n/5)
+           n = n/5;
+           numberOfFives += n;
        }
 
         return numberOfFives;
