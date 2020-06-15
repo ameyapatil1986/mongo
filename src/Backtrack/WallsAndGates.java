@@ -63,7 +63,7 @@ public class WallsAndGates {
             return;
         }
 
-        if (distance > rooms[row] [col]) {
+        if (distance > rooms[row][col]) {
             return;
         }
 

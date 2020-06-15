@@ -34,7 +34,7 @@ public class NextPermutation {
         // look at https://www.programcreek.com/2014/06/leetcode-next-permutation-java/ for example.
         int idx = nums.length - 1;
         for (int i = nums.length - 1; i > mark; i--) {
-            if (nums[i] > nums[mark]) {
+            if (nums[mark] < nums[i]) {
                 idx = i;
                 break;
             }

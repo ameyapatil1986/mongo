@@ -1,5 +1,8 @@
 package BasicMath;
 
+/**
+ * O(nloglogn)
+ */
 public class CountPrimes {
 
     public int countPrimes(int n) {
@@ -16,7 +19,7 @@ public class CountPrimes {
         }
 
         int res = 0;
-        for(int i = 2 ; i < composite.length-1; i++){
+        for(int i = 2; i < composite.length; i++){
             if(!composite[i]) {
                 res++;
             }

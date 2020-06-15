@@ -14,7 +14,7 @@ public class BasicCalculator2 {
         int prev = 0;
         int result = 0;
 
-        for(int i = 0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
             if (Character.isDigit(c)) {
@@ -22,7 +22,6 @@ public class BasicCalculator2 {
                 for ( ; i < s.length() && Character.isDigit(s.charAt(i)); i++) {
                     num += num * 10 + s.charAt(i) - '0';
                 }
-
                 if (prevMultiplyOrDivide == 0) {
                     prev = prev * num;
                     prevMultiplyOrDivide = -1;
@@ -32,11 +31,11 @@ public class BasicCalculator2 {
                 } else {
                     prev = num;
                 }
-            } else if (c=='/') {
+            } else if (c == '/') {
                 prevMultiplyOrDivide = 1;
-            } else if (c=='*') {
+            } else if (c == '*') {
                 prevMultiplyOrDivide = 0;
-            } else if (c=='+') {
+            } else if (c == '+') {
                 result = result + prevSign * prev;
                 prevSign = 1;
             } else if (c =='-') {

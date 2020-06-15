@@ -47,8 +47,6 @@ class Consumer extends Thread {
 }
 
 
-
-
 /**
  * Blocking queue implementation.
  * http://tutorials.jenkov.com/java-concurrency/blocking-queues.html

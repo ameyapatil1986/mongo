@@ -78,21 +78,26 @@ public class AlienDictionary {
             char c = q.poll();
             sb.append(c);
 
+            /*
+             * a
+             * b
+             */
             if (map.containsKey(c)) {
                 for (char c2: map.get(c)) {
                     // all next chars' in-degree abstract 1
                     inDegree.put(c2, inDegree.get(c2) - 1);
-                    if(inDegree.get(c2) == 0) q.add(c2);
+                    if (inDegree.get(c2) == 0) q.add(c2);
+                    if (inDegree.get(c2) < 0) return "";
                 }
             }
         }
 
         /**
          *
-         * apqr
-         * bpqr
-         * apqr
-         * bpqr
+         * a
+         * b
+         * a
+         * b
          *
          */
         if(sb.length() != inDegree.size()) return "";

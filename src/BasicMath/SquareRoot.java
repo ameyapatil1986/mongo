@@ -42,7 +42,7 @@ public final class SquareRoot {
         double a = 0, b = x, e = 0.001; // e is the chosen precision.will result in answer of root in 3 digits 3.142
 
         // a != b condition may cause a very long for loop. note: b will always remain greater than A.
-        while ((b-a) > e) {
+        while ((b - a) > e) {
             System.out.println("low: " + a  + " high " + b);
             b = (a + b) / 2;   // find the mid between low and high. slowly slowly keep brigding the gap.
             a = x / b;         //   low * high = x, low incre

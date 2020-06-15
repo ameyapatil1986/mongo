@@ -70,6 +70,6 @@ public class LongestIncreasingPathMatrix {
 
         dp[row][col] = curMax + 1;
 
-        return dp[row][col] + 1;
+        return dp[row][col];
     }
 }

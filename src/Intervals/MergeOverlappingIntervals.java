@@ -25,7 +25,7 @@ import java.util.*;
  */
 public class MergeOverlappingIntervals {
 
-    public static List<Interval> mergeOverlappingIntervals(ArrayList<Interval> intervalList) {
+    public static List<Interval> mergeOverlappingIntervals(List<Interval> intervalList) {
         final List<Interval> mergedIntervalList = new ArrayList<Interval>();
 
         if (intervalList.size() == 0) {

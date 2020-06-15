@@ -2,6 +2,7 @@ package DynamicProgramming.Palindrome;
 
 /**
  * https://leetcode.com/problems/longest-palindromic-subsequence/
+ * https://www.youtube.com/watch?v=_nCsPn7_OgI&t=225s
  * https://www.youtube.com/watch?v=U4yPae3GEO0
  * https://leetcode.com/problems/longest-palindromic-subsequence/
  */

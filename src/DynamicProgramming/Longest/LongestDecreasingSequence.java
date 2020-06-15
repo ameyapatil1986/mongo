@@ -56,7 +56,7 @@ public class LongestDecreasingSequence {
             lis[i] = 1;
 
         /* Compute optimized LIS values in bottom up manner */
-        for ( i = 1; i < n; i++ ) {
+        for (i = 1; i < n; i++ ) {
             for (j = 0; j < i; j++) {
                 if (arr[j] < arr[i]) {
                     lis[i] = Math.max(lis[i], lis[j] + 1);

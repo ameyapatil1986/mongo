@@ -57,6 +57,9 @@ public final class PrintFactors {
     * https://bitbucket.org/ameyapatil/all-images/commits/ddf2019185b07328eefaeba5bbc227507400d21c
     */
     public static void printFactorsListX(int number, int seed, String factorString) {
+        if (number >= 2) {
+            return;
+        }
         /*
          * This function contains factorString as an argument to facilitate the recursive call for subsequent
          * factors until it reaches prime values. For example, let's say input number = 32 and when i = 8 it prints

@@ -22,10 +22,9 @@ public class CoinChange {
         for(int i = coins[0]; i <= amount; i++) {
           // If array of coins is sorted then -> for (int j = 0; j < coins.length && i >= coins[j]; j++)
             for (int coin: coins) {
+                // this if-check if needed to prevent arrays out of bounds exception.
                 if (i >= coin) {
-                    if (dp[i - coin] != Integer.MAX_VALUE) {
                         dp[i] = Math.min(dp[i - coin] + 1, dp[i]);
-                    }
                 }
             }
         }

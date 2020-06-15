@@ -26,7 +26,7 @@ public class DistantBarcode {
     public int[] rearrangeBarcodes(int[] barcodes) {
         Map<Integer, Integer> map = new HashMap<>();
 
-        for (int i = barcodes.length - 1; i >= 0; i--) {
+        for (int i = 0; i  < barcodes.length; i++) {
             map.put(barcodes[i], map.getOrDefault(barcodes[i], 0) + 1);
         }
 

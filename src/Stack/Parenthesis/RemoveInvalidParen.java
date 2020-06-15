@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Output: ["()()()", "(())()"]
  *
  * Complexity:
- * O( length * 2 ^ (length/2) )
+ * O(length * 2 ^ (length/2))
  */
 public class RemoveInvalidParen {
 
@@ -37,8 +37,8 @@ public class RemoveInvalidParen {
 
     public void dfs(String str, String constructedString, int countOpenLeftFacingBracket, int maxLeftFacingBracketCount) {
 
-        if (str.length() == 0) {
-            if(countOpenLeftFacingBracket == 0 && constructedString.length() != 0) {
+        if (str.length() == 0 && constructedString.length() != 0) {
+            if(countOpenLeftFacingBracket == 0) {
                 max = Math.max(max, maxLeftFacingBracketCount);
                 // avoid duplicate result.
                 if(!result.contains(constructedString)){

@@ -78,7 +78,7 @@ public class LongestPalindromeSubstring {
                 center = i;
             }
         }
-        return s.substring((center - (length - 1)/2), (center + (length - 1)/2) + 1);
+        return s.substring((center - length)/2, (center + length)/2);
     }
 
 

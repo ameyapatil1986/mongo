@@ -1,4 +1,4 @@
-package BinaryTrees.LCA;
+package BinaryTrees;
 
 /**
  *
@@ -49,8 +49,6 @@ public class ConstructPreAndPost {
                 break;
             }
         }
-
-
 
         // next parent on same level is 'left subtree size' away from the node.
         // https://ameyapatil@bitbucket.org/ameyapatil/pointstonote.git

@@ -29,9 +29,7 @@ class RearrangeCharacters {
 
         // Insert all characters with their frequencies into a priority_queue
         Queue<Map.Entry<Character, Integer>> pq = new PriorityQueue<>(Comparator.comparing(e -> -e.getValue()));
-        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
-            pq.add(entry);
-        }
+        pq.addAll(charCount.entrySet());
 
         StringBuilder stringBuilder = new StringBuilder();
 

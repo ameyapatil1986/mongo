@@ -23,6 +23,7 @@ public class CompareIPAddresses {
                 return -1;
             }
         }
+
 		// any versions left out due to uneven numbers of subversions, should be handled separately
         while(i < len1) {
             int value1 = Integer.parseInt(split1[i++]);

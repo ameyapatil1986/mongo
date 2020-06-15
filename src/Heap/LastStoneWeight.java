@@ -32,7 +32,7 @@ public class LastStoneWeight {
             pq.offer(stones[i]);
         }
 
-        while (!pq.isEmpty()) {
+        while (pq.size() > 1) {
             int first = pq.poll();
             int second = pq.poll();
             int rem = first - second;

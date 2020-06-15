@@ -14,7 +14,7 @@ public class DeleteNodeFromBST {
 
     public TreeNode deleteNode(TreeNode node, int key) {
 
-        if (node == null) return node;
+        if (node == null) return null;
 
         if (key < node.val) {
             node.left = deleteNode(node.left, key);

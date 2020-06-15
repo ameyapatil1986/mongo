@@ -3,6 +3,15 @@ package DynamicProgramming;
 /**
  * https://www.youtube.com/watch?v=_Lf1looyJMU
  * https://leetcode.com/problems/maximal-square/
+ *
+ *
+ * Example Matrices:
+ * | 0  1 |
+ * | 1  0 | --> here you need diagonal check.
+ *
+ *
+ *
+ *
  */
 public class MaximumSquareInMatrix {
 

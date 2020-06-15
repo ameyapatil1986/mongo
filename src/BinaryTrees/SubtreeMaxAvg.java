@@ -17,13 +17,13 @@ public class SubtreeMaxAvg {
     }
 
     class NodeData {
-        int sum;
-        int count;
+        int sumOfSubtree;
+        int countOfSubtree;
         double maxAvgSoFar;
 
         NodeData(int sum, int count, double pMaxAvgSoFar) {
-            this.sum = sum;
-            this.count = count;
+            this.sumOfSubtree = sum;
+            this.countOfSubtree = count;
             this.maxAvgSoFar = pMaxAvgSoFar;
         }
     }
@@ -43,8 +43,8 @@ public class SubtreeMaxAvg {
 
         for (TreeNode currChild : node.nodes) {
             NodeData nodeData = getAvg(currChild);
-            sum += nodeData.sum;
-            count += nodeData.count;
+            sum += nodeData.sumOfSubtree;
+            count += nodeData.countOfSubtree;
             maxAvg = Math.max(maxAvg, nodeData.maxAvgSoFar);
         }
 

@@ -23,7 +23,7 @@ public class WiggleSort {
         int right = n - 1;
 
         for (int i = 0; i < n; i++) {
-            if ((i & 1) == 0) {
+            if (i % 2 == 0) {
                 temp[i] = nums[left];
                 left--;
             } else {

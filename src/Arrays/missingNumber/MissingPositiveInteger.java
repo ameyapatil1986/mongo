@@ -40,6 +40,7 @@ public class MissingPositiveInteger {
         }
 
 
+        // [ 1 3 4 5 ]
         for(int i = 1; i < n; i++) {
             if(nums[i] > 0) {
                 return i;
