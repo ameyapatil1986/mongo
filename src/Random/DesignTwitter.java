@@ -56,6 +56,7 @@ public class DesignTwitter {
             result.add(top);
         }
 
+        Collections.reverse(result);
         return result;
     }
 

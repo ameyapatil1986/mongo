@@ -18,18 +18,22 @@ public class FindAllAnagramsInString {
             return ans;
         }
 
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> frequencyMap = new HashMap<>();
         for (char c : p.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
+            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
         }
 
+        Map<Character, Integer> copyMap = new HashMap<>();
+        copyMap.putAll(frequencyMap);
+
+
         // The number of distinct characters
-        int counter = map.size();
+        int counter = copyMap.size();
         for (int left = 0, right = 0; right < s.length(); right++) {
 
-            if (map.containsKey(s.charAt(right))) {
-                map.put(s.charAt(right), map.get(s.charAt(right)) - 1);
-                if (map.get(s.charAt(right)) == 0) {
+            if (copyMap.containsKey(s.charAt(right))) {
+                copyMap.put(s.charAt(right), frequencyMap.get(s.charAt(right)) - 1);
+                if (copyMap.get(s.charAt(right)) == 0) {
                     counter -= 1;
                 }
             }
@@ -42,9 +46,9 @@ public class FindAllAnagramsInString {
 
                 // put it back: eg:  xyaaaa and 'string p' is aaa
                 // another example: eg: aaabc and 'string p' is abc
-                if (map.containsKey(s.charAt(left))) {
-                    map.put(s.charAt(left), map.get(s.charAt(left)) + 1);
-                    if (map.get(s.charAt(left)) == 0) {
+                if (copyMap.containsKey(s.charAt(left))) {
+                    copyMap.put(s.charAt(left), frequencyMap.get(s.charAt(left)) + 1);
+                    if (copyMap.get(s.charAt(left)) == frequencyMap.get(s.charAt(left))) {
                         counter += 1;
                     }
                 }

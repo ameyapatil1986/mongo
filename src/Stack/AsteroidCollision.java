@@ -5,6 +5,7 @@ import java.util.*;
 
 /**
  * https://leetcode.com/problems/asteroid-collision/
+ * https://www.youtube.com/watch?v=6GGTBM7mwfs
  *
  * We are given an array asteroids of integers representing asteroids in a row.
  *
@@ -26,13 +27,15 @@ public class AsteroidCollision {
             if (asteroids[i] >= 0) {
                 stack.push(asteroids[i]);
             } else {
-                while (!stack.isEmpty()) {
+                while (true) {
                     if (stack.peek() == Math.abs(asteroids[i])) {
                         stack.pop();
                         break;
                     } else if (stack.peek() < Math.abs(asteroids[i])) {
-                        leftAsteroids.add(asteroids[i]);
                         stack.pop();
+                        if (stack.isEmpty()) {
+                            leftAsteroids.add(asteroids[i]);
+                        }
                     } else if (stack.peek() > Math.abs(asteroids[i])) {
                         break;
                     }

@@ -3,9 +3,6 @@ package Matrices;
 import java.util.*;
 
 
-/**
- * O(n)
- */
 public class ValidSudoku {
 
    public boolean isSudokuValidator(char[][] board) {

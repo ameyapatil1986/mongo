@@ -2,6 +2,8 @@ package Matrices;
 
 /**
  * https://tenderleo.gitbooks.io/leetcode-solutions-/GoogleMedium/74.html
+ *
+ * O( log mn )
  */
 public class FindElementsInMatrices {
 
