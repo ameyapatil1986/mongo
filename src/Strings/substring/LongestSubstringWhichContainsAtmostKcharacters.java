@@ -23,7 +23,7 @@ import java.util.*;
  * Find out the longest length of subarrays with at most 2 different numbers?
  * Sliding window for K-elements?
  */
-public class LongestSubstringKcharacters {
+public class LongestSubstringWhichContainsAtmostKcharacters {
 
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
         int result = 0;
@@ -35,6 +35,7 @@ public class LongestSubstringKcharacters {
 
             charFrequency.put(c, charFrequency.getOrDefault(c, 0) + 1);
 
+            // at-most k unique characters.
             if (charFrequency.size() <= k) {
                 result = Math.max(result, i - j +1);
             } else {

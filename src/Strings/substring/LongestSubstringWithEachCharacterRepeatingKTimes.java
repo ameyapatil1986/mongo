@@ -6,6 +6,9 @@ import java.util.*;
  * https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/
  *
  * https://edlinlink.github.io/Leetcode_Longest_Substring_With_At_Least_K_Repeating_Characters.html
+ *
+ * Complexity:
+ * O(n!)
  */
 public class LongestSubstringWithEachCharacterRepeatingKTimes {
 
