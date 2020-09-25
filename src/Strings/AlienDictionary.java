@@ -43,6 +43,6 @@ public class AlienDictionary {
                 }
             }
 
-            return s1.length() <= s2.length();
+            return s1.length() < s2.length();
         }
 }

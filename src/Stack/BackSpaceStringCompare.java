@@ -51,6 +51,4 @@ public class BackSpaceStringCompare {
             return sb.toString();
         }
     }
-
-
 }

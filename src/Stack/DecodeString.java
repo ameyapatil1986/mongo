@@ -34,9 +34,8 @@ public class DecodeString {
         while (idx < s.length()) {
             if (Character.isDigit(s.charAt(idx))) {
                 int num = 0;
-                while (idx < s.length() && Character.isDigit(s.charAt(idx))) {
+                for ( ; idx < s.length() && Character.isDigit(s.charAt(idx)); idx++) {
                     num = num * 10 + (s.charAt(idx) - '0');
-                    idx++;
                 }
                 nums.push(num);
             } else if (s.charAt(idx) == '[') {

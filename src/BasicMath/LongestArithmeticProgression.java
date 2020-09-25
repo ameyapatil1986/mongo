@@ -9,6 +9,7 @@ import java.util.*;
  */
 public class LongestArithmeticProgression {
 
+    // [3, 6, 9, 12]
     public int longestArithSeqLength(int[] A) {
         final Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
         int res = 2;

@@ -22,7 +22,6 @@ import java.util.*;
  */
 public class LongestPrefix {
 
-
     public static String longestCommonPrefix(List<String> strs) {
         if (strs == null || strs.size() == 0)
             return "";
@@ -52,9 +51,7 @@ public class LongestPrefix {
     }
 
     public static void main(String[] main) {
-
         // System.out.println("abcd".substring(0, 2)); // prints ab.
-
         String[] strList = {"leets", "leetcode", "leet", "leeds"};
         System.out.println(longestCommonPrefix(Arrays.asList(strList)));
     }

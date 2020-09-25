@@ -26,6 +26,7 @@ public class LongestPalindromicSubsequence {
                 }
             }
         }
+
         return palindrome[0][n-1];
     }
 }

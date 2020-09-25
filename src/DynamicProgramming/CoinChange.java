@@ -24,7 +24,7 @@ public class CoinChange {
             for (int coin: coins) {
                 // this if-check if needed to prevent arrays out of bounds exception.
                 if (i >= coin) {
-                        dp[i] = Math.min(dp[i - coin] + 1, dp[i]);
+                    dp[i] = Math.min(dp[i - coin] + 1, dp[i]);
                 }
             }
         }

@@ -25,7 +25,7 @@ public class LongestPalindromeSubstring {
     static char[] getFormattedArray(String s) {
         char[] t = new char[s.length() * 2 + 1];
 
-        for (int i = 0; i < t.length - 1; i = i + 2) {
+        for (int i = 0; i < s.length(); i++) {
             t[ 2 * i ] = '#';
             t[ 2 * i + 1 ] = s.charAt(i);
         }
@@ -72,7 +72,7 @@ public class LongestPalindromeSubstring {
     public static String longestPalindromicSubstring(String s, int[] palindromeSize) {
         int length = 0;   // length of longest palindromic substring
         int center = 0;   // center of longest palindromic substring
-        for (int i = 1; i < palindromeSize.length-1; i++) {
+        for (int i = 1; i < palindromeSize.length - 1; i++) {
             if (palindromeSize[i] > length) {
                 length = palindromeSize[i];
                 center = i;

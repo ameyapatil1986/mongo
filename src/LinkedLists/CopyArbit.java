@@ -88,7 +88,6 @@ public class CopyArbit<T> {
             node.next = temp;
         }
 
-
         for (Node<T> node = first; node != null; node = node.next.next) {
             Node<T> temp = node.next;
             temp.arbit = node.arbit.next;

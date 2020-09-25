@@ -35,6 +35,6 @@ public class LongestSubstringWithSumK {
         }
 
         // print the sub-array
-        System.out.println("[" + (ending_index - len + 1) + ", " + ending_index + "]");
+        System.out.println("[" + (ending_index - len) + ", " + ending_index + "]");
     }
 }

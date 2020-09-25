@@ -32,7 +32,7 @@ public class FindAllAnagramsInString {
         for (int left = 0, right = 0; right < s.length(); right++) {
 
             if (copyMap.containsKey(s.charAt(right))) {
-                copyMap.put(s.charAt(right), frequencyMap.get(s.charAt(right)) - 1);
+                copyMap.put(s.charAt(right), copyMap.get(s.charAt(right)) - 1);
                 if (copyMap.get(s.charAt(right)) == 0) {
                     counter -= 1;
                 }
@@ -47,7 +47,7 @@ public class FindAllAnagramsInString {
                 // put it back: eg:  xyaaaa and 'string p' is aaa
                 // another example: eg: aaabc and 'string p' is abc
                 if (copyMap.containsKey(s.charAt(left))) {
-                    copyMap.put(s.charAt(left), frequencyMap.get(s.charAt(left)) + 1);
+                    copyMap.put(s.charAt(left), copyMap.get(s.charAt(left)) + 1);
                     if (copyMap.get(s.charAt(left)) == frequencyMap.get(s.charAt(left))) {
                         counter += 1;
                     }

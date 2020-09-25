@@ -60,8 +60,8 @@ public class GameOfLife {
             }
         }
 
-        for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
+        for (int i = 0; i < rows; i++){
+            for (int j = 0; j < cols; j++){
                 if (board[i][j] == die)
                     board[i][j] = 0;
                 if (board[i][j] == live)
