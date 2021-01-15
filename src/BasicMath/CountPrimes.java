@@ -10,7 +10,7 @@ public class CountPrimes {
 
         double sqrt = Math.sqrt(n);
 
-        for(int i = 2; i <= sqrt; i++){
+        for (int i = 2; i <= sqrt; i++) {
             if(!composite[i]) {
                 for(int j = i * i; j <= n; j = j + i){
                     composite[j] = true;

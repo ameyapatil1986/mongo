@@ -8,7 +8,6 @@ import java.util.*;
  */
 public class WordBreak2 {
 
-
     public List<String> wordBreak(String s, Set<String> wordDict) {
         List<List<String>> pos = new ArrayList<>();
         pos.add(new ArrayList<String>());

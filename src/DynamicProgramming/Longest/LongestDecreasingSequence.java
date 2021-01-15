@@ -16,7 +16,7 @@ import java.util.Arrays;
  * Explanation: The longest decreasing subsequence is {50, 10, 7}
  *
  */
-public class LongestDecreasingSequence {
+public class  LongestDecreasingSequence {
 
     static int lds(int arr[], int n) {
         int lds[] = new int[n];

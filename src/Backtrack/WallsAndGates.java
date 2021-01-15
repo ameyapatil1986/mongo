@@ -63,6 +63,7 @@ public class WallsAndGates {
             return;
         }
 
+        // this also takes care of situation where it lands on a gate with value 0.
         if (distance > rooms[row][col]) {
             return;
         }

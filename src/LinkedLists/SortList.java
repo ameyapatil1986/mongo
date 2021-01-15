@@ -32,9 +32,9 @@ class SortList {
 
         //partition the list
         ListNode p1 = head;
-        ListNode firstEnd = midPoint(head);
-        ListNode p2 = firstEnd.next;
-        firstEnd.next = null;
+        ListNode midPoint = midPoint(head);
+        ListNode p2 = midPoint.next;
+        midPoint.next = null;
 
         //sort each list
         p1 = sortList(p1);
@@ -50,8 +50,8 @@ class SortList {
             return node;
         }
 
-        ListNode fast = node.next;
         ListNode slow = node;
+        ListNode fast = node.next;
 
         for (;fast != null && fast.next != null; slow = slow.next, fast = fast.next.next);
 

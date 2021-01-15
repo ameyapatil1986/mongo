@@ -20,7 +20,7 @@ public class FourSum {
             if (i > 0 && nums[i] == nums[i-1])
                 continue;
 
-            for (int j = i + 1; j < nums.length - 2; j++){
+            for (int j = i + 1; j < nums.length - 2; j++) {
                 if (j > i + 1 && nums[j] == nums[j-1])
                     continue;
 
@@ -44,11 +44,11 @@ public class FourSum {
                         k++;
                         l--;
 
-                        while(k<l && nums[l]==nums[l+1] ){
+                        while(k<l && nums[l] == nums[l+1] ){
                             l--;
                         }
 
-                        while(k<l && nums[k]==nums[k-1]){
+                        while(k<l && nums[k] == nums[k-1]){
                             k++;
                         }
                     }

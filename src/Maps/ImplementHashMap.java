@@ -84,7 +84,7 @@ public class ImplementHashMap<K, V> {
      * http://stackoverflow.com/questions/34119364/why-do-we-need-to-check-hashcode-twice
      * http://stackoverflow.com/questions/19349436/do-keys-with-different-hashes-also-get-mapped-to-the-same-index-in-hashmap
      */
-    private boolean hashAndEqualsCheckSuccess(Entry<K, V> e, K key) {
+    private boolean sameKeyAndHash(Entry<K, V> e, K key) {
 
         if (e.key == null && key == null) {
             return true;
@@ -112,17 +112,17 @@ public class ImplementHashMap<K, V> {
         int keyIndex = key == null ? 0 : key.hashCode() % table.length;
 
         for (Entry<K, V> e = table[keyIndex]; e != null; e = e.next) {
-            if (hashAndEqualsCheckSuccess(e, key))
+            if (sameKeyAndHash(e, key))
                 return true;
         }
         return false;
     }
 
-    public /* synchronized */   V get(K key) {
+    public /* synchronized */  V get(K key) {
         int keyIndex = key == null ? 0 : key.hashCode() % table.length;
 
         for (Entry<K, V> e = table[keyIndex]; e != null; e = e.next) {
-            if (hashAndEqualsCheckSuccess(e, key))
+            if (sameKeyAndHash(e, key))
                 return e.value;
         }
         return null;
@@ -135,7 +135,7 @@ public class ImplementHashMap<K, V> {
         Entry<K, V> e = table[keyIndex];
 
         for (; e != null; e = e.next) {
-            if (hashAndEqualsCheckSuccess(e, key)) {
+            if (sameKeyAndHash(e, key)) {
                 modCount++;
                 size--;
                 if (prev == null) {
@@ -157,7 +157,7 @@ public class ImplementHashMap<K, V> {
         int keyIndex = hash % table.length;
 
         for (Entry<K, V> e = table[keyIndex]; e != null; e = e.next) {
-            if (hashAndEqualsCheckSuccess(e, key)) {
+            if (sameKeyAndHash(e, key)) {
                 V oldValue = e.value;
                 e.value = value;
                 return oldValue;

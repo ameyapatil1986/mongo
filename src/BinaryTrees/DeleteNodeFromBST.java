@@ -13,7 +13,6 @@ public class DeleteNodeFromBST {
     }
 
     public TreeNode deleteNode(TreeNode node, int key) {
-
         if (node == null) return null;
 
         if (key < node.val) {
@@ -21,9 +20,12 @@ public class DeleteNodeFromBST {
         } else if (key > node.val) {
             node.right = deleteNode(node.right, key);
         } else {
+            // finally reached the node.
             if (node.left == null) {
                 return node.right;
-            } else if (node.right == null) {
+            }
+
+            if (node.right == null) {
                 return node.left;
             }
 

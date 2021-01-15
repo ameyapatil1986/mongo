@@ -48,14 +48,12 @@ public class CircularDeletion<T extends Comparable<T>> {
     public void insertNodeInCircularLL(T element) {
         final Node<T> node = new Node<T>(element, null);
 
-        // using guard clause like pattern. leads to cleaner indentation.
         if (first == null) {
             first = node;
             first.next = first;
-            return;     // DONT FORGET THE RETURNS
+            return;
         }
 
-        // smaller than first node.
         if (element.compareTo(first.element) < 0) {
             Node<T> currNode;
             for (currNode = first; currNode.next != first; currNode = currNode.next);
@@ -139,24 +137,4 @@ public class CircularDeletion<T extends Comparable<T>> {
         }
         return elements;
     }
-
-//    public static void main(String[] args) {
-//        CircularDeletion<Integer> clld = new CircularDeletion<Integer>();
-//        int[] a = {10, 20, 30, 40, 50};
-//        for (int i : a) {
-//            clld.insertNodeInCircularLL(i);
-//        }
-//
-//        // delete first.
-//        clld.deleteNodeInCircularLL(10);
-//        assertEquals(Arrays.asList(20, 30, 40, 50), clld.toList());
-//
-//        // delete some node in the middle.
-//        clld.deleteNodeInCircularLL(30);
-//        assertEquals(Arrays.asList(20, 40, 50), clld.toList());
-//
-//        // delete the node in the end.
-//        clld.deleteNodeInCircularLL(50);
-//        assertEquals(Arrays.asList(20, 40), clld.toList());
-//    }
 }

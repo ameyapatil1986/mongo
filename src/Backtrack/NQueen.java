@@ -59,7 +59,6 @@ public class NQueen {
                 returnValue = NQueenSolver (board, row + 1) || returnValue;
                 board[row][j] = 0;
             }
-
         }
 
         return returnValue;

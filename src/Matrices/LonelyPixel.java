@@ -16,26 +16,42 @@ public class LonelyPixel {
         final int ROWS = pixels.length;
         final int COLS = pixels[0].length;
 
-        int[] r = new int[ROWS];
-        int[] c = new int[COLS];
+        int[] r0 = new int[ROWS];
+        int[] c0 = new int[COLS];
+
+        int[] r1 = new int[ROWS];
+        int[] c1 = new int[COLS];
 
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
-                if (1 == pixels[i][j]) {
-                    r[i]++;
-                    c[j]++;
+
+                if (pixels[i][j] == 0) {
+                    r0[i]++;
+                    c0[i]++;
+                }
+
+
+                if (pixels[i][j] == 1) {
+                    r1[i]++;
+                    c1[j]++;
                 }
             }
         }
 
-        for (int i = 0; i < ROWS; i++) {
-            for (int j = 0; j < COLS; j++) {
-                if (pixels[i][j] == 1 && r[i] == 1 && c[j] == 1) {
+        printLoneleyPixel(pixels, r0, c0, 0);
+        printLoneleyPixel(pixels, r1, c1, 1);
+    }
+
+    static void printLoneleyPixel(int[][] pixels, int[] r, int[] c, int num) {
+        for (int i = 0; i < r.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                if (pixels[i][j] == num && r[i] == 1 && c[j] == 1) {
                     System.out.printf("lonely pixel at %d %d %n", i, j);
                 }
             }
         }
     }
+
 
     public static void main(final String args[]) {
 

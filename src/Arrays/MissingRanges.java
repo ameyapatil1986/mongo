@@ -18,7 +18,7 @@ public class MissingRanges {
 
 
         // findIndexOfLower. if lower is missing then the one which is higher.
-        // if (a[mid] > x && ((mid == 0) || (x  < a[mid - 1]))
+        // if (a[mid] >= x && ((mid == 0) || (x  < a[mid - 1]))
         int indexOfLower = 0;
 
         // findIndexOfHigher. if higher is missing then the one which is lesser.

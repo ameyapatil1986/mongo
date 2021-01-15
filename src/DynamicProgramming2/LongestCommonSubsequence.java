@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming2;
 
 
 public class LongestCommonSubsequence {

@@ -98,38 +98,35 @@ public class CopyArbit<T> {
 
     private CopyArbit<T> split () {
 
-        Node<T> oddhead = null;
-        Node<T> oddPrev = null;
-        Node<T> evenhead = null;
-        Node<T> evenPrev = null;
+        Node<T> odd = null;
+        Node<T> even = null;
         int count = 0;
 
-        evenhead = evenPrev = first;
+        even = first;
         // we have the guarantee that our linkedlist has even legnth. This is because of the first for loop in method 'getCopy'
-        oddhead = oddPrev = first.next;
+        odd = first.next;
 
-
-        for(Node<T> temp = oddhead.next; temp != null; temp = temp.next) {
+        for(Node<T> temp = first.next.next; temp != null; temp = temp.next) {
             if (count % 2 == 0) {
-                evenPrev.next = temp;
-                evenPrev = temp;
+                even.next = temp;
+                even = temp;
             } else {
-                oddPrev.next = temp;
-                oddPrev = temp;
+                odd.next = temp;
+                odd = temp;
             }
             count++;
         }
 
         //if (evenPrev != null) {
-            evenPrev.next = null;
+            even.next = null;
         //}
         //        if (oddPrev != null) {
         //            oddPrev.next = null;
         //        }
 
         CopyArbit<T> copyArbit = new CopyArbit<T>();
-        copyArbit.first = oddhead;
-        copyArbit.last = oddPrev;
+        copyArbit.first = first.next.next;
+        copyArbit.last = odd;
         copyArbit.size = size;
 
         return copyArbit;

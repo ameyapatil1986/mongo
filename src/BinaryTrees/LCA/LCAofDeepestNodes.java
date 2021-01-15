@@ -62,7 +62,7 @@ public class LCAofDeepestNodes {
         if (l.d == r.d) {
             return new Pair(pNode, l.d + 1);
         } else {
-            return  l.d > r.d ? new Pair(l.node, l.d + 1) : new Pair(r.node, l.d + 1);
+            return  l.d > r.d ? new Pair(l.node, l.d + 1) : new Pair(r.node, r.d + 1);
         }
     }
 }

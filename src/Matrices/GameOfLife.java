@@ -48,9 +48,9 @@ public class GameOfLife {
                         board[i][j] = live;
                     }
                 } else if (board[i][j] == 1) {
-                    // Any live cell` with two or three live neighbors lives on to the next generation.
-                    if (around == 2 || around ==3)
-                        continue;
+//                    // Any live cell` with two or three live neighbors lives on to the next generation.
+//                    if (around == 2 || around ==3)
+//                        continue;
 
                     // Any live cell with more than three live neighbors dies, as if by over-population.
                     // Any live cell with less than three live neighbors dies, as if by under-population.

@@ -60,6 +60,10 @@ public class TimeBasedMap {
 
         int index = binarySearchModified(map.get(key), timestamp);
 
+        if (index < 0) {
+            // no key with lesser timestamp then the one provided in the input.
+        }
+
         return map.get(key).get(index).getValue();
     }
 

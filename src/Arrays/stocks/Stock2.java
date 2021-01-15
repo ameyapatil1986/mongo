@@ -21,6 +21,4 @@ public class Stock2 {
         return total;
 
     }
-
-
 }

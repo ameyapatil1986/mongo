@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming2;
 
 /**
  * https://www.youtube.com/watch?v=YDf982Lb84o&t=306s

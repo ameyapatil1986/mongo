@@ -28,7 +28,14 @@ public class BSTInorderSuccessorWithoutParentPointer {
 
         TreeNode prev = null;
         TreeNode current = root;
-        while (current != null && current.val != p.val) {
+
+        // step 1: just search
+        while (current != null) {
+
+            if (current.val == p.val) {
+                break;
+            }
+
             if (p.val < current.val) {
                 prev = current;
                 current = current.left;
@@ -37,9 +44,11 @@ public class BSTInorderSuccessorWithoutParentPointer {
             }
         }
 
+        // if p is missing, then it means input was bad.
         if (current == null)
             return null;
 
+        // if current.
         if (current.right == null)
             return prev;
 

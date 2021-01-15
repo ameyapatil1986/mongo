@@ -48,38 +48,60 @@ public class KSmallestPairs {
     }
 
     public class SomeObject {
-        int val1;
-        int val2;
-        int index;
+        int index1;
+        int index2;
 
-        public SomeObject(int val1, int val2, int pIndex) {
-            this.val1 = val1;
-            this.val2 = val2;
-            index = pIndex;
+        public SomeObject(int pIndex1, int pIndex2) {
+            this.index1 = pIndex1;
+            this.index2 = pIndex2;
         }
     }
 
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
 
-        PriorityQueue<SomeObject> queue = new PriorityQueue<>(Comparator.comparing(o -> o.val1 + o.val2));
+        PriorityQueue<SomeObject> queue = new PriorityQueue<>(Comparator.comparing(o -> nums1[o.index1] + nums2[o.index2]));
 
         for(int i = 0; i < Math.min(nums1.length, k); i++) {
-            queue.offer(new SomeObject(nums1[i], nums2[0], 0));
+            queue.offer(new SomeObject(i, 0));
         }
 
         final List<int[]> res = new ArrayList<>();
         while (k-- > 0 && !queue.isEmpty()) {
             SomeObject o = queue.poll();
 
-            res.add(new int[]{o.val1, o.val2});
+            res.add(new int[]{nums1[o.index1], nums2[o.index2]});
 
-            if(o.index == nums2.length - 1) {
+            if(o.index2 == nums2.length - 1) {
                 continue;
             }
 
-            queue.offer(new SomeObject(o.val1, nums2[o.index + 1], o.index + 1));
+            queue.offer(new SomeObject(o.index1, o.index2 + 1));
         }
 
         return res;
     }
+
+//    public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
+//
+//        PriorityQueue<SomeObject> queue = new PriorityQueue<>(Comparator.comparing(o -> o.val1 + o.val2));
+//
+//        for(int i = 0; i < Math.min(nums1.length, k); i++) {
+//            queue.offer(new SomeObject(nums1[i], nums2[0], 0));
+//        }
+//
+//        final List<int[]> res = new ArrayList<>();
+//        while (k-- > 0 && !queue.isEmpty()) {
+//            SomeObject o = queue.poll();
+//
+//            res.add(new int[]{o.val1, o.val2});
+//
+//            if(o.index == nums2.length - 1) {
+//                continue;
+//            }
+//
+//            queue.offer(new SomeObject(o.val1, nums2[o.index + 1], o.index + 1));
+//        }
+//
+//        return res;
+//    }
 }

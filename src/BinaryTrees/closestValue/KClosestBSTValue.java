@@ -31,22 +31,25 @@ public class KClosestBSTValue {
         }
 
         final Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
         TreeNode<Integer> node = root;
 
         while(!stack.isEmpty()) {
-            while(node != null){
+
+            while(node != null) {
                 stack.push(node);
                 node = node.left;
             }
 
             node = stack.pop();
 
-            list.add(node.val);
-            if (list.size() > k) {
+
+            if (list.size() < k) {
+                list.add(node.val);
+            } else {
                 if (Math.abs(list.peek() - target) > Math.abs(node.val - target)) {
                     list.poll();
-                } else {
-                    break;
+                    list.add(node.val);
                 }
             }
 

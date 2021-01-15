@@ -57,7 +57,7 @@ public final class PrintFactors {
     * https://bitbucket.org/ameyapatil/all-images/commits/ddf2019185b07328eefaeba5bbc227507400d21c
     */
     public static void printFactorsListX(int number, int seed, String factorString) {
-        if (number >= 2) {
+        if (number <= 2) {
             return;
         }
         /*

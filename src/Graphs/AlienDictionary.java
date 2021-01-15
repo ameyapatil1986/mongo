@@ -27,8 +27,8 @@ public class AlienDictionary {
         // According to Leetcode:  There may be multiple valid order of letters, return any one of them is fine.
         // Thus, if there is only 1 word in the dictionary called "abcd" then any order is fine.
         // i.e. : abcd is same as bdca.
-        for(String s: words){
-            for(char c: s.toCharArray()){
+        for(String s: words) {
+            for(char c: s.toCharArray()) {
                 inDegree.put(c, 0);
             }
         }

@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming2;
 
 /**
  * https://leetcode.com/problems/partition-equal-subset-sum/

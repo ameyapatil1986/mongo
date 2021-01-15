@@ -36,7 +36,7 @@ public class Teemo {
             if (sleptUntil < arr[i]) {
                 count += sleepSpan;
             } else {
-                count += arr[i] + sleepSpan - 1 - sleptUntil;
+                count += arr[i] + (sleepSpan - 1) - sleptUntil;
             }
             sleptUntil = arr[i] + (sleepSpan - 1);
         }

@@ -36,6 +36,14 @@ public class RunningMedian {
         minHeap.add(Integer.MAX_VALUE);
     }
 
+
+
+    private void balance(Queue<Integer> bigHeap, Queue<Integer> smallHeap) {
+        if (bigHeap.size() - smallHeap.size() == 2) {
+            smallHeap.add(bigHeap.poll());
+        }
+    }
+
     /**
      * 3 step solution:
      * - add.
@@ -50,20 +58,15 @@ public class RunningMedian {
         else
             maxHeap.add(num);
 
-        //balancing the heaps
-        if(minHeap.size() - maxHeap.size() == 2)
-            maxHeap.add(minHeap.poll());
-        else if(maxHeap.size() - minHeap.size() == 2)
-            minHeap.add(maxHeap.poll());
+        balance(maxHeap, minHeap);
+        balance(minHeap, maxHeap);
 
         //returning the median
-        if (minHeap.size() == maxHeap.size())
+        if (minHeap.size() == maxHeap.size()) {
             return (minHeap.peek() + maxHeap.peek()) / 2.0;
-        else if (minHeap.size() > maxHeap.size()) {
-            return minHeap.peek();
-        } else {
-            return maxHeap.peek();
         }
+
+        return minHeap.size() > maxHeap.size() ? minHeap.peek() : maxHeap.peek();
     }
 
     public static void main(String[] args) {

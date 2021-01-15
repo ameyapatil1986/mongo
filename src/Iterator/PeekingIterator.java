@@ -12,7 +12,7 @@ class PeekingIterator<E> implements Iterator<E> {
 
     private Iterator<E> iter;
 
-    private boolean noSuchElement;
+    private boolean empty;
 
     public PeekingIterator(Iterator<E> iterator) {
         // initialize incoming iterator with iter member
@@ -41,7 +41,7 @@ class PeekingIterator<E> implements Iterator<E> {
     //T O(1)
     @Override
     public boolean hasNext() {
-        return !noSuchElement;
+        return !empty;
     }
 
     //T O(1)
@@ -49,7 +49,7 @@ class PeekingIterator<E> implements Iterator<E> {
         if (iter.hasNext()) {
             next = iter.next();
         } else {
-            noSuchElement = true;
+            empty = true;
         }
     }
 }

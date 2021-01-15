@@ -186,12 +186,13 @@ public class LRU<K, V> {
 
     public synchronized V get (K key) {
 
-        if (map.containsKey(key)) {
-            Entry<K, V> entry = map.get(key);
-            reAdjust(entry);
-            return entry.value;
+        if (!map.containsKey(key)) {
+            return null;
         }
-        return null;
+
+        Entry<K, V> entry = map.get(key);
+        reAdjust(entry);
+        return entry.value;
     }
 
     /**
@@ -208,13 +209,15 @@ public class LRU<K, V> {
 
     public synchronized V remove (K key) {
 
-        if (map.containsKey(key)) {
-            Entry<K, V> entry = map.remove(key);
-            remove(entry);
-            this.lruSize--;
-            return entry.value;
+        if (!map.containsKey(key)) {
+            return null;
         }
-        return null;
+
+
+        Entry<K, V> entry = map.remove(key);
+        remove(entry);
+        this.lruSize--;
+        return entry.value;
     }
 
 
