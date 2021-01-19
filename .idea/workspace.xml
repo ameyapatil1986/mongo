@@ -6,83 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0624665e-5253-4ea4-a620-c1973536b705" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Matrices/DistanceFromNearestZero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Arrays/NextPermutation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Arrays/NextPermutation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Backtrack/LongestIncreasingPathMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Backtrack/LongestIncreasingPathMatrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Backtrack/NQueen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Backtrack/NQueen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Backtrack/WallsAndGates$Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Backtrack/WallsAndGates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BasicMath/BasicCalculator2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BasicMath/BasicCalculator2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BasicMath/CountPrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BasicMath/CountPrimes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BasicMath/PrintFactors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BasicMath/PrintFactors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/DeleteNodeFromBST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/DeleteNodeFromBST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/LCA/ConstructPreAndPost$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/LCA/ConstructPreAndPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/LCA/LCAofDeepestNodes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/LCA/LCAofDeepestNodes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/Successor/BSTInorderSuccessorWithoutParentPointer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/Successor/BSTInorderSuccessorWithoutParentPointer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/closestValue/KClosestBSTValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/BinaryTrees/closestValue/KClosestBSTValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/Palindrome/LongestPalindromicSubsequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/Palindrome/LongestPalindromicSubsequence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/PerfectSquares.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/PerfectSquares.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/Wordbreak/WordBreak2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/DynamicProgramming/Wordbreak/WordBreak2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Graphs/AlienDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Graphs/AlienDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Heap/RearrangeCharacters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Heap/RearrangeCharacters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Matrices/FindElementsInMatrices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Matrices/FindElementsInMatrices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Matrices/ValidSudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Matrices/ValidSudoku.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Random/DesignTwitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Random/DesignTwitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Stack/AsteroidCollision.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Stack/AsteroidCollision.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Stack/DecodeString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Stack/DecodeString.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/AlienDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/AlienDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/LongestPrefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/LongestPrefix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/Panagrams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/Panagrams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/palindrome/LongestPalindromeSubstring.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/palindrome/LongestPalindromeSubstring.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/substring/LongestSubstringKcharacters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/substring/LongestSubstringWithEachCharacterRepeatingKTimes$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/substring/LongestSubstringWithEachCharacterRepeatingKTimes$Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/substring/LongestSubstringWithEachCharacterRepeatingKTimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/substring/LongestSubstringWithEachCharacterRepeatingKTimes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/substringsum/LongestSubstringWithSumK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/mongo/Strings/substringsum/LongestSubstringWithSumK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/mongo/Strings/zeroAndOne/CountEqualsZerosAndOnes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/MissingRanges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/MissingRanges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/stocks/Stock2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/stocks/Stock2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arrays/sum/FourSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arrays/sum/FourSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/NQueen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/NQueen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/SurroundingRegions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/SurroundingRegions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtrack/WallsAndGates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtrack/WallsAndGates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/CountPrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/CountPrimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/CountTriangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/CountTriangles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/HappyNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/HappyNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicMath/PrintFactors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicMath/PrintFactors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTrees/DeleteNodeFromBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTrees/DeleteNodeFromBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTrees/LCA/LCAofDeepestNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTrees/LCA/LCAofDeepestNodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTrees/Successor/BSTInorderSuccessorWithoutParentPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTrees/Successor/BSTInorderSuccessorWithoutParentPointer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinaryTrees/closestValue/KClosestBSTValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTrees/closestValue/KClosestBSTValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BitManip/ReverseBits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BitManip/ReverseBits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/CoinChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/CoinChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/CountBinaryTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/CountBinaryTrees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/DistanceFromNearestZero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/EqualSubset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/EqualSubset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Immutable2DSumRangeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/Immutable2DSumRangeQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Lavenshtein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/Lavenshtein.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Longest/LongestDecreasingSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming/Longest/LongestDecreasingSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/LongestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/LongestCommonSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/MaximumSumRectangeInMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming/MaximumSumRectangeInMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/PerfectSquares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/PerfectSquares.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/StairRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming2/StairRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Wordbreak/WordBreak2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DynamicProgramming/Wordbreak/WordBreak2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphs/AlienDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/AlienDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heap/KSmallestPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heap/KSmallestPairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heap/RunningMedian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Heap/RunningMedian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Intervals/Teemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Intervals/Teemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Iterator/PeekingIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Iterator/PeekingIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedLists/CircularDeletion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedLists/CircularDeletion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedLists/CopyArbit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedLists/CopyArbit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedLists/SortList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedLists/SortList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maps/ImplementHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maps/ImplementHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maps/LRU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maps/LRU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maps/TimeBasedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maps/TimeBasedMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrices/GameOfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/GameOfLife.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrices/LonelyPixel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/LonelyPixel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Random/GetRandom710.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Random/GetRandom710.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Matrices/RottenOranges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrices/RottenOranges.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,47 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Matrices/GameOfLife.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Matrices/LonelyPixel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="96" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Matrices/RotateMatrix.java">
+        <entry file="file://$PROJECT_DIR$/src/Matrices/RottenOranges.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Stack/LargestRectangleHistogram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            <state relative-caret-position="854">
+              <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -166,7 +55,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Strings/palindrome/LongestPalindromeSubstring.java" />
         <option value="$PROJECT_DIR$/src/Strings/substringsum/LongestSubstringWithSumK.java" />
         <option value="$PROJECT_DIR$/src/Intervals/GasStation.java" />
         <option value="$PROJECT_DIR$/src/Stack/Parenthesis/BalancedParenthesis.java" />
@@ -217,6 +105,7 @@
         <option value="$PROJECT_DIR$/src/Matrices/GameOfLife.java" />
         <option value="$PROJECT_DIR$/src/Matrices/LonelyPixel.java" />
         <option value="$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java" />
+        <option value="$PROJECT_DIR$/src/Matrices/RottenOranges.java" />
       </list>
     </option>
   </component>
@@ -227,16 +116,18 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1544" />
+    <option name="x" value="1463" />
     <option name="y" value="23" />
-    <option name="width" value="1717" />
-    <option name="height" value="1031" />
+    <option name="width" value="1693" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,33 +150,17 @@
               <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mongo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Matrices" type="462c0819:PsiDirectoryNode" />
-              <item name="RotateMatrix.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Matrices" type="462c0819:PsiDirectoryNode" />
-              <item name="RottenOranges.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mongo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Stack" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1610602128767" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611077093241" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
   </component>
@@ -344,18 +219,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1544" y="23" width="1717" height="1031" extended-state="0" />
-    <editor active="true" />
+    <frame x="1463" y="23" width="1693" height="1057" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6124722" visible="true" weight="0.17253731" />
-      <window_info id="Structure" order="1" sideWeight="0.38752785" side_tool="true" visible="true" weight="0.17253731" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61139894" visible="true" weight="0.1774682" />
+      <window_info id="Structure" order="1" sideWeight="0.38860103" side_tool="true" visible="true" weight="0.1774682" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.19668247" side_tool="true" weight="0.16829409" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.499409" visible="true" weight="0.043663472" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.499409" visible="true" weight="0.055405404" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -419,13 +293,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Heap/ConnectSticks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Heap/DistantBarcode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -720,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Matrices/DistanceFromNearestZero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Matrices/FindElementsInMatrices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -743,15 +603,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Matrices/GameOfLife.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+        <state relative-caret-position="1343">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Matrices/LonelyPixel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+        <state relative-caret-position="731">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -762,17 +629,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Matrices/MaximumRectangularSubmatrixOf1s.java">
+    <entry file="file://$PROJECT_DIR$/src/Matrices/RotateMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="96" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
+        <state relative-caret-position="51">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Matrices/RotateMatrix.java">
+    <entry file="file://$PROJECT_DIR$/src/Matrices/DistanceFromNearestZero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="640">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Matrices/RottenOranges.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
         </state>
       </provider>
     </entry>
