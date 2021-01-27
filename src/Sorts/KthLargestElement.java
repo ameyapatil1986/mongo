@@ -37,6 +37,7 @@ public final class KthLargestElement {
         int down = lb;
         int up = hb;
 
+        // example: [ 10, 6, 60, 7, 70, 8, 80, 9, 10 ]
         while (down < up) {
 
             // elements equal to x, would eventually be on my left.

@@ -6,6 +6,11 @@ import java.util.*;
 public class ValidSudoku {
 
    public boolean isSudokuValidator(char[][] board) {
+       if (board.length != 9 || board[0].length != 9) {
+           // throw some exception.
+       }
+
+
        Set<String> seen = new HashSet<>();
        for (int i = 0; i < 9; i++) {
            for (int  j = 0; j < 9; j++) {

@@ -21,7 +21,7 @@ public class GetRandom {
 
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     public boolean insert(int val) {
-        if(valueMap.containsKey(val)){
+        if (valueMap.containsKey(val)) {
             return false;
         }
 

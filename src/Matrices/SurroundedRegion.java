@@ -44,19 +44,19 @@ public class SurroundedRegion {
         }
 
         //merge O's on top & bottom boarder
-        for(int j = 0; j < n; j++){
-            if(board[0][j] == 'O'){
+        for(int j = 0; j < n; j++) {
+            if(board[0][j] == 'O') {
                 merge(board, 0, j);
             }
 
-            if(board[m-1][j] == 'O'){
+            if(board[m-1][j] == 'O') {
                 merge(board, m-1, j);
             }
         }
 
         //process the board
         for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++){
+            for(int j = 0; j < n; j++) {
                 if (board[i][j] == 'O') {
                     board[i][j] = 'X';
                 } else if(board[i][j] == '#') {
