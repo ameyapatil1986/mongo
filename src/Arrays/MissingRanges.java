@@ -41,6 +41,6 @@ public class MissingRanges {
     }
 
     private String getRange(int n1, int n2) {
-        return n1 == n2 ? String.valueOf(n1) : String.valueOf(n1) + " -> " + String.valueOf(n2);
+        return n1 == n2 ? String.valueOf(n1) : n1 + " -> " + n2;
     }
 }

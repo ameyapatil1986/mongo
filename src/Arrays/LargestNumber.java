@@ -20,6 +20,7 @@ public class LargestNumber {
         }
 
         // https://stackoverflow.com/questions/61043870/how-to-translate-following-comparator-into-compatator-comparing
+        // eg: 90 and 9 becomes 909 and 990
         Arrays.sort(arr, (a, b) -> (b + a).compareTo(a + b));
 
         if(arr[0].equals("0")) return "0";

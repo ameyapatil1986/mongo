@@ -28,7 +28,6 @@ public class GenerateStringOnConcat {
         return false;
     }
 
-    // Driver code
     public static void main(String args[]) {
         String str = "GeeksforGeeks";
         String a = "Geeksfo";

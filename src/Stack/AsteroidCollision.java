@@ -27,7 +27,11 @@ public class AsteroidCollision {
             if (asteroids[i] >= 0) {
                 stack.push(asteroids[i]);
             } else {
-                while (true) {
+                if (stack.isEmpty()) {
+                    leftAsteroids.add(asteroids[i]);
+                }
+
+                while (!stack.isEmpty()) {
                     if (stack.peek() == Math.abs(asteroids[i])) {
                         stack.pop();
                         break;

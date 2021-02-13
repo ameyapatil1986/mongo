@@ -51,7 +51,7 @@ public final class BraceCombinations {
 
     // length == height == arraynindex
     private static void generate(LinkedList<Character> parenthesis, int openBrace, int closeBrace, int halfLength) {
-        if (openBrace == halfLength && closeBrace == halfLength) {
+        if (openBrace == closeBrace && openBrace + closeBrace == halfLength * 2) {
             for (Character ch : parenthesis) {
                 System.out.print(ch);
             }

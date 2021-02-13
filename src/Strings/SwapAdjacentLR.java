@@ -23,8 +23,8 @@ public class SwapAdjacentLR {
                 if (s.charAt(i) == 'X') i++;
                 if (t.charAt(j) == 'X') j++;
 
-                // cant make sense out of this if condition.
                 if (s.charAt(i) != 'X' && t.charAt(j) != 'X') {
+                    // XL, XR
                     if (s.charAt(i) != t.charAt(j)) return false;
 
                     // LX & XL.  here both chars for i and j are 'L'. Since L cannot move right, its a false.

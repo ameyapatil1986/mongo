@@ -8,12 +8,12 @@ import java.util.stream.Collectors;
 
 public class ProductSuggestion {
 
-    public static List<List<String>> productCodes(List<String> list, String word) {
+    public static List<List<String>> productCodes(List<String> products, String keyStrokes) {
         List<List<String>> suggestions = new ArrayList<>();
 
-        for (int i = 0; i < word.length(); i++) {
-            String str = word.substring(0, i + 1);
-            suggestions.add(list.stream().filter(w -> w.startsWith(str)).collect(Collectors.toList()));
+        for (int i = 0; i < keyStrokes.length(); i++) {
+            String str = keyStrokes.substring(0, i + 1);
+            suggestions.add(products.stream().filter(w -> w.startsWith(str)).collect(Collectors.toList()));
         }
 
         return suggestions;

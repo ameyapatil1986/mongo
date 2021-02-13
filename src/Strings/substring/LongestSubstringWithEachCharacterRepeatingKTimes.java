@@ -16,7 +16,7 @@ public class LongestSubstringWithEachCharacterRepeatingKTimes {
         /**
          * Sample example:
          *  a a p a a b b
-         *  a p a b b and k = 2
+         *  a a b b and k = 2
          *
          * @param s: a string
          * @param k: an integer

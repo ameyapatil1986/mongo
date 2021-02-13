@@ -19,8 +19,11 @@ public class Panagrams {
         Set<Character> hashSet = new HashSet<Character>();
         for (int i = 0; i < str.length(); i++) {
             hashSet.add(str.charAt(i));
+            if (hashSet.size() == 26) {
+                return true;
+            }
         }
-        return hashSet.size() == 26;
+        return false;
     }
 
 }

@@ -38,7 +38,7 @@ public class FindAllAnagramsInString {
                 }
             }
 
-            while (counter <= 0) {
+            while (counter == 0) {
 
                 if (right - left + 1 == p.length()) {
                     ans.add(left);

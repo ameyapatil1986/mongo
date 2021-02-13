@@ -46,9 +46,7 @@ public class RemoveInvalidParen {
             if(openBrace == closeBrace) {
                 max = Math.max(max, constructedString.length());
                 // avoid duplicate result.
-                if(!result.contains(constructedString)){
-                    result.add(constructedString);
-                }
+                result.add(constructedString);
             }
             return;
         }

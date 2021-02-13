@@ -2,7 +2,7 @@ package Strings;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
-
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/first-unique-character-in-a-string/
@@ -13,7 +13,7 @@ public class FirstNonRepeatingCharacter {
 
     public static int firstNonRepeating(String str) {
         Set<Character> unique = new LinkedHashSet<>();
-        Set<Character> visited = new LinkedHashSet<>();
+        Set<Character> visited = new HashSet<>();
 
         for (char i : str.toCharArray()) {
             if (!visited.contains(i)) {

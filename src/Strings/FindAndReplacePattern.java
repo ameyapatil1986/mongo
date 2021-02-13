@@ -29,10 +29,9 @@ public class FindAndReplacePattern {
 
         Set<Character> set = new HashSet<>();
         for (char p : M.values()) {
-            if (set.contains(p)) {
+            if (!set.add(p)) {
                 return false;
             }
-            set.add(p);
         }
         return true;
     }
