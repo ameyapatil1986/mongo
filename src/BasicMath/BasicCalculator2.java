@@ -11,7 +11,7 @@ public class BasicCalculator2 {
     public int calculate(String s) {
         int prevMultiplyOrDivide = -1; // 0 is m, 1 is d
         int prevSign = -1; // 1 is +, -1 is -
-        int prev = 0;
+        int prevNumber = 0;
         int result = 0;
 
         for (int i = 0; i < s.length(); i++) {
@@ -23,28 +23,28 @@ public class BasicCalculator2 {
                     num += num * 10 + s.charAt(i) - '0';
                 }
                 if (prevMultiplyOrDivide == 0) {
-                    prev = prev * num;
+                    prevNumber = prevNumber * num;
                     prevMultiplyOrDivide = -1;
                 } else if (prevMultiplyOrDivide == 1) {
-                    prev = prev / num;
+                    prevNumber = prevNumber / num;
                     prevMultiplyOrDivide = -1;
                 } else {
-                    prev = num;
+                    prevNumber = num;
                 }
             } else if (c == '/') {
                 prevMultiplyOrDivide = 1;
             } else if (c == '*') {
                 prevMultiplyOrDivide = 0;
             } else if (c == '+') {
-                result = result + prevSign * prev;
+                result = result + prevSign * prevNumber;
                 prevSign = 1;
             } else if (c =='-') {
-                result = result + prevSign * prev;
+                result = result + prevSign * prevNumber;
                 prevSign = -1;
             }
         }
 
-        result = result + prevSign * prev;
+        result = result + prevSign * prevNumber;
         return result;
     }
 }

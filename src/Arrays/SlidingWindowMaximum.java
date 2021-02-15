@@ -27,7 +27,7 @@ public class SlidingWindowMaximum {
         for(int i = 0; i < nums.length; i++) {
 
             // remove last item from queue if queue size exceeds k.
-            if (!deque.isEmpty() &&  i - deque.peek() == k)
+            if (!deque.isEmpty() &&  i - k + 1 > deque.peek())
                 deque.poll();     // a poll removes from the head.
 
             // now queue is small, keep it in descending order.

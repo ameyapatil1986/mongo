@@ -17,17 +17,19 @@ public class BasicCalculator {
         int prevSign = 1;
         int prevNumber = 0;
 
-        for (char c : s.toCharArray()) {
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
             if (Character.isDigit(c)) {
-                prevNumber = prevNumber * 10 + (c - '0');
+                prevNumber = 0;
+                for (; i < s.length() && Character.isDigit(s.charAt(i)); i++) {
+                    prevNumber += prevNumber * 10 + s.charAt(i) - '0';
+                }
             } else if (c == '+') {
                 result += prevSign * prevNumber;
                 prevSign = 1;
-                prevNumber = 0;
             } else if (c == '-') {
                 result += prevSign * prevNumber;
                 prevSign = -1;
-                prevNumber = 0;
             } else if (c == '(') {
                 stack.push(result);
                 stack.push(prevSign);
